@@ -1,0 +1,102 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_excel_sheet" style="display: none">
+  <category name="%{BKY_TSUMICKY_CATEGORY_EXCEL_SHEET}" id="category_excel_sheet" colour="#745ba5">
+    <block type="excel_sheet_add">
+      <value name="workbook">
+        <block type="excel_active_workbook"></block>
+      </value>
+      <value name="sheetname">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="excel_active_sheet">
+      <value name="workbook">
+        <block type="excel_active_workbook"></block>
+      </value>
+    </block>
+    <block type="excel_sheet_by_index">
+      <value name="workbook">
+        <block type="excel_active_workbook"></block>
+      </value>
+      <value name="index">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="excel_sheet_by_name">
+      <value name="workbook">
+        <block type="excel_active_workbook"></block>
+      </value>
+      <value name="sheetname">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="excel_set_sheet_do">
+      <value name="sheet">
+        <block type="excel_active_sheet">
+          <value name="workbook">
+            <block type="excel_active_workbook"></block>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block type="excel_set_sheet_loop">
+      <value name="workbook">
+        <block type="excel_active_workbook"></block>
+      </value>
+    </block>
+    <block type="excel_current_sheet"></block>
+    <block type="excel_set_sheet_name">
+      <value name="sheet">
+        <block type="excel_current_sheet"></block>
+      </value>
+      <value name="name">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="excel_sheet_name">
+      <value name="sheet">
+        <block type="excel_current_sheet"></block>
+      </value>
+    </block>
+    <block type="excel_sheet_index">
+      <value name="sheet">
+        <block type="excel_current_sheet"></block>
+      </value>
+    </block>
+    <block type="excel_sheet_parent">
+      <value name="sheet">
+        <block type="excel_current_sheet"></block>
+      </value>
+    </block>
+    <block type="excel_set_sheet_tab_color">
+      <value name="sheet">
+        <block type="excel_current_sheet"></block>
+      </value>
+      <value name="color">
+        <block type="colour_picker"></block>
+      </value>
+    </block>
+    <block type="excel_reset_sheet_tab_color">
+      <value name="sheet">
+        <block type="excel_current_sheet"></block>
+      </value>
+    </block>
+    <block type="excel_sheets">
+      <value name="workbook">
+        <block type="excel_active_workbook"></block>
+      </value>
+    </block>
+    <block type="excel_sheets_count">
+      <value name="workbook">
+        <block type="excel_active_workbook"></block>
+      </value>
+    </block>
+  </category>
+</xml>

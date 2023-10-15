@@ -1,0 +1,50 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_excel_workbook" style="display: none">
+  <category name="%{BKY_TSUMICKY_CATEGORY_EXCEL_WORKBOOK}" id="category_excel_workbook" colour="#995ba5">
+    <block type="excel_active_workbook"></block>
+    <block type="excel_workbook_by_name">
+      <value name="filename">
+        <shadow type="text">
+          <field name="TEXT">somefile.xlsx</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="excel_set_workbook_do">
+      <value name="workbook">
+        <block type="excel_active_workbook"></block>
+      </value>
+    </block>
+    <block type="excel_current_workbook"></block>
+    <block type="excel_workbook_save_as">
+      <value name="workbook">
+        <block type="excel_current_workbook"></block>
+      </value>
+      <value name="filename">
+        <shadow type="text">
+          <field name="TEXT">somefile.xlsx</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="excel_workbook_save">
+      <value name="workbook">
+        <block type="excel_current_workbook"></block>
+      </value>
+    </block>
+    <block type="excel_workbook_name">
+      <value name="workbook">
+        <block type="excel_current_workbook"></block>
+      </value>
+    </block>
+    <block type="excel_workbook_fullname">
+      <value name="workbook">
+        <block type="excel_current_workbook"></block>
+      </value>
+    </block>
+    <block type="excel_workbook_path">
+      <value name="workbook">
+        <block type="excel_current_workbook"></block>
+      </value>
+    </block>
+    <block type="excel_workbooks"></block>
+    <block type="excel_workbooks_count"></block>
+  </category>
+</xml>

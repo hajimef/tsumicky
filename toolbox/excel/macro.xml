@@ -1,0 +1,42 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_excel_macro" style="display: none">
+  <category name="%{BKY_TSUMICKY_CATEGORY_EXCEL_MACRO}" id="category_excel_macro" colour="#5b80a5">
+    <block type="excel_macro_statement_book">
+      <mutation items="1"></mutation>
+      <value name="workbook">
+        <block type="excel_active_workbook"></block>
+      </value>
+      <value name="macro">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="excel_macro_value_book">
+      <mutation items="1"></mutation>
+      <value name="workbook">
+        <block type="excel_active_workbook"></block>
+      </value>
+      <value name="macro">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="excel_macro_statement_addin">
+      <mutation items="1"></mutation>
+      <value name="macro">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="excel_macro_value_addin">
+      <mutation items="1"></mutation>
+      <value name="macro">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+  </category>
+</xml>

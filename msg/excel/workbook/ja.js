@@ -1,0 +1,26 @@
+export function addMessages() {
+  Blockly.Msg["TSUMICKY_CATEGORY_EXCEL_WORKBOOK"] = "Excelブック";
+  Blockly.Msg["TSUMICKY_CATEGORY_EXCEL_SUB_WORKBOOK"] = "ブック";
+  Blockly.Msg["TSUMICKY_EXCEL_ACTIVE_WORKBOOK"] = "アクティブなブック";
+  Blockly.Msg["TSUMICKY_EXCEL_ACTIVE_WORKBOOK_TOOLTIP"] = "アクティブなブックを得ます。";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_BY_NAME"] = "ファイル名が %1 のブック";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_BY_NAME_TOOLTIP"] = "指定したファイル名のブックを得ます。";
+  Blockly.Msg["TSUMICKY_EXCEL_SET_WORKBOOK_DO"] = "%1 を操作対象のブックにしてブロック内の処理を行う %2 %3";
+  Blockly.Msg["TSUMICKY_EXCEL_SET_WORKBOOK_DO_TOOLTIP"] = "指定したブックを操作対象にして、ブロック内の処理を行います。\nブロック内では、「操作対象のブック」のブロックでブックを指定することができます。";
+  Blockly.Msg["TSUMICKY_EXCEL_CURRENT_WORKBOOK"] = "操作対象のブック";
+  Blockly.Msg["TSUMICKY_EXCEL_CURRENT_WORKBOOK_TOOLTIP"] = "操作対象のブックを得ます。\n「〇〇を操作対象にしてブロック内の処理を行う」のブロック内でのみ利用できます。";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_SAVE"] = "%1 を上書き保存する";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_SAVE_TOOLTIP"] = "指定したブックを上書き保存します。";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_SAVE_AS"] = "%1 に %2 の名前を付けて保存";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_SAVE_AS_TOOLTIP"] = "指定したブックにファイル名を付けて保存します。";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOKS"] = "開いているブックのリスト";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOKS_TOOLTIP"] = "開いているブックのリストを得ます。";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOKS_COUNT"] = "開いているブックの数";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOKS_COUNT_TOOLTIP"] = "開いているブックの数を得ます。";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_NAME"] = "%1 のファイル名";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_NAME_TOOLTIP"] = "ブックのファイル名(フォルダを除いた部分)を得ます。";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_FULLNAME"] = "%1 のフルパス名";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_FULLNAME_TOOLTIP"] = "ブックのフルパス名を得ます。";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_PATH"] = "%1 のフォルダ名";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_PATH_TOOLTIP"] = "ブックが保存されているフォルダの名前を得ます。";
+};

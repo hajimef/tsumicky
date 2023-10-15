@@ -1,0 +1,73 @@
+{
+  "language": "en",
+  "categories": [
+    "basic",
+    "basic_io",
+    "pwm_esp32",
+    "pwm_rpi",
+    "pwm_pico",
+    "servo",
+    "custom",
+    "sep",
+    "excel/basic",
+    "excel/workbook",
+    "excel/sheet",
+    "excel/range",
+    "excel/macro"
+  ],
+  "tree":[
+    {
+      "catname": "%{BKY_TSUMICKY_CATEGORY_PWM}",
+      "colour": "#5b80a5",
+      "before": "category_pwm_esp32",
+      "id": "category_pwm",
+      "children": [
+        {
+          "id": "category_pwm_esp32",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_PWM_SUB_ESP32}"
+        },
+        {
+          "id": "category_pwm_rpi",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_PWM_SUB_RPI}"
+        },
+        {
+          "id": "category_pwm_pico",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_PWM_SUB_PICO}"
+        }
+      ]
+    },
+    {
+      "catname": "%{BKY_TSUMICKY_CATEGORY_EXCEL}",
+      "colour": "#5ba55b",
+      "before": "category_excel_basic",
+      "id": "category_excel",
+      "children": [
+        {
+          "id": "category_excel_basic",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_EXCEL_SUB_BASIC}"
+        },
+        {
+          "id": "category_excel_workbook",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_EXCEL_SUB_WORKBOOK}"
+        },
+        {
+          "id": "category_excel_sheet",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_EXCEL_SUB_SHEET}"
+        },
+        {
+          "id": "category_excel_range",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_EXCEL_SUB_RANGE}"
+        },
+        {
+          "id": "category_excel_macro",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_EXCEL_SUB_MACRO}"
+        }
+      ]
+    }
+  ],
+  "hiddenBlock": [
+    "excel_find_file",
+    "excel_run_book_macro"
+  ],
+  "workspace": "workspace"
+}

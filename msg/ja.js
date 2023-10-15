@@ -1,0 +1,17 @@
+Blockly.Msg["TSUMICKY_MESSAGE_RUN"] = "実行";
+Blockly.Msg["TSUMICKY_MESSAGE_STOP"] = "終了";
+Blockly.Msg["TSUMICKY_MESSAGE_NEW"] = "新規作成";
+Blockly.Msg["TSUMICKY_MESSAGE_OPEN"] = "読み込み";
+Blockly.Msg["TSUMICKY_MESSAGE_SAVE"] = "保存";
+Blockly.Msg["TSUMICKY_CATEGORY_LOGIC"] = "論理";
+Blockly.Msg["TSUMICKY_CATEGORY_LOOPS"] = "繰り返し";
+Blockly.Msg["TSUMICKY_CATEGORY_MATH"] = "数学";
+Blockly.Msg["TSUMICKY_CATEGORY_TEXT"] = "文字列";
+Blockly.Msg["TSUMICKY_CATEGORY_LISTS"] = "リスト";
+Blockly.Msg["TSUMICKY_CATEGORY_COLOUR"] = "色";
+Blockly.Msg["TSUMICKY_CATEGORY_VARIABLES"] = "変数";
+Blockly.Msg["TSUMICKY_CATEGORY_FUNCTIONS"] = "関数";
+Blockly.Msg["TSUMICKY_CATEGORY_PWM"] = "PWM出力";
+Blockly.Msg["TSUMICKY_CATEGORY_EXCEL"] = "Excel";
+Blockly.Msg["TSUMICKY_IS_CLEAR_OK"] = "現在のプログラムは消えます。\nよろしいですか？";
+Blockly.Msg["TSUMICKY_ERROR"] = "エラーが発生しました。";

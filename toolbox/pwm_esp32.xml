@@ -1,0 +1,44 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_pwm_esp32" style="display: none">
+    <category name="%{BKY_TSUMICKY_CATEGORY_PWM_ESP32}" id="category_pwm_esp32" colour="#5b80a5">
+        <block type="pwm_esp32_setup">
+            <field name="ws_var" id="Y$+Fj;g6#{mQbyUM4uXx">sock</field>
+            <value name="ch">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="freq">
+                <shadow type="math_number">
+                    <field name="NUM">10000</field>
+                </shadow>
+            </value>
+            <value name="bit">
+                <shadow type="math_number">
+                    <field name="NUM">12</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="pwm_esp32_attach_pin">
+            <field name="ws_var" id="mM0r_zLEftg14tf7COGf">sock</field>
+            <field name="pin_var" id=":DMyuH-0%2l]Ot22p6=f">pin</field>
+            <value name="ch">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="pwm_esp32_write">
+            <field name="ws_var" id="mM0r_zLEftg14tf7COGf">sock</field>
+            <value name="ch">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="duty">
+                <shadow type="math_number">
+                    <field name="NUM">50</field>
+                </shadow>
+            </value>
+        </block>
+    </category>
+</xml>

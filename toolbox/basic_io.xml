@@ -1,0 +1,74 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_basic_io" style="display: none">
+    <category name="%{BKY_TSUMICKY_CATEGORY_BASIC_IO}" id="category_basic_io" colour="#9fa55b">
+        <block type="basic_io_connect">
+            <value name="host">
+                <shadow type="text">
+                    <field name="TEXT">wsserver.local</field>
+                </shadow>
+            </value>
+            <value name="port">
+                <shadow type="math_number">
+                    <field name="NUM">8000</field>
+                </shadow>
+            </value>
+            <field name="prot">ws</field>
+            <field name="var_name" id="Hw-7y*jA/sMZpHr%,#[+">sock</field>
+        </block>
+        <block type="basic_io_model_name">
+            <field name="ws_var" id="Q7O,::IhG^;1-c_:mBf!">sock</field>
+        </block>
+        <block type="basic_io_assign_pin">
+            <field name="ws_var" id="S9e:h:V#BxbJ.G@l;jE[">sock</field>
+            <field name="pin_var" id="Ey5q@4X]TV?R-dcYSdyQ">pin</field>
+            <value name="pin_no">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="basic_io_pinmode">
+            <field name="pin_var" id="`Ftxf_?gGZbJW.phwe_`">pin</field>
+            <field name="mode">0</field>
+        </block>
+        <block type="basic_io_digital_write">
+            <field name="pin" id="F*=/X!{EjP@E^J$/.lcV">pin</field>
+            <field name="hl">1</field>
+        </block>
+        <block type="basic_io_digital_read">
+            <field name="pin" id="eREhDsj$#:lZFNd$uS^,">pin</field>
+        </block>
+        <block type="basic_io_analog_read">
+            <field name="pin" id="eREhDsj$#:lZFNd$uS^,">pin</field>
+        </block>
+        <block type="basic_io_map">
+            <value name="input">
+                <block type="basic_io_analog_read">
+                    <field name="pin" id="eREhDsj$#:lZFNd$uS^,">pin</field>
+                </block>
+            </value>
+            <value name="input_min">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="input_max">
+                <shadow type="math_number">
+                    <field name="NUM">4095</field>
+                </shadow>
+            </value>
+            <value name="output_min">
+                <shadow type="math_number">
+                    <field name="NUM">0</field>
+                </shadow>
+            </value>
+            <value name="output_max">
+                <shadow type="math_number">
+                    <field name="NUM">3.3</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="basic_io_hl">
+            <field name="hl_value">1</field>
+        </block>
+    </category>
+</xml>

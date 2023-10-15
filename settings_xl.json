@@ -1,0 +1,48 @@
+{
+  "language": "ja",
+  "categories": [
+    "basic",
+    "sep",
+    "excel/basic",
+    "excel/workbook",
+    "excel/sheet",
+    "excel/range",
+    "excel/macro"
+  ],
+  "tree":[
+    {
+      "catname": "%{BKY_TSUMICKY_CATEGORY_EXCEL}",
+      "colour": "#5ba55b",
+      "before": "category_excel_basic",
+      "id": "category_excel",
+      "children": [
+        {
+          "id": "category_excel_basic",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_EXCEL_SUB_BASIC}"
+        },
+        {
+          "id": "category_excel_workbook",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_EXCEL_SUB_WORKBOOK}"
+        },
+        {
+          "id": "category_excel_sheet",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_EXCEL_SUB_SHEET}"
+        },
+        {
+          "id": "category_excel_range",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_EXCEL_SUB_RANGE}"
+        },
+        {
+          "id": "category_excel_macro",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_EXCEL_SUB_MACRO}"
+        }
+      ]
+    }
+  ],
+  "hiddenBlock": [
+    "excel_launch",
+    "excel_find_file",
+    "excel_run_book_macro"
+  ],
+  "workspace": "workspace_xl"
+}

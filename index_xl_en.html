@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tsumicky</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="navbar" class="container-fruid">
+      <nav class="navbar bg-primary-subtle" style="justify-content: flex-start;">
+        <a class="navbar-brand" href="#">Tsumicky</a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <button class="btn btn btn-outline-primary" id="run">&nbsp;</button>
+            <button class="btn btn btn-outline-danger" id="stop">&nbsp;</button>
+            <button class="btn btn btn-outline-success" id="new">&nbsp;</button>
+            <label class="btn btn btn-outline-success"><input type="file" class="btn btn btn-outline-success" id="load" value="Load" accept=".json" /><span id="open">&nbsp;</span></label>
+            <button class="btn btn btn-outline-success" id="save">&nbsp;</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <main>
+      <div id="blocklyArea" class="container-fruid">
+        <div id="blocklyDiv" style="position: absolute"></div>
+      </div>
+    <p style="display: none;"><textarea id="code" rows="10" cols="80"></textarea><textarea id="ws" rows="10" cols="80"></textarea><a href="#" id="savefile"></a><input type="file" id="selfile" accept=".json" /></p>
+    </main>
+  <script type="text/javascript">
+      var settingsFile = 'settings_xl_en.json';
+  </script>
+    <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+    <script src="https://unpkg.com/blockly/blocks_compressed.js"></script>
+    <script src="https://unpkg.com/blockly/javascript.js"></script>
+    <script src="procedures.js"></script>
+    <script src="main.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>

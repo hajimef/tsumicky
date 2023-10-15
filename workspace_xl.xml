@@ -1,0 +1,19 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="workspaceBlocks" style="display: none">
+    <block type="basic_normal_main" id=")_duFAo?!MZB?ujQvr4g" deletable="false" movable="false" editable="false" x="13" y="13">
+        <statement name="code">
+        <block type="excel_launch" deletable="false" movable="false" editable="false">
+            <field name="visible">1</field>
+            <value name="host">
+                <shadow type="text">
+                    <field name="TEXT">localhost</field>
+                </shadow>
+            </value>
+            <value name="port">
+                <shadow type="math_number">
+                    <field name="NUM">8001</field>
+                </shadow>
+            </value>
+        </block>
+        </statement>
+    </block>
+</xml>

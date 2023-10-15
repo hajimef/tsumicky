@@ -1,0 +1,17 @@
+Blockly.Msg["TSUMICKY_MESSAGE_RUN"] = "Run";
+Blockly.Msg["TSUMICKY_MESSAGE_STOP"] = "Stop";
+Blockly.Msg["TSUMICKY_MESSAGE_NEW"] = "New";
+Blockly.Msg["TSUMICKY_MESSAGE_OPEN"] = "Open";
+Blockly.Msg["TSUMICKY_MESSAGE_SAVE"] = "Save";
+Blockly.Msg["TSUMICKY_CATEGORY_LOGIC"] = "Logic";
+Blockly.Msg["TSUMICKY_CATEGORY_LOOPS"] = "Loops";
+Blockly.Msg["TSUMICKY_CATEGORY_MATH"] = "Math";
+Blockly.Msg["TSUMICKY_CATEGORY_TEXT"] = "Text";
+Blockly.Msg["TSUMICKY_CATEGORY_LISTS"] = "Lists";
+Blockly.Msg["TSUMICKY_CATEGORY_COLOUR"] = "Colour";
+Blockly.Msg["TSUMICKY_CATEGORY_VARIABLES"] = "Variables";
+Blockly.Msg["TSUMICKY_CATEGORY_FUNCTIONS"] = "Functions";
+Blockly.Msg["TSUMICKY_CATEGORY_PWM"] = "PWM Output";
+Blockly.Msg["TSUMICKY_CATEGORY_EXCEL"] = "Excel";
+Blockly.Msg["TSUMICKY_IS_CLEAR_OK"] = "Current program will be deleted. \nAre you OK?";
+Blockly.Msg["TSUMICKY_ERROOR"] = "Error occured.";

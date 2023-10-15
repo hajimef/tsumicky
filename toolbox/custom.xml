@@ -1,0 +1,49 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_custom" style="display: none">
+    <category name="%{BKY_TSUMICKY_CATEGORY_CUSTOM}" id="category_custom" colour="#5b67a5">
+        <block type="custom_function_statement">
+            <mutation items="1"></mutation>
+            <field name="ws_name" id="qg_NkU2w9{={oU@O;fRq">sock</field>
+            <value name="group">
+                <shadow type="text">
+                    <field name="TEXT">cu</field>
+                </shadow>
+            </value>
+            <value name="subgroup">
+                <shadow type="text">
+                    <field name="TEXT"></field>
+                </shadow>
+            </value>
+            <value name="command">
+                <shadow type="text">
+                    <field name="TEXT"></field>
+                </shadow>
+            </value>
+        </block>
+        <block type="custom_function_value">
+            <mutation items="1"></mutation>
+            <field name="ws_name" id="qg_NkU2w9{={oU@O;fRq">sock</field>
+            <value name="group">
+                <shadow type="text">
+                    <field name="TEXT">cu</field>
+                </shadow>
+            </value>
+            <value name="subgroup">
+                <shadow type="text">
+                    <field name="TEXT"></field>
+                </shadow>
+            </value>
+            <value name="command">
+                <shadow type="text">
+                    <field name="TEXT"></field>
+                </shadow>
+            </value>
+        </block>
+        <block type="custom_function_param">
+            <value name="key">
+                <shadow type="text">
+                    <field name="TEXT"></field>
+                </shadow>
+            </value>
+        </block>
+    </category>
+</xml>

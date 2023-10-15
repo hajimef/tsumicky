@@ -1,0 +1,26 @@
+export function addMessages() {
+  Blockly.Msg["TSUMICKY_CATEGORY_EXCEL_WORKBOOK"] = "Excel workbook";
+  Blockly.Msg["TSUMICKY_CATEGORY_EXCEL_SUB_WORKBOOK"] = "Workbook";
+  Blockly.Msg["TSUMICKY_EXCEL_ACTIVE_WORKBOOK"] = "active workbook";
+  Blockly.Msg["TSUMICKY_EXCEL_ACTIVE_WORKBOOK_TOOLTIP"] = "Get the active workbook.";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_BY_NAME"] = "workbook with file name %1";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_BY_NAME_TOOLTIP"] = "Gets the book with the specified file name.";
+  Blockly.Msg["TSUMICKY_EXCEL_SET_WORKBOOK_DO"] = "process within the block using %1 as the target workbook %2 %3";
+  Blockly.Msg["TSUMICKY_EXCEL_SET_WORKBOOK_DO_TOOLTIP"] = "Process within the block, targeting the specified workbook. \nIn the block, you can specify a workbook in the 'target workbook' block.";
+  Blockly.Msg["TSUMICKY_EXCEL_CURRENT_WORKBOOK"] = "target workbook";
+  Blockly.Msg["TSUMICKY_EXCEL_CURRENT_WORKBOOK_TOOLTIP"] = "Get the target workbook. \nCan only be used in the block 'process within the block using as the target workbook'.";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_SAVE"] = "save %1";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_SAVE_TOOLTIP"] = "Save the specified workbook.";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_SAVE_AS"] = "save %1 as %2";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_SAVE_AS_TOOLTIP"] = "Save the specified workbook with a file name.";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOKS"] = "list of open workbooks";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOKS_TOOLTIP"] = "Get a list of open workbooks.";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOKS_COUNT"] = "count of open workbooks";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOKS_COUNT_TOOLTIP"] = "Get the number of open workbooks.";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_NAME"] = "file name of %1";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_NAME_TOOLTIP"] = "Get the file name of workbook (excluding the folder).";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_FULLNAME"] = "full path of %1";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_FULLNAME_TOOLTIP"] = "Get the full path of workbook.";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_PATH"] = "folder of %1";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_PATH_TOOLTIP"] = "Get the folder name where the workbook is saved.";
+};
