@@ -29,7 +29,7 @@ function createDisposeList(generator) {
   var code = '';
   for (let key in Blockly.runTimeJS) {
     let rt = Blockly.runTimeJS[key];
-    code += generator.INDENT + '$_' + rt.modName + '.dispose();\n';
+    code += generator.INDENT + 'await $_' + rt.modName + '.dispose();\n';
   }
   code += generator.INDENT + 'Blockly.__wsobjs.forEach(function(ws) {\n';
   code += generator.INDENT + generator.INDENT + 'ws.send(\'{"g":"close","c":"close","p":{"p":0}}\');\n';

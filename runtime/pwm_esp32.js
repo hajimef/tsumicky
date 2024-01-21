@@ -6,7 +6,7 @@ var ch_pin = {};
 export function setup() {
 }
 
-export function dispose() {
+export async function dispose() {
 }
 
 export async function ledcSetup(_ws, ch, freq, bit) {

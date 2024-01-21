@@ -23,7 +23,7 @@ function sleep_sub(msec) {
 export function setup() {
 }
 
-export function dispose() {
+export async function dispose() {
 }
 
 export async function sleep(ms) {

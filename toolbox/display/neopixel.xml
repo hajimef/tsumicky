@@ -1,0 +1,38 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_neopixel" style="display: none">
+  <category id="category_neopixel" name="NeoPixel" colour="#a5745b">
+    <block type="neopixel_init">
+      <field name="ws_var" id="QGz2xSZhDBaPt|lyRZ};">sock</field>
+      <field name="no">0</field>
+      <field name="pin_var" id="^yjIk*w}%|4sAGRlM;,u">pin</field>
+      <value name="numpixels">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <field name="color_order">0</field>
+    </block>
+    <block type="neopixel_set_pixel_color">
+      <field name="ws_name" id="B4e?BfX.R|jI0kpZ8V*m">sock</field>
+      <field name="no">0</field>
+      <value name="p_no">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="color">
+        <block type="colour_picker"></block>
+      </value>
+    </block>
+    <block type="neopixel_set_all_pixel_color">
+      <field name="ws_var" id="CAD3x*C1=g8jcDrax].m">sock</field>
+      <field name="no">0</field>
+      <value name="color">
+        <block type="colour_picker"></block>
+      </value>
+    </block>
+    <block type="neopixel_show">
+      <field name="ws_var" id="fSG3zoj^wJYYcpvx:]u.">sock</field>
+      <field name="no">0</field>
+    </block>
+  </category>
+</xml>

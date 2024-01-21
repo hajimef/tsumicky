@@ -5,7 +5,7 @@ const PWM_RPI_GROUP = 'pwm_rpi';
 export function setup() {
 }
 
-export function dispose() {
+export async function dispose() {
 }
 
 export async function setFrequency(_ws, pin, freq) {

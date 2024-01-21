@@ -1,0 +1,20 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_bmp280" style="display: none">
+  <category id="category_bmp280" name="BMP280" colour="#745ba5">
+    <block type="bmp280_init">
+      <field name="ws_var" id="{eh$h3YRrCG4Rw7yxnY7">sock</field>
+      <field name="i2c">118</field>
+    </block>
+    <block type="bmp280_init_i2c">
+      <field name="ws_var" id="0l`2Z@WpjE8TBW:2]v_{">sock</field>
+      <field name="i2c">118</field>
+      <field name="sda">0</field>
+      <field name="scl">0</field>
+    </block>
+    <block type="bmp280_temperature">
+      <field name="ws_var" id="{eh$h3YRrCG4Rw7yxnY7">sock</field>
+    </block>
+    <block type="bmp280_pressure">
+      <field name="ws_var" id="{eh$h3YRrCG4Rw7yxnY7">sock</field>
+    </block>
+  </category>
+</xml>

@@ -3,7 +3,7 @@ import * as ws from '/lib/websocket.js';
 export function setup() {
 }
 
-export function dispose() {
+export async function dispose() {
 }
 
 function convPin(param) {

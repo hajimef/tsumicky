@@ -5,7 +5,7 @@ const PWM_PICO_GROUP = 'pwm_rpip';
 export function setup() {
 }
 
-export function dispose() {
+export async function dispose() {
 }
 
 export async function pwmSetup(_ws, freq, bit) {

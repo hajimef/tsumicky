@@ -79,8 +79,8 @@ export function addJS() {
     javascript.javascriptGenerator.forBlock['excel_get_cell_value'] = function(block, generator) {
         setRuntimeName();
         var range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
-        var code = 'await' + range + '.getValue()';
-        return [code, Blockly.javascript.ORDER_MEMBER];
+        var code = 'await ' + range + '.getValue()';
+        return [code, Blockly.JavaScript.ORDER_MEMBER];
     };
       
     javascript.javascriptGenerator.forBlock['excel_set_cell_formula'] = function(block, generator) {

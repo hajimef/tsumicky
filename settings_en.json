@@ -7,6 +7,8 @@
     "pwm_rpi",
     "pwm_pico",
     "servo",
+    "display/neopixel",
+    "sensor/bmp280",
     "custom",
     "sep",
     "excel/basic",

@@ -4,7 +4,7 @@ import * as xl from './xlBase.js';
 export function setup() {
 }
 
-export function dispose() {
+export async function dispose() {
 }
 
 export async function runExcel(host, port, visible) {

@@ -5,7 +5,7 @@ const SERVO_GROUP = 'sv';
 export function setup() {
 }
 
-export function dispose() {
+export async function dispose() {
 }
 
 export async function attach(_ws, pin, servo_no, pmin, pmax) {

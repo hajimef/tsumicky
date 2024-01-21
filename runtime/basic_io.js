@@ -4,7 +4,7 @@ const BASIC_IO_GROUP = 'bio';
 export function setup() {
 }
 
-export function dispose() {
+export async function dispose() {
 }
 
 export async function connect(host, port, prot) {
