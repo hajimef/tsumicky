@@ -1,0 +1,40 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_lcd" style="display: none">
+  <category id="category_lcd" name="LCD" colour="#995ba5">
+    <block type="lcd_init">
+      <field name="ws_var">sock</field>
+      <field name="i2c_address">0</field>
+      <field name="rc">0</field>
+    </block>
+    <block type="lcd_init_i2c">
+      <field name="ws_var">sock</field>
+      <field name="i2c_address">0</field>
+      <field name="rc">0</field>
+      <field name="sda">0</field>
+      <field name="scl">0</field>
+    </block>
+    <block type="lcd_clear">
+      <field name="ws_var">sock</field>
+    </block>
+    <block type="lcd_cursor_pos">
+      <field name="ws_var">sock</field>
+      <value name="x">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="y">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="lcd_print">
+      <field name="ws_var">sock</field>
+      <value name="text">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+  </category>
+</xml>

@@ -5,6 +5,7 @@ export function addMessages() {
   Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_TOOLTIP"] = "Pythonのxlserver.pyに接続します。";
   Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_VISIBLE"] = "して表示する";
   Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_INVISIBLE"] = "するが表示しない";
+  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_CONNECT"] = "せずに接続だけ行う";
   Blockly.Msg["TSUMICKY_EXCEL_QUIT"] = "Excelを終了する";
   Blockly.Msg["TSUMICKY_EXCEL_QUIT_TOOLTIP"] = "Excelを終了します。";
   Blockly.Msg["TSUMICKY_EXCEL_NEW_FILE"] = "ブックを新規作成する";

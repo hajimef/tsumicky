@@ -9,8 +9,7 @@ export function addJS() {
     setRuntimeName();
     var ws_var = generator.nameDB_.getName(block.getFieldValue('ws_var'), Blockly.Names.NameType.VARIABLE);
     var freq = generator.valueToCode(block, 'freq', javascript.Order.ATOMIC);
-    var bit = generator.valueToCode(block, 'bit', javascript.Order.ATOMIC);
-    var code = 'await $_' + modName + '.pwmSetup(' + ws_var + ', ' + freq + ', ' + bit + ');\n';
+    var code = 'await $_' + modName + '.pwmSetup(' + ws_var + ', ' + freq + ');\n';
     return code;
   };
   

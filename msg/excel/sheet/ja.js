@@ -15,6 +15,8 @@ export function addMessages() {
   Blockly.Msg["TSUMICKY_EXCEL_SET_SHEET_LOOP_TOOLTIP"] = "指定したブックのすべてのシートを順に取り出し、それを操作対象のシートにして、ブロック内の処理を繰り返し行います。\nこのブロック内では、「操作対象のシート」のブロックでシートを指定することができます。";
   Blockly.Msg["TSUMICKY_EXCEL_CURRENT_SHEET"] = "操作対象のシート";
   Blockly.Msg["TSUMICKY_EXCEL_CURRENT_SHEET_TOOLTIP"] = "操作対象のシートを得ます。\n「○○を操作対象にしてブロック内の処理を行う」「○○のすべてのシートを順に操作対象のシートにしてブロック内の処理を繰り返す」ブロック内でのみ利用できます。";
+  Blockly.Msg["TSUMICKY_EXCEL_SET_SHEET_NAME"] = "%1 の名前を %2 にする"
+  Blockly.Msg["TSUMICKY_EXCEL_SET_SHEET_NAME_TOOLTIP"] = "操作対象のシートの名前を変更します。"
   Blockly.Msg["TSUMICKY_EXCEL_SHEET_NAME"] = "%1 の名前";
   Blockly.Msg["TSUMICKY_EXCEL_SHEET_NAME_TOOLTIP"] = "シートの名前を得ます。";
   Blockly.Msg["TSUMICKY_EXCEL_SHEET_INDEX"] = "%1 の番号";

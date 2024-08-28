@@ -50,8 +50,8 @@ async def activate(p):
         return g.errReturn()
 
 def addCallbacks():
-    g.addCallback("wb", "nf", newFile)
-    g.addCallback("wb", "of", openFile)
-    g.addCallback("wb", "sf", saveFile)
-    g.addCallback("wb", "cl", close)
-    g.addCallback("wb", "ac", activate)
+    g.addCallback("xl", "wb", "nf", newFile)
+    g.addCallback("xl", "wb", "of", openFile)
+    g.addCallback("xl", "wb", "sf", saveFile)
+    g.addCallback("xl", "wb", "cl", close)
+    g.addCallback("xl", "wb", "ac", activate)

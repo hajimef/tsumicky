@@ -122,7 +122,17 @@ export function addJS() {
       return code;
     };
     
+    javascript.javascriptGenerator.forBlock['basic_format_float'] = function(block, generator) {
+      setRuntimeName();
+      var num = generator.valueToCode(block, 'num', javascript.Order.ATOMIC);
+      var n_all = block.getFieldValue('all');
+      var n_u0 = block.getFieldValue('u0');
     
+      // TODO: Assemble javascript into the code variable.
+      var code = '$_' + modName + '.format_float('+ num + ', ' + n_all + ', ' + n_u0 + ')';
+      return [ code, Blockly.JavaScript.ORDER_NONE ];
+    }
+
     javascript.javascriptGenerator.forBlock['basic_sleep'] = function(block, generator) {
       setRuntimeName();
       var value_ms = generator.valueToCode(block, 'ms', javascript.Order.ATOMIC);

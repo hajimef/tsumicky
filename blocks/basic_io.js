@@ -38,7 +38,7 @@ export function addBlocks() {
     "nextStatement": null,
     "colour": 65,
     "tooltip": "%{BKY_TSUMICKY_BASIC_IO_CONNECT_TOOLTIP}",
-    "helpUrl": ""
+    "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/basic-io/blocks.php#connect"
   },
   {
     "type": "basic_io_model_name",
@@ -53,7 +53,7 @@ export function addBlocks() {
     "output": "String",
     "colour": 65,
     "tooltip": "%{BKY_TSUMICKY_BASIC_IO_MODELNAME_TOOLTIP}",
-    "helpUrl": ""
+    "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/basic-io/blocks.php#modelname"
   },
   {
     "type": "basic_io_assign_pin",
@@ -83,7 +83,7 @@ export function addBlocks() {
     "nextStatement": null,
     "colour": 65,
     "tooltip": "%{BKY_TSUMICKY_BASIC_IO_ASSIGN_PIN_TOOLTIP}",
-    "helpUrl": ""
+    "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/basic-io/blocks.php#assign_pin"
   },
   {
     "type": "basic_io_pinmode",
@@ -117,7 +117,7 @@ export function addBlocks() {
     "nextStatement": null,
     "colour": 65,
     "tooltip": "%{BKY_TSUMICKY_BASIC_IO_PIN_MODE_TOOLTIP}",
-    "helpUrl": ""
+    "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/basic-io/blocks.php#pinmode"
   },
   {
     "type": "basic_io_digital_write",
@@ -147,7 +147,7 @@ export function addBlocks() {
     "nextStatement": null,
     "colour": 65,
     "tooltip": "%{BKY_TSUMICKY_BASIC_IO_DIGITAL_WRITE_TOOLTIP}",
-    "helpUrl": ""
+    "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/basic-io/blocks.php#digital_write"
   },
   {
     "type": "basic_io_digital_read",
@@ -162,7 +162,7 @@ export function addBlocks() {
     "output": "Number",
     "colour": 65,
     "tooltip": "%{BKY_TSUMICKY_BASIC_IO_DIGITAL_READ_TOOLTIP}",
-    "helpUrl": ""
+    "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/basic-io/blocks.php#digital_read"
   },
   {
     "type": "basic_io_analog_read",
@@ -177,7 +177,7 @@ export function addBlocks() {
     "output": "Number",
     "colour": 65,
     "tooltip": "%{BKY_TSUMICKY_BASIC_IO_ANALOG_READ_TOOLTIP}",
-    "helpUrl": ""
+    "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/basic-io/blocks.php#analog_read"
   },
   {
     "type": "basic_io_hl",
@@ -202,7 +202,7 @@ export function addBlocks() {
     "output": "Number",
     "colour": 65,
     "tooltip": "%{BKY_TSUMICKY_BASIC_IO_HL_TOOLTIP}",
-    "helpUrl": ""
+    "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/basic-io/blocks.php#high_low"
   },
   {
     "type": "basic_io_map",
@@ -234,6 +234,6 @@ export function addBlocks() {
     "output": "Number",
     "colour": 65,
     "tooltip": "%{BKY_TSUMICKY_BASIC_IO_MAP_TOOLTIP}",
-    "helpUrl": ""
+    "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/basic-io/blocks.php#map"
   }]);
 };

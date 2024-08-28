@@ -42,7 +42,7 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 210,
       "tooltip": "%{BKY_TSUMICKY_PWM_ESP32_SETUP_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/pwm/esp32.php#setup"
     },
     {
       "type": "pwm_esp32_attach_pin",
@@ -72,7 +72,7 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 210,
       "tooltip": "%{BKY_TSUMICKY_PWM_ESP32_ATTACH_PIN_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/pwm/esp32.php#attach"
     },
     {
       "type": "pwm_esp32_write",
@@ -105,7 +105,7 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 210,
       "tooltip": "%{BKY_TSUMICKY_PWM_ESP32_WRITE_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/pwm/esp32.php#write"
     }
   ]);
 }

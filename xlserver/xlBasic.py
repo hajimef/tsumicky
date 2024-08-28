@@ -7,11 +7,11 @@ import traceback
 async def launchExcel(p):
     try:
         vis = True if p["v"] == 1 else False
-        g.xlApp = xw.App(visible = vis, add_book = False)
-        svdir = os.path.dirname(__file__)
-        adfile = os.path.join(svdir, "xlServerAddin.xlam")
-        ad = g.xlApp.books.open(adfile)
-
+        if p["v"] != 2:
+            g.xlApp = xw.App(visible = vis, add_book = False)
+            svdir = os.path.dirname(__file__)
+            adfile = os.path.join(svdir, "xlServerAddin.xlam")
+            ad = g.xlApp.books.open(adfile)
     except Exception as e:
         return g.errReturn()
 
@@ -77,12 +77,12 @@ async def runBookMacro(p):
         return g.errReturn()
     
 def addCallbacks():
-    g.addCallback("co", "le", launchExcel)
-    g.addCallback("co", "qu", quitExcel)
-    g.addCallback("co", "ff", findFile)
-    g.addCallback("co", "sfp", specialFolderPath)
-    g.addCallback("co", "ojp", osJoinPath)
-    g.addCallback("co", "bcs", setCellValue)
-    g.addCallback("co", "bcg", getCellValue)
-    g.addCallback("co", "bcsf", setCellFormula)
-    g.addCallback("co", "rbm", runBookMacro)
+    g.addCallback("xl", "co", "le", launchExcel)
+    g.addCallback("xl", "co", "qu", quitExcel)
+    g.addCallback("xl", "co", "ff", findFile)
+    g.addCallback("xl", "co", "sfp", specialFolderPath)
+    g.addCallback("xl", "co", "ojp", osJoinPath)
+    g.addCallback("xl", "co", "bcs", setCellValue)
+    g.addCallback("xl", "co", "bcg", getCellValue)
+    g.addCallback("xl", "co", "bcsf", setCellFormula)
+    g.addCallback("xl", "co", "rbm", runBookMacro)

@@ -127,7 +127,7 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 210,
       "tooltip": "%{BKY_TSUMICKY_EXCEL_MACRO_STATEMENT_BOOK_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/macro/blocks.php#statement_book"
     },
     {
       "type": "excel_macro_statement_addin",
@@ -151,7 +151,7 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 210,
       "tooltip": "%{BKY_TSUMICKY_EXCEL_MACRO_STATEMENT_ADDIN_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/macro/blocks.php#statement_addin"
     },
     {
       "type": "excel_macro_value_book",
@@ -178,7 +178,7 @@ export function addBlocks() {
       "output": null,
       "colour": 210,
       "tooltip": "%{BKY_TSUMICKY_EXCEL_MACRO_VALUE_BOOK_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/macro/blocks.php#value_book"
     },
     {
       "type": "excel_macro_value_addin",
@@ -201,7 +201,7 @@ export function addBlocks() {
       "output": null,
       "colour": 210,
       "tooltip": "%{BKY_TSUMICKY_EXCEL_MACRO_VALUE_ADDIN_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/macro/blocks.php#value_addin"
     },
     {
       "type": "excel_macro_param_container",

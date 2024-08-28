@@ -3,12 +3,16 @@
   "categories": [
     "basic",
     "basic_io",
+    "pwm_esp32n",
     "pwm_esp32",
     "pwm_rpi",
     "pwm_pico",
     "servo",
+    "display/lcd",
     "display/neopixel",
     "sensor/bmp280",
+    "sensor/dht",
+    "sensor/mpu6050",
     "custom",
     "sep",
     "excel/basic",
@@ -25,6 +29,10 @@
       "id": "category_pwm",
       "children": [
         {
+          "id": "category_pwm_esp32n",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_PWM_SUB_ESP32N}"
+        },
+        {
           "id": "category_pwm_esp32",
           "catname": "%{BKY_TSUMICKY_CATEGORY_PWM_SUB_ESP32}"
         },
@@ -35,6 +43,66 @@
         {
           "id": "category_pwm_pico",
           "catname": "%{BKY_TSUMICKY_CATEGORY_PWM_SUB_PICO}"
+        }
+      ]
+    },
+    {
+      "catname": "%{BKY_TSUMICKY_CATEGORY_DISPLAY}",
+      "colour": "#a5745b",
+      "before": "category_lcd",
+      "id": "category_display",
+      "children": [
+        {
+          "id": "category_lcd",
+          "catname": "LCD"
+        },
+        {
+          "id": "category_neopixel",
+          "catname": "NeoPixel"
+        }
+      ]
+    },
+    {
+      "catname": "%{BKY_TSUMICKY_CATEGORY_TPH}",
+      "colour": "#5b80a5",
+      "before": "category_bmp280",
+      "id": "category_tph",
+      "children": [
+        {
+          "id": "category_bmp280",
+          "catname": "BMP280"
+        },
+        {
+          "id": "category_dht",
+          "catname": "DHT11/22"
+        }
+      ]
+    },
+    {
+      "catname": "%{BKY_TSUMICKY_CATEGORY_MOTION}",
+      "after": "category_tph",
+      "id": "category_motion",
+      "colour": "#5ba55b",
+      "children": [
+        {
+          "id": "category_mpu6050",
+          "catname": "MPU6050"
+        }
+      ]
+    },
+    {
+      "catname": "%{BKY_TSUMICKY_CATEGORY_SENSOR}",
+      "colour": "#745ba5",
+      "before": "category_tph",
+      "id": "category_sensor",
+      "children": [
+        {
+          "id": "category_tph",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_TPH}"
+        },
+        {
+          "id": "category_motion",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_MOTION}"
         }
       ]
     },

@@ -166,6 +166,10 @@ export function addBlocks() {
             [
               "%{BKY_TSUMICKY_EXCEL_LAUNCH_INVISIBLE}",
               "0"
+            ],
+            [
+              "%{BKY_TSUMICKY_EXCEL_LAUNCH_CONNECT}",
+              "2"
             ]
           ]
         }
@@ -175,7 +179,7 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 120,
       "tooltip": "%{BKY_TSUMICKY_EXCEL_LAUNCH_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/basic/blocks.php#connect"
     },
     {
       "type": "excel_quit",
@@ -184,7 +188,7 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 120,
       "tooltip": "%{BKY_TSUMICKY_EXCEL_QUIT_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/basic/blocks.php#quit"
     },
     {
       "type": "excel_new_file",
@@ -193,7 +197,7 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 120,
       "tooltip": "%{BKY_TSUMICKY_EXCEL_NEW_FILE_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/basic/blocks.php#new_workbook"
     },
     {
       "type": "excel_open_file",
@@ -210,7 +214,7 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 120,
       "tooltip": "%{BKY_TSUMICKY_EXCEL_OPEN_FILE_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/basic/blocks.php#open_workbook"
     },
     {
       "type": "excel_find_file",
@@ -235,7 +239,7 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 120,
       "tooltip": "%{BKY_TSUMICKY_EXCEL_SAVE_AS_FILE_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/basic/blocks.php#save_as_workbook"
     },
     {
       "type": "excel_save_file",
@@ -244,7 +248,7 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 120,
       "tooltip": "%{BKY_TSUMICKY_EXCEL_SAVE_FILE_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/basic/blocks.php#save_workbook"
     },
     {
       "type": "excel_os_special_folder_path",
@@ -277,7 +281,7 @@ export function addBlocks() {
       "output": "String",
       "colour": 120,
       "tooltip": "%{BKY_TSUMICKY_EXCEL_OS_SPECIAL_FOLDER_PATH_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/basic/blocks.php#special_folder_path"
     },
     {
       "type": "excel_os_join_path",
@@ -290,7 +294,7 @@ export function addBlocks() {
       "output": "String",
       "colour": 120,
       "tooltip": "%{BKY_TSUMICKY_EXCEL_OS_JOIN_PATH_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/basic/blocks.php#join_path"
     },
     {
       "type": "excel_os_join_path_container",
@@ -350,7 +354,7 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 120,
       "tooltip": "%{BKY_TSUMICKY_EXCEL_BASIC_CELLS_SET_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/basic/blocks.php#cell_set_value"
     },
     {
       "type": "excel_basic_cells_get",
@@ -371,7 +375,7 @@ export function addBlocks() {
       "output": null,
       "colour": 120,
       "tooltip": "%{BKY_TSUMICKY_EXCEL_BASIC_CELLS_GET_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/basic/blocks.php#cell_set_formula"
     },
     {
       "type": "excel_basic_cells_formula",
@@ -398,7 +402,7 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 120,
       "tooltip": "%{BKY_TSUMICKY_EXCEL_BASIC_CELLS_FORMULA_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/basic/blocks.php#cell_get_value"
     },
     {
       "type": "excel_run_book_macro",

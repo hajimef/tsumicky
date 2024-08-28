@@ -4,6 +4,8 @@ export function addMessages() {
   Blockly.Msg["TSUMICKY_BASIC_MAIN_TOOLTIP"] = "In the 'setup' part, enter the block to be executed during initialization. \nIn the 'repeat' part, enter a block to be executed repeatedly. \nIn the 'end' part, enter the block to be executed when the program ends.";
   Blockly.Msg["TSUMICKY_BASIC_NORMAL_MAIN"] = "statements %1 %2";
   Blockly.Msg["TSUMICKY_BASIC_NORMAL_MAIN_TOOLTIP"] = "Insert the block for the process you want to perform into this block.";
+  Blockly.Msg["TSUMICKY_BASIC_FORMAT_FLOAT"] = "%1 formatted to %2 digits total and %3 decimal places %4";
+  Blockly.Msg["TSUMICKY_BASIC_FORMAT_FLOAT_TOOLTIP"] = "Formats a number with a decimal point into a string with the specified number of digits.";
   Blockly.Msg["TSUMICKY_BASIC_CONSOLE_LOG"] = "output %1 %2 to console";
   Blockly.Msg["TSUMICKY_BASIC_CONSOLE_LOG_TOOLTIP"] = "Outputs characters etc. to the web browser console.";
   Blockly.Msg["TSUMICKY_BASIC_SLEEP"] = "wait %1 milliseconds";

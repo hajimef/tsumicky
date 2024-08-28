@@ -6,9 +6,9 @@ import board
 
 pins = {}
 
-async def dispose():
-  for p in pins.keys():
-    pins[p] = None
+async def dispose(p):
+  for pin in pins.keys():
+    pins[pin] = None
   print("tmkBasicIO dispose")
 
 async def modelName(p):

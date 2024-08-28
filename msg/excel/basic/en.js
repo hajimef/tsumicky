@@ -1,10 +1,11 @@
 export function addMessages() {
   Blockly.Msg["TSUMICKY_CATEGORY_EXCEL_BASIC"] = "Excel(Basic)";
   Blockly.Msg["TSUMICKY_CATEGORY_EXCEL_SUB_BASIC"] = "Basic";
-  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH"] = "connect to host %1 %2 port %3 %4 , launch Excel %5";
+  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH"] = "connect to host %1 %2 port %3 %4 , %5";
   Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_TOOLTIP"] = "Connect to Python's xlserver.py.";
-  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_VISIBLE"] = "and show Excel";
-  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_INVISIBLE"] = "but hide excel";
+  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_VISIBLE"] = "launch Excel and show Excel";
+  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_INVISIBLE"] = "launch Excel but hide excel";
+  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_CONNECT"] = "doesn't launch Excel, only connect";
   Blockly.Msg["TSUMICKY_EXCEL_QUIT"] = "quit Excel";
   Blockly.Msg["TSUMICKY_EXCEL_QUIT_TOOLTIP"] = "Quit Excel.";
   Blockly.Msg["TSUMICKY_EXCEL_NEW_FILE"] = "create new workbook";

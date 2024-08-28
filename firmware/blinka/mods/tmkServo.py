@@ -5,7 +5,7 @@ from adafruit_motor import servo
 MAX_SERVO = 16
 servos = [{ "pwm": None, "sv": None}] * MAX_SERVO
 
-async def dispose():
+async def dispose(p):
   global servos
   for i in range(MAX_SERVO):
     servos[i]["sv"] = None

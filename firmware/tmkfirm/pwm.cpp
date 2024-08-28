@@ -2,8 +2,9 @@
 #include "pwm.h"
 
 #define MAX_CH 16
+#define MAX_PIN 48
 #define DEF_FREQ 10000
-#if defined(CONFIG_IDF_TARGET_ESP32S3) || defined(CONFIG_IDF_TARGET_ESP32C3)
+#if defined(CONFIG_IDF_TARGET_ESP32S3) || defined(CONFIG_IDF_TARGET_ESP32C3) || defined(CONFIG_IDF_TARGET_ESP3sC6)
 #define DEF_BIT 10
 #define DEF_RES 1023
 #else
@@ -12,8 +13,13 @@
 #endif
 
 #if defined(ESP32)
+#if defined(ESP32_CORE_V3)
+String pwm_group = "pwm_e32n";
+long maxRes[MAX_PIN];
+#else
 String pwm_group = "pwm_e32";
 long maxRes[MAX_CH];
+#endif
 #elif defined(ARDUINO_ARCH_RP2040)
 String pwm_group = "pwm_rpip";
 long maxRes;
@@ -21,6 +27,13 @@ long maxRes;
 
 void pwm_setup(void) {
 #if defined(ESP32)
+#if defined(ESP32_CORE_V3)
+  addCallback(pwm_group, "", "a", &pwm_ledcAttach);
+  addCallback(pwm_group, "", "w", &pwm_ledcWrite);
+  for (int pin = 0; pin < MAX_PIN; pin++) {
+    maxRes[pin] = DEF_RES;
+  }
+#else
   addCallback(pwm_group, "", "s", &pwm_ledcSetup);
   addCallback(pwm_group, "", "a", &pwm_ledcAttachPin);
   addCallback(pwm_group, "", "w", &pwm_ledcWrite);
@@ -28,6 +41,7 @@ void pwm_setup(void) {
     maxRes[ch] = DEF_RES;
     ledcSetup(ch, DEF_FREQ, DEF_BIT);
   }
+#endif
 #elif defined(ARDUINO_ARCH_RP2040)
   addCallback(pwm_group, "", "s", &pwm_picoSetup);
   addCallback(pwm_group, "", "w", &pwm_picoWrite);
@@ -38,6 +52,38 @@ void pwm_setup(void) {
 }
 
 #if defined(ESP32)
+#if defined(ESP32_CORE_V3)
+void pwm_ledcAttach(JSONVar &p) {
+  int pin, bit;
+  long freq;
+
+  pin = (int) p["p"];
+  freq = (long) p["f"];
+  bit = (int) p["b"];
+  maxRes[pin] = (long) ((1 << bit) - 1);
+  ledcAttach(pin, freq, bit);
+  r_stat["s"] = (int) NO_RETURN;
+}
+
+void pwm_ledcWrite(JSONVar &p) {
+  int pin, duty;
+  double duty_d;
+
+  pin = (int) p["p"];
+  duty_d = (double) p["d"];
+  duty = (int) (maxRes[pin] * duty_d / 100);
+/*
+  Serial.print("pin = ");
+  Serial.print(pin);
+  Serial.print(", duty_d = ");
+  Serial.print(duty_d);
+  Serial.print(", duty = ");
+  Serial.println(duty);
+*/
+  ledcWrite(pin, duty);
+  r_stat["s"] = (int) NO_RETURN;
+}
+#else
 void pwm_ledcSetup(JSONVar &p) {
   int ch, freq, bit;
 
@@ -68,6 +114,7 @@ void pwm_ledcWrite(JSONVar &p) {
   ledcWrite(ch, duty);
   r_stat["s"] = (int) NO_RETURN;
 }
+#endif
 #endif
 
 #if defined(ARDUINO_ARCH_RP2040)

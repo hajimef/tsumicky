@@ -1,0 +1,19 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_mpu6050" style="display: none">
+  <category id="category_mpu6050" name="MPU6050" colour="#5ba55b">
+    <block type="mpu6050_init">
+      <field name="ws_var" id="1!OvFkN];51lOY1xU9+d">sock</field>
+    </block>
+    <block type="mpu6050_init_pin">
+      <field name="ws_var" id="1!OvFkN];51lOY1xU9+d">sock</field>
+      <field name="sda">0</field>
+      <field name="scl">0</field>
+    </block>
+    <block type="mpu6050_update">
+      <field name="ws_var" id="1!OvFkN];51lOY1xU9+d">sock</field>
+    </block>
+    <block type="mpu6050_read">
+      <field name="ws_var" id="1!OvFkN];51lOY1xU9+d">sock</field>
+      <field name="type">0</field>
+    </block>
+  </category>
+</xml>

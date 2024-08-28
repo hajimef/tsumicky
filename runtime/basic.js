@@ -1,3 +1,5 @@
+import { format } from "https://cdn.jsdelivr.net/gh/ymd-h/format-js@v1/format.js";
+
 function sleep_sub(msec) {
     return new Promise(function(resolve, reject) {
         var s_dt = new Date();
@@ -32,4 +34,9 @@ export async function sleep(ms) {
 
 export async function console_log(text) {
     await console.log(text);
+}
+
+export function format_float(num, n_all, n_u0) {
+    let fmt = "{0:" + format("{0}.{1}f", n_all, n_u0) + "}";
+    return format(fmt, num);
 }

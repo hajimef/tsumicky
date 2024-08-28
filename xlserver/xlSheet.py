@@ -58,9 +58,9 @@ async def activate(p):
       return g.errReturn()
 
 def addCallbacks():
-    g.addCallback("sh", "as", add)
-    g.addCallback("sh", "sn", setName)
-    g.addCallback("sh", "stc", setTabColor)
-    g.addCallback("sh", "rtc", resetTabColor)
-    g.addCallback("sh", "gtc", getTabColor)
-    g.addCallback("sh", "ac", activate)
+    g.addCallback("xl", "sh", "as", add)
+    g.addCallback("xl", "sh", "sn", setName)
+    g.addCallback("xl", "sh", "stc", setTabColor)
+    g.addCallback("xl", "sh", "rtc", resetTabColor)
+    g.addCallback("xl", "sh", "gtc", getTabColor)
+    g.addCallback("xl", "sh", "ac", activate)

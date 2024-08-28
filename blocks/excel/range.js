@@ -108,7 +108,7 @@ export function addBlocks() {
         "output": "xlRange",
         "colour": 230,
         "tooltip": "%{BKY_TSUMICKY_EXCEL_CELL_ROW_COL_TOOLTIP}",
-        "helpUrl": ""
+        "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/range/blocks.php#cell_rc"
       },
       {
         "type": "excel_range",
@@ -129,7 +129,7 @@ export function addBlocks() {
         "output": "xlRange",
         "colour": 230,
         "tooltip": "%{BKY_TSUMICKY_EXCEL_RANGE_TOOLTIP}",
-        "helpUrl": ""
+        "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/range/blocks.php#range"
       },
       {
         "type": "excel_set_range_do",
@@ -153,7 +153,7 @@ export function addBlocks() {
         "nextStatement": null,
         "colour": 230,
         "tooltip": "%{BKY_TSUMICKY_EXCEL_SET_RANGE_DO_TOOLTIP}",
-        "helpUrl": ""
+        "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/range/blocks.php#set_range_do"
       },
       {
         "type": "excel_current_cell",
@@ -161,7 +161,7 @@ export function addBlocks() {
         "output": "xlRange",
         "colour": 230,
         "tooltip": "%{BKY_TSUMICKY_EXCEL_CURRENT_CELL_TOOLTIP}",
-        "helpUrl": ""
+        "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/range/blocks.php#target_cell"
       },
       {
         "type": "excel_set_cell_value",
@@ -182,7 +182,7 @@ export function addBlocks() {
         "nextStatement": null,
         "colour": 230,
         "tooltip": "%{BKY_TSUMICKY_EXCEL_SET_CELL_VALUE_TOOLTIP}",
-        "helpUrl": ""
+        "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/range/blocks.php#set_cell_value"
       },
       {
         "type": "excel_get_cell_value",
@@ -198,7 +198,7 @@ export function addBlocks() {
         "output": null,
         "colour": 230,
         "tooltip": "%{BKY_TSUMICKY_EXCEL_GET_CELL_VALUE_TOOLTIP}",
-        "helpUrl": ""
+        "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/range/blocks.php#get_cell_value"
       },
       {
         "type": "excel_set_cell_formula",
@@ -218,7 +218,7 @@ export function addBlocks() {
         "nextStatement": null,
         "colour": 230,
         "tooltip": "%{BKY_TSUMICKY_EXCEL_SET_CELL_FORMULA_TOOLTIP}",
-        "helpUrl": ""
+        "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/range/blocks.php#set_cell_formula"
       },
       {
         "type": "excel_set_cell_number_format",
@@ -238,7 +238,7 @@ export function addBlocks() {
         "nextStatement": null,
         "colour": 230,
         "tooltip": "%{BKY_TSUMICKY_EXCEL_SET_CELL_NUMBER_FORMAT_TOOLTIP}",
-        "helpUrl": ""
+        "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/range/blocks.php#set_cell_number_format"
       },
       {
         "type": "excel_set_cell_font_color",
@@ -260,7 +260,7 @@ export function addBlocks() {
         "nextStatement": null,
         "colour": 230,
         "tooltip": "%{BKY_TSUMICKY_EXCEL_SET_CELL_FONT_COLOR_TOOLTIP}",
-        "helpUrl": ""
+        "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/range/blocks.php#set_cell_font_color"
       },
       {
         "type": "excel_set_cell_font_bold",
@@ -285,7 +285,7 @@ export function addBlocks() {
         "nextStatement": null,
         "colour": 230,
         "tooltip": "%{BKY_TSUMICKY_EXCEL_SET_CELL_FONT_BOLD_TOOLTIP}",
-        "helpUrl": ""
+        "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/range/blocks.php#set_cell_font_bold"
       },
       {
         "type": "excel_set_cell_font_italic",
@@ -310,7 +310,7 @@ export function addBlocks() {
         "nextStatement": null,
         "colour": 230,
         "tooltip": "%{BKY_TSUMICKY_EXCEL_SET_CELL_FONT_ITALIC_TOOLTIP}",
-        "helpUrl": ""
+        "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/range/blocks.php#set_cell_font_italic"
       },
       {
         "type": "excel_set_cell_border_type",
@@ -459,7 +459,7 @@ export function addBlocks() {
         "nextStatement": null,
         "colour": 230,
         "tooltip": "%{BKY_TSUMICKY_EXCEL_SET_CELL_BORDER_TYPE_TOOLTIP}",
-        "helpUrl": ""
+        "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/range/blocks.php#set_cell_border_type"
       },
       {
         "type": "excel_set_cell_border_color",
@@ -485,7 +485,7 @@ export function addBlocks() {
         "nextStatement": null,
         "colour": 230,
         "tooltip": "%{BKY_TSUMICKY_EXCEL_SET_CELL_BORDER_COLOR_TOOLTIP}",
-        "helpUrl": ""
+        "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/range/blocks.php#set_cell_border_color"
       },
       {
         "type": "excel_set_cell_interior_color",
@@ -507,7 +507,7 @@ export function addBlocks() {
         "nextStatement": null,
         "colour": 230,
         "tooltip": "%{BKY_TSUMICKY_EXCEL_SET_CELL_INTERIOR_COLOR_TOOLTIP}",
-        "helpUrl": ""
+        "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/range/blocks.php#set_cell_interior_color"
       },
       {
         "type": "excel_set_cell_font_name",
@@ -529,7 +529,7 @@ export function addBlocks() {
         "nextStatement": null,
         "colour": 230,
         "tooltip": "%{BKY_TSUMICKY_EXCEL_SET_CELL_FONT_NAME_TOOLTIP}",
-        "helpUrl": ""
+        "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/range/blocks.php#set_cell_font_name"
       },
       {
         "type": "excel_set_cell_font_size",
@@ -551,7 +551,7 @@ export function addBlocks() {
         "nextStatement": null,
         "colour": 230,
         "tooltip": "%{BKY_TSUMICKY_EXCEL_SET_CELL_FONT_SIZE_TOOLTIP}",
-        "helpUrl": ""
+        "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/range/blocks.php#set_cell_font_size"
       }
   ]);
 }

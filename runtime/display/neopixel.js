@@ -40,11 +40,13 @@ export async function init(_ws, no, pin, numpixels, color_order) {
 }
 
 export function setPixelColor(_ws, no, p_no, color) {
+  Blockly.checkStop();
   checkInit(_ws, no);
   neopixels[_ws.url][no][p_no] = color.substring(1);
 }
 
 export function setAllPixelColor(_ws, no, color) {
+  Blockly.checkStop();
   checkInit(_ws, no);
   neopixels[_ws.url][no].fill(color.substring(1));
 }

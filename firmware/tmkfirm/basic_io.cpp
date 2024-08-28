@@ -39,6 +39,10 @@ void basic_io_pinMode(JSONVar &p) {
       pinMode(p_no, INPUT_PULLUP);
       break;
   }
+//  Serial.print("pinmode: pin = ");
+//  Serial.print(p_no);
+//  Serial.print(", mode = ");
+//  Serial.println(mode);
   r_stat["s"] = (int) NO_RETURN;
 }
 
@@ -48,6 +52,10 @@ void basic_io_digitalWrite(JSONVar &p) {
   p_no = (int) p["p"];
   value = (int) p["v"];
   digitalWrite(p_no, value);
+//  Serial.print("digitalWrite: pin = ");
+//  Serial.print(p_no);
+//  Serial.print(", value = ");
+//  Serial.println(value);
   r_stat["s"] = (int) NO_RETURN;
 }
 
@@ -66,6 +74,10 @@ void basic_io_analogRead(JSONVar &p) {
 
   p_no = (int) p["p"];
   value = analogRead(p_no);
+//  Serial.print("pin = ");
+//  Serial.print(p_no);
+//  Serial.print(", value = ");
+//  Serial.println(value);
   r_stat["s"] = (int) USE_RETURN;
   r_stat["t"] = (int) TYPE_INT;
   r_stat["v"] = value;

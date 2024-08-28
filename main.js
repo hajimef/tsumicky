@@ -146,7 +146,7 @@ Blockly.runTimeJS = {};
     var workspaceBlocks = document.getElementById("workspaceBlocks"); 
     await Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
     workspace.addChangeListener(updateCode);
-
+    workspace.addChangeListener(Blockly.Events.disableOrphans);
     const blocklyArea = document.getElementById('blocklyArea');
     const blocklyDiv = document.getElementById('blocklyDiv');
     const onresize = function(e) {

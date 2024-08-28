@@ -19,6 +19,6 @@ async def runAddinMacro(p):
         return g.errReturn()
 
 def addCallbacks():
-    g.addCallback("ma", "rbm", runBookMacro)
-    g.addCallback("ma", "ram", runAddinMacro)
+    g.addCallback("xl", "ma", "rbm", runBookMacro)
+    g.addCallback("xl", "ma", "ram", runAddinMacro)
 

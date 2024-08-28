@@ -64,7 +64,39 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 20,
       "tooltip": "%{BKY_TSUMICKY_BASIC_CONSOLE_LOG_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/basic/blocks.php#console_log"
+    },
+    {
+      "type": "basic_format_float",
+      "tooltip": "%{BKY_TSUMICKY_BASIC_FORMAT_FLOAT_TOOLTIP}",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/basic/blocks.php#format_float",
+      "message0": "%{BKY_TSUMICKY_BASIC_FORMAT_FLOAT}",
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "num",
+          "check": "Number"
+        },
+        {
+          "type": "field_number",
+          "name": "all",
+          "value": 0,
+          "min": 0
+        },
+        {
+          "type": "field_number",
+          "name": "u0",
+          "value": 0,
+          "min": 0
+        },
+        {
+          "type": "input_dummy",
+          "name": ""
+        }
+      ],
+      "output": null,
+      "colour": 15,
+      "inputsInline": true
     },
     {
       "type": "basic_sleep",
@@ -81,7 +113,7 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 20,
       "tooltip": "%{BKY_TSUMICKY_BASIC_SLEEP_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/basic/blocks.php#sleep"
     },
     {
       "type": "basic_stop",
@@ -89,7 +121,7 @@ export function addBlocks() {
       "previousStatement": null,
       "colour": 20,
       "tooltip": "%{BKY_TSUMICKY_BASIC_END_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/basic/blocks.php#stop"
     }
   ]);
 };

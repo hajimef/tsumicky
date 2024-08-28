@@ -17,17 +17,18 @@ if len(sys.argv) > 1:
 async def proc(websocket, path):
     async for message in websocket:
         data = json.loads(message)
+        group = data["g"]
         subgroup = data["sg"] if "sg" in data else None
         command = data["c"]
         param = data["p"]
-        print(data, subgroup, command, param)
-        ret = await g.runCallback(subgroup, command, param)
+        print(data, group, subgroup, command, param)
+        ret = await g.runCallback(group, subgroup, command, param)
         if isinstance(ret, g.xlErr):
-            send_data = { "g": "xl", "sg": subgroup, "c": command, "e": ret.msg }
+            send_data = { "g": group, "sg": subgroup, "c": command, "e": ret.msg }
         elif ret is not None:
-            send_data = { "g": "xl", "sg": subgroup, "c": command, "v": ret }
+            send_data = { "g": group, "sg": subgroup, "c": command, "v": ret }
         else:
-            send_data = { "g": "xl", "sg": subgroup, "c": command, "v": 1 }
+            send_data = { "g": group, "sg": subgroup, "c": command, "v": 1 }
         try:
             await websocket.send(json.dumps(send_data))
         except Exception as e:

@@ -5,7 +5,7 @@ pwmFreq = 10000
 pwmFreqs = [ 10000 ] * 28
 pins = [ None ] * 30
 
-async def dispose():
+async def dispose(p):
   for i in range(len(pins)):
     pins[i] = None
   print("tmkPWM dispose")

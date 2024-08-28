@@ -17,21 +17,13 @@ export function addBlocks() {
           "name": "freq",
           "check": "Number"
         },
-        {
-          "type": "input_dummy"
-        },
-        {
-          "type": "input_value",
-          "name": "bit",
-          "check": "Number"
-        }
       ],
       "inputsInline": true,
       "previousStatement": null,
       "nextStatement": null,
       "colour": 210,
       "tooltip": "%{BKY_TSUMICKY_PWM_PICO_SETUP_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/pwm/pico.php#setup"
     },
     {
       "type": "pwm_pico_analog_write",
@@ -61,7 +53,7 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 210,
       "tooltip": "%{BKY_TSUMICKY_PWM_PICO_ANALOG_WRITE_TOOLTIP}",
-      "helpUrl": ""
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/pwm/pico.php#write"
     }
   ]);
 };

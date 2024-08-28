@@ -2,6 +2,9 @@ import mods.tmkGlobal as g
 import board
 import adafruit_bmp280
 
+group = "sen"
+subgroup = "bmp2"
+
 i2c = None
 bmp280 = None
 
@@ -39,7 +42,8 @@ async def readPressure(p):
     return g.errReturn()
 
 def addCallbacks():
-  g.addCallback("sen", "bmp2", "i", init)
-  g.addCallback("sen", "bmp2", "d", dispose)
-  g.addCallback("sen", "bmp2", "t", readTemperature)
-  g.addCallback("sen", "bmp2", "p", readPressure)
+  g.addCallback(group, subgroup, "i", init)
+  g.addCallback(group, subgroup, "d", dispose)
+  g.addCallback(group, subgroup, "t", readTemperature)
+  g.addCallback(group, subgroup, "p", readPressure)
+  g.addDispose(group, subgroup, dispose)

@@ -15,6 +15,8 @@ export function addMessages() {
   Blockly.Msg["TSUMICKY_EXCEL_SET_SHEET_LOOP_TOOLTIP"] = "It sequentially retrieves all the sheets in the specified workbook, uses them as the target sheet, and repeats the process within the block. \nIn this block, you can specify the sheet by 'target sheet' block.";
   Blockly.Msg["TSUMICKY_EXCEL_CURRENT_SHEET"] = "target sheet";
   Blockly.Msg["TSUMICKY_EXCEL_CURRENT_SHEET_TOOLTIP"] = "Get the target sheet. \nIt can only be used within the 'process within the block using as the target sheet' and 'repeat the process in the block by sequentially selecting all sheets in as target sheet' blocks.";
+  Blockly.Msg["TSUMICKY_EXCEL_SET_SHEET_NAME"] = "rename %1 to %2"
+  Blockly.Msg["TSUMICKY_EXCEL_SET_SHEET_NAME_TOOLTIP"] = "Change the name of the target sheet."
   Blockly.Msg["TSUMICKY_EXCEL_SHEET_NAME"] = "name of %1";
   Blockly.Msg["TSUMICKY_EXCEL_SHEET_NAME_TOOLTIP"] = "Get the sheet name.";
   Blockly.Msg["TSUMICKY_EXCEL_SHEET_INDEX"] = "index of %1";

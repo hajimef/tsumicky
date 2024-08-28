@@ -18,9 +18,15 @@ import mods.tmkBasicIO as tmkBasicIO
 if g.tmkMode != "ft232h":
     import mods.tmkPWM as tmkPWM
     import mods.tmkServo as tmkServo
-#import mods.tmkCustomBlock as tmkCustomBlock
+try:
+    import mods.tmkCustomBlock as tmkCustomBlock
+except Exception as e:
+    pass
+import mods.displays.tmkLCD as tmkLCD
 import mods.displays.tmkNeoPixel as tmkNeoPixel
+import mods.sensors.env.tmkDHT as tmkDHT
 import mods.sensors.env.tmkBMP280 as tmkBMP280
+import mods.sensors.motion.tmkMPU6050 as tmkMPU6050
 import traceback
 
 if g.tmkMode == "pico" or g.tmkMode == "ft232h":
@@ -43,7 +49,7 @@ async def proc(websocket, path):
         #print(data, subgroup, command, param)
         ret = await g.runCallback(group, subgroup, command, param)
         if isinstance(ret, g.tmkErr):
-            send_data = { "g": group, "sg": subgroup, "c": command, "e": ret.msg }
+            send_data = { "g": group, "sg": subgroup, "c": command, "e": 1, "msg": ret.msg }
         elif ret is not None:
             send_data = { "g": group, "sg": subgroup, "c": command, "v": ret }
         else:
@@ -66,7 +72,13 @@ tmkBasicIO.addCallbacks()
 if g.tmkMode != "ft232h":
     tmkPWM.addCallbacks()
     tmkServo.addCallbacks()
-#tmkCustomBlock.addCallbacks()
+try:
+    tmkCustomBlock.addCallbacks()
+except Exception as e:
+    pass
+tmkLCD.addCallbacks()
 tmkNeoPixel.addCallbacks()
+tmkDHT.addCallbacks()
 tmkBMP280.addCallbacks()
+tmkMPU6050.addCallbacks()
 asyncio.run(main())

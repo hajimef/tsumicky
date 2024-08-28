@@ -56,6 +56,6 @@ async def runCallback(g, sg, co, param):
 async def disposeAll(param):
     for g in disposeTable:
         for sg in disposeTable[g]:
-            await disposeTable[g][sg]()
+            await disposeTable[g][sg](param)
 
 addCallback("close", "", "close", disposeAll)

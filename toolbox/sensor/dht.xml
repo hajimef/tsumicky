@@ -1,0 +1,15 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_dht" style="display: none">
+  <category id="category_dht" name="DHT11/22" colour="#5b67a5">
+    <block type="dht_init">
+      <field name="ws_var" id="UMnhYN`v9dKi:MKBPmq3">sock</field>
+      <field name="type">0</field>
+      <field name="pin">0</field>
+    </block>
+    <block type="dht_temperature">
+      <field name="ws_var" id="UMnhYN`v9dKi:MKBPmq3">sock</field>
+    </block>
+    <block type="dht_humidity">
+      <field name="ws_var" id="UMnhYN`v9dKi:MKBPmq3">sock</field>
+    </block>
+  </category>
+</xml>

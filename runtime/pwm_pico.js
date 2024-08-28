@@ -8,9 +8,9 @@ export function setup() {
 export async function dispose() {
 }
 
-export async function pwmSetup(_ws, freq, bit) {
+export async function pwmSetup(_ws, freq) {
   Blockly.checkStop();
-  var param = { 'f': freq, 'b': bit };
+  var param = { 'f': freq };
   await ws.send(_ws, PWM_PICO_GROUP, null, 's', param);
 };
 
