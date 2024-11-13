@@ -7,6 +7,17 @@ import xlWorkbook
 import xlSheet
 import xlRange
 import xlMacro
+import slData
+import slLinearRegression
+import slSVR
+import slLogisticRegression
+import slKmeans
+import slPCA
+import slMetrics
+import mplBasic
+import mplChart
+import mplStatChart
+import mplChartElement
 import sys
 import traceback
 
@@ -21,14 +32,15 @@ async def proc(websocket, path):
         subgroup = data["sg"] if "sg" in data else None
         command = data["c"]
         param = data["p"]
-        print(data, group, subgroup, command, param)
+        #print(data, group, subgroup, command, param)
         ret = await g.runCallback(group, subgroup, command, param)
         if isinstance(ret, g.xlErr):
-            send_data = { "g": group, "sg": subgroup, "c": command, "e": ret.msg }
-        elif ret is not None:
-            send_data = { "g": group, "sg": subgroup, "c": command, "v": ret }
+            send_data = { "g": group, "sg": subgroup, "c": command, "e": 1, "msg": ret.msg }
+#        elif ret is not None:
         else:
-            send_data = { "g": group, "sg": subgroup, "c": command, "v": 1 }
+            send_data = { "g": group, "sg": subgroup, "c": command, "v": ret }
+#        else:
+#            send_data = { "g": group, "sg": subgroup, "c": command, "v": 1 }
         try:
             await websocket.send(json.dumps(send_data))
         except Exception as e:
@@ -49,4 +61,15 @@ xlWorkbook.addCallbacks()
 xlSheet.addCallbacks()
 xlRange.addCallbacks()
 xlMacro.addCallbacks()
+slData.addCallbacks()
+slLinearRegression.addCallbacks()
+slSVR.addCallbacks()
+slLogisticRegression.addCallbacks()
+slKmeans.addCallbacks()
+slPCA.addCallbacks()
+slMetrics.addCallbacks()
+mplBasic.addCallbacks()
+mplChart.addCallbacks()
+mplStatChart.addCallbacks()
+mplChartElement.addCallbacks()
 asyncio.run(main())

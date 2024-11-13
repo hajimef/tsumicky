@@ -13,7 +13,7 @@ export class _Workbook {
             let sh = new _Sheet(this, sheets[i].i, sheets[i].n)
             this.sheetsByIndex.push(sh);
             this.sheetsByName[sheets[i].n] = sh;
-            if (sheets[i].n = active.n) {
+            if (sheets[i].n == active.n) {
                 this.activeSheet = sh;
             }
         }
@@ -105,6 +105,14 @@ export class _Workbooks {
     }
 
     activate(wb) {
+        this.active = wb;
+    }
+
+    add_active(wb_data) {
+        let wb = new _Workbook(this.index, wb_data.n, wb_data.f, wb_data.p, wb_data.s, wb_data.a);
+        this.workbooksByIndex.push(wb);
+        this.workbooksByName[wb_data.n] = wb;
+        this.index++;
         this.active = wb;
     }
 

@@ -1,7 +1,7 @@
 <xml xmlns="https://developers.google.com/blockly/xml" id="workspaceBlocks" style="display: none">
     <block type="basic_normal_main" id=")_duFAo?!MZB?ujQvr4g" deletable="false" movable="false" editable="false" x="13" y="13">
         <statement name="code">
-        <block type="excel_launch" deletable="false" movable="false" editable="false">
+        <block type="excel_launch" deletable="false" movable="false">
             <field name="visible">1</field>
             <value name="host">
                 <shadow type="text">

@@ -1,0 +1,41 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_append" style="display: none">
+  <category name="Append" id="category_append" colour="#a5745b">
+    <block type="text_basen">
+      <value name="num">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="text_ml"></block>
+    <block type="math_dec">
+      <value name="str">
+        <shadow type="text">
+          <field name="TEXT">0</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="colour_split">
+      <value name="colour">
+        <block type="colour_picker"></block>
+      </value>
+    </block>
+    <block type="colour_grey">
+      <value name="colour">
+        <block type="colour_picker"></block>
+      </value>
+    </block>
+    <block type="colour_sepia">
+      <value name="colour">
+        <block type="colour_picker"></block>
+      </value>
+    </block>
+    <block type="list_push_unshift">
+      <field name="method">push</field>
+    </block>
+    <block type="list_pop_shift">
+      <field name="method">pop</field>
+    </block>
+  </category>
+</xml>
+

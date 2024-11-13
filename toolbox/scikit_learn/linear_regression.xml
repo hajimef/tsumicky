@@ -1,0 +1,12 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_sl_lr" style="display: none">
+  <category id="category_sl_lr" name="SLLR" colour="#9fa55b">
+    <block type="sl_lr_init">
+    </block>
+    <block type="sl_lr_fit">
+    </block>
+    <block type="sl_lr_coef">
+    </block>
+    <block type="sl_lr_intercept">
+    </block>
+  </category>
+</xml>

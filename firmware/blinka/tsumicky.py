@@ -50,10 +50,11 @@ async def proc(websocket, path):
         ret = await g.runCallback(group, subgroup, command, param)
         if isinstance(ret, g.tmkErr):
             send_data = { "g": group, "sg": subgroup, "c": command, "e": 1, "msg": ret.msg }
-        elif ret is not None:
-            send_data = { "g": group, "sg": subgroup, "c": command, "v": ret }
+#        elif ret is not None:
         else:
-            send_data = { "g": group, "sg": subgroup, "c": command, "v": 1 }
+            send_data = { "g": group, "sg": subgroup, "c": command, "v": ret }
+#        else:
+#            send_data = { "g": group, "sg": subgroup, "c": command, "v": 1 }
         try:
             await websocket.send(json.dumps(send_data))
         except Exception as e:

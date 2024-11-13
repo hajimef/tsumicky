@@ -1,0 +1,24 @@
+export function addMessages() {
+  Blockly.Msg["TSUMICKY_CATEGORY_SL_METRICS"] = "評価";
+  Blockly.Msg["TSUMICKY_SL_METRICS_MSE"] = "%1 の平均二乗誤差";
+  Blockly.Msg["TSUMICKY_SL_METRICS_MSE_TOOLTIP"] = "元データと予測値の間の平均二乗誤差の値です。";
+  Blockly.Msg["TSUMICKY_SL_METRICS_RMSE"] = "%1 の二乗平均平方根誤差";
+  Blockly.Msg["TSUMICKY_SL_METRICS_RMSE_TOOLTIP"] = "元データと予測値の間の二乗平均平方根誤差の値です。";
+  Blockly.Msg["TSUMICKY_SL_METRICS_R2_SCORE"] = "%1 の決定係数";
+  Blockly.Msg["TSUMICKY_SL_METRICS_R2_SCORE_TOOLTIP"] = "元データと予測値の間の決定係数の値です。";
+  Blockly.Msg["TSUMICKY_SL_METRICS_CONFUSION_MATRIX"] = "%1 の混同行列";
+  Blockly.Msg["TSUMICKY_SL_METRICS_CONFUSION_MATRIX_TOOLTIP"] = "元データと予測値の間の混同行列です。";
+  Blockly.Msg["TSUMICKY_SL_METRICS_ACCURACY_SCORE"] = "%1 の正解率";
+  Blockly.Msg["TSUMICKY_SL_METRICS_ACCURACY_SCORE_TOOLTIP"] = "元データと予測値の間の正解率の値です。";
+  Blockly.Msg["TSUMICKY_SL_METRICS_PRECISION_SCORE"] = "%1 の適合率 平均方法 %2";
+  Blockly.Msg["TSUMICKY_SL_METRICS_PRECISION_SCORE_TOOLTIP"] = "元データと予測値の間の適合率の値です。";
+  Blockly.Msg["TSUMICKY_SL_METRICS_RECALL_SCORE"] = "%1 の再現率 平均方法 %2";
+  Blockly.Msg["TSUMICKY_SL_METRICS_RECALL_SCORE_TOOLTIP"] = "元データと予測値の間の再現率の値です。";
+  Blockly.Msg["TSUMICKY_SL_METRICS_F1_SCORE"] = "%1 のF1スコア 平均方法 %2";
+  Blockly.Msg["TSUMICKY_SL_METRICS_F1_SCORE_TOOLTIP"] = "元データと予測値の間のF1スコアの値です。";
+  Blockly.Msg["TSUMICKY_SL_METRICS_AVERAGE_BINARY"] = "二値";
+  Blockly.Msg["TSUMICKY_SL_METRICS_AVERAGE_MACRO"] = "マクロ";
+  Blockly.Msg["TSUMICKY_SL_METRICS_AVERAGE_MICRO"] = "ミクロ";
+  Blockly.Msg["TSUMICKY_SL_METRICS_AVERAGE_WEIGHTED"] = "加重";
+  Blockly.Msg["TSUMICKY_SL_METRICS_AVERAGE_SAMPLES"] = "サンプル";
+};

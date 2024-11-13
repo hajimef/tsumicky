@@ -37,6 +37,13 @@ export function addJS() {
     return [code, Blockly.JavaScript.ORDER_MEMBER];
   };
 
+  javascript.javascriptGenerator.forBlock['excel_sheet_activate'] = function(block, generator) {
+    setRuntimeName();
+    var sheet = generator.valueToCode(block, 'sheet', javascript.Order.FUNCTION_CALL);
+    var code = 'await ' + sheet + '.activate();\n';
+    return code;
+  };
+
   javascript.javascriptGenerator.forBlock['excel_set_sheet_do'] = function(block, generator) {
     setRuntimeName();
     var sheet = generator.valueToCode(block, 'sheet', javascript.Order.FUNCTION_CALL);

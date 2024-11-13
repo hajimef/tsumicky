@@ -1,0 +1,140 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_mpl_stat_chart" style="display: none">
+  <category name="%{BKY_TSUMICKY_CATEGORY_MPL_STAT_CHART}" id="category_mpl_stat_chart" colour="#9fa55b">
+    <block type="mpl_chart_scatter">
+      <value name="row">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="col">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="x">
+        <block type="lists_create_with"></block>
+      </value>
+      <value name="y">
+        <block type="lists_create_with"></block>
+      </value>
+      <value name="color">
+        <block type="colour_picker"></block>
+      </value>
+      <value name="label">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+      <value name="marker">
+        <block type="mpl_chart_markers">
+          <field name="markers">o</field>
+        </block>
+      </value>
+      <value name="markersize">
+        <shadow type="math_number">
+          <field name="NUM">5</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="mpl_chart_scatter_datalabel">
+      <value name="row">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="col">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="xofs">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="yofs">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <field name="xalign">1</field>
+      <field name="yalign">0</field>
+      <value name="angle">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="mpl_chart_histgram">
+      <field name="type">0</field>
+      <value name="row">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="col">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="x">
+        <block type="lists_create_with"></block>
+      </value>
+      <value name="bins">
+        <shadow type="math_number">
+          <field name="NUM">10</field>
+        </shadow>
+      </value>
+      <field name="norm">0</field>
+      <value name="alpha">
+        <shadow type="math_number">
+          <field name="NUM">1.0</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="mpl_chart_histgram_excel_bins">
+      <value name="range">
+        <block type="excel_range">
+          <value name="sheet">
+            <block type="excel_active_sheet">
+              <value name="workbook">
+                <block type="excel_active_workbook"></block>
+              </value>
+            </block>
+          </value>
+          <value name="range">
+            <shadow type="text">
+              <field name="TEXT">A1</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block type="mpl_chart_histgram_excel_n">
+      <value name="range">
+        <block type="excel_range">
+          <value name="sheet">
+            <block type="excel_active_sheet">
+              <value name="workbook">
+                <block type="excel_active_workbook"></block>
+              </value>
+            </block>
+          </value>
+          <value name="range">
+            <shadow type="text">
+              <field name="TEXT">A1</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block type="mpl_chart_linestyles">
+      <field name="linestyles">-</field>
+    </block>
+    <block type="mpl_chart_markers">
+      <field name="markers">o</field>
+    </block>
+    <block type="mpl_chart_top_label">
+    </block>
+  </category>
+</xml>

@@ -15,6 +15,15 @@
         <block type="excel_active_workbook"></block>
       </value>
     </block>
+    <block type="excel_sheet_activate">
+      <value name="sheet">
+        <block type="excel_active_sheet">
+          <value name="workbook">
+            <block type="excel_active_workbook"></block>
+          </value>
+        </block>
+      </value>
+    </block>
     <block type="excel_sheet_by_index">
       <value name="workbook">
         <block type="excel_active_workbook"></block>

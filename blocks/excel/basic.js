@@ -168,6 +168,10 @@ export function addBlocks() {
               "0"
             ],
             [
+              "%{BKY_TSUMICKY_EXCEL_LAUNCH_ACTIVE}",
+              "3"
+            ],
+            [
               "%{BKY_TSUMICKY_EXCEL_LAUNCH_CONNECT}",
               "2"
             ]
@@ -273,6 +277,10 @@ export function addBlocks() {
             [
               "%{BKY_TSUMICKY_EXCEL_SPECIAL_FOLDER_DOWNLOADS}",
               "3"
+            ],
+            [
+              "%{BKY_TSUMICKY_EXCEL_SPECIAL_FOLDER_TSUMICKY}",
+              "4"
             ]
           ]
         }
@@ -283,6 +291,32 @@ export function addBlocks() {
       "tooltip": "%{BKY_TSUMICKY_EXCEL_OS_SPECIAL_FOLDER_PATH_TOOLTIP}",
       "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/basic/blocks.php#special_folder_path"
     },
+    {
+      "type": "excel_screen_updating",
+      "tooltip": "%{BKY_TSUMICKY_EXCEL_SCREEN_UPDATING_TOOLTIP}",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/basic/blocks.php#screen_updating",
+      "message0": "%1",
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "flag",
+          "options": [
+            [
+              "%{BKY_TSUMICKY_EXCEL_SCREEN_UPDATING_ON}",
+              "1"
+            ],
+            [
+              "%{BKY_TSUMICKY_EXCEL_SCREEN_UPDATING_OFF}",
+              "0"
+            ]
+          ]
+        }
+      ],
+      "previousStatement": null,
+      "nextStatement": null,
+      "colour": 120,
+      "inputsInline": true
+    },    
     {
       "type": "excel_os_join_path",
       "message0": "%{BKY_TSUMICKY_EXCEL_OS_JOIN_PATH}",
@@ -306,7 +340,7 @@ export function addBlocks() {
         }
       ],
       'enableContextMenu': false,
-      "colour": 230,
+      "colour": 120,
       "tooltip": "%{BKY_TSUMICKY_EXCEL_OS_JOIN_CONTAINER_TOOLTIP}",
       "helpUrl": ""
     },
@@ -317,7 +351,7 @@ export function addBlocks() {
       "inputsInline": true,
       "previousStatement": null,
       "nextStatement": null,
-      "colour": 230,
+      "colour": 120,
       "tooltip": "%{BKY_TSUMICKY_EXCEL_OS_JOIN_ITEM_TOOLTIP}",
       "helpUrl": ""
     },

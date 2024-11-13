@@ -22,8 +22,11 @@ javascript.javascriptGenerator.forBlock['procedures_defreturn'] = function(block
         generator.INDENT);
   }
   const branch = generator.statementToCode(block, 'STACK');
-  let returnValue =
-      generator.valueToCode(block, 'RETURN', javascript.Order.NONE) || '';
+  let returnValue = '';
+  try {
+    returnValue = generator.valueToCode(block, 'RETURN', javascript.Order.NONE) || '';
+  }
+  catch(e) {}
   let xfix2 = '';
   if (branch && returnValue) {
     // After executing the function body, revisit this block for the return.

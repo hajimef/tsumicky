@@ -1,0 +1,46 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_mpl_basic" style="display: none">
+    <category name="%{BKY_TSUMICKY_CATEGORY_MPL_BASIC}" id="category_mpl_basic" colour="#a5745b">
+        <block type="mpl_pyplot_subplots">
+            <value name="row">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+            <value name="col">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+            <value name="width">
+                <shadow type="math_number">
+                    <field name="NUM">4</field>
+                </shadow>
+            </value>
+            <value name="height">
+                <shadow type="math_number">
+                    <field name="NUM">3</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="mpl_pyplot_show">
+        </block>
+        <block type="mpl_pyplot_draw">
+        </block>
+        <block type="mpl_pyplot_pause">
+        </block>
+        <block type="mpl_pyplot_cla">
+            <value name="row">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+            <value name="col">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="mpl_pyplot_close">
+        </block>
+    </category>
+</xml>

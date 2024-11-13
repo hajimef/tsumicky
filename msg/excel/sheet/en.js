@@ -3,6 +3,8 @@ export function addMessages() {
   Blockly.Msg["TSUMICKY_CATEGORY_EXCEL_SUB_SHEET"] = "Sheet";
   Blockly.Msg["TSUMICKY_EXCEL_ACTIVE_SHEET"] = "active sheet in %1";
   Blockly.Msg["TSUMICKY_EXCEL_ACTIVE_SHEET_TOOLTIP"] = "Get the active sheet of the specified workbook.";
+  Blockly.Msg["TSUMICKY_EXCEL_SHEET_ACTIVATE"] = "activate %1 %2";
+  Blockly.Msg["TSUMICKY_EXCEL_SHEET_ACTIVATE_TOOLTIP"] = "Activate the specified sheet.";
   Blockly.Msg["TSUMICKY_EXCEL_SHEET_BY_INDEX"] = "sheet with index %2 in %1";
   Blockly.Msg["TSUMICKY_EXCEL_SHEET_BY_INDEX_TOOLTIP"] = "Get the sheet with the specified number in the workbook.";
   Blockly.Msg["TSUMICKY_EXCEL_SHEET_BY_NAME"] = "sheet with name %2 in %1";

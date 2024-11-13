@@ -1,6 +1,8 @@
 import * as ws from '/lib/websocket.js';
 import * as xl from './xlBase.js';
 
+const LAUNCH_ACTIVE = 3
+
 export function setup() {
 }
 
@@ -14,7 +16,12 @@ export async function runExcel(host, port, visible) {
   sock = await ws.connect(host, port, "ws");
   Blockly.__wsobjs.push(sock);
   xl.setWS(sock);
-  await ws.send(sock, "xl", "co", "le", param);
+  let wb_data = await ws.send(sock, "xl", "co", "le", param);
+  if (visible == LAUNCH_ACTIVE) {
+    if (typeof wb_data != 'undefined') {
+      xl.Workbooks().add_active(wb_data)
+    }
+  }
 };
 
 export async function quitExcel() {
@@ -46,6 +53,12 @@ export async function saveAsFileBasic(filename) {
 export async function saveFileBasic() {
   Blockly.checkStop();
   return await ws.send(xl.WS(), "xl", "co", "sf", {});
+}
+
+export async function screenUpdating(flag) {
+  Blockly.checkStop();
+  let param = { 'f': flag };
+  return await ws.send(xl.WS(), "xl", "co", "su", param);
 }
 
 export async function specialFolderPath(folder) {

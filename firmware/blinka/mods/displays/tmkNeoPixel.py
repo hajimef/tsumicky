@@ -90,4 +90,4 @@ def addCallbacks():
   g.addCallback(group, subgroup, "i", init)
   g.addCallback(group, subgroup, "d", dispose)
   g.addCallback(group, subgroup, "s", show)
-
+  g.addDispose(group, subgroup, dispose)

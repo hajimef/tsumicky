@@ -14,7 +14,7 @@ def callback():
   tm = threading.Timer(itvl , callback)
   tm.start()
 
-async def dispose():
+async def dispose(p):
   global tm, pin
   if tm is not None:
     tm.cancel()

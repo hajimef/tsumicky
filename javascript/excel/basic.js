@@ -54,6 +54,13 @@ export function addJS() {
     return code;
   };
 
+  javascript.javascriptGenerator.forBlock['excel_screen_updating'] = function(block, generator) {
+    setRuntimeName()
+    var flag = block.getFieldValue('flag');
+    var code = 'await $_' + modName + '.screenUpdating(' + flag + ');\n';
+    return code;
+  };
+  
   javascript.javascriptGenerator.forBlock['excel_os_special_folder_path'] = function(block, generator) {
     setRuntimeName()
     var folder = block.getFieldValue('folder');

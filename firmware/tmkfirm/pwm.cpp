@@ -72,14 +72,12 @@ void pwm_ledcWrite(JSONVar &p) {
   pin = (int) p["p"];
   duty_d = (double) p["d"];
   duty = (int) (maxRes[pin] * duty_d / 100);
-/*
   Serial.print("pin = ");
   Serial.print(pin);
   Serial.print(", duty_d = ");
   Serial.print(duty_d);
   Serial.print(", duty = ");
   Serial.println(duty);
-*/
   ledcWrite(pin, duty);
   r_stat["s"] = (int) NO_RETURN;
 }

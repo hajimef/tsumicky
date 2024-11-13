@@ -7,11 +7,22 @@ import traceback
 async def launchExcel(p):
     try:
         vis = True if p["v"] == 1 else False
-        if p["v"] != 2:
+        if p["v"] == 0 or p["v"] == 1:
             g.xlApp = xw.App(visible = vis, add_book = False)
             svdir = os.path.dirname(__file__)
             adfile = os.path.join(svdir, "xlServerAddin.xlam")
             ad = g.xlApp.books.open(adfile)
+        elif p["v"] == 3:
+            g.xlApp = xw.apps.active
+            svdir = os.path.dirname(__file__)
+            adfile = os.path.join(svdir, "xlServerAddin.xlam")
+            ad = g.xlApp.books.open(adfile)
+            wbs = g.xlApp.books
+            if wbs.count > 0:
+                wb = wbs.active
+                bi = g.getBookInfo(wb)
+                return bi
+            pass
     except Exception as e:
         return g.errReturn()
 
@@ -38,17 +49,27 @@ async def specialFolderPath(p):
     pf = platform.system()
     flds = [ 'Desktop', 'Documents', 'Downloads' ]
     fno = p["f"]
-    fld = os.path.expanduser('~')
-    if fno > 0:
-        fld = os.path.join(fld, flds[fno - 1])
-    if pf == 'Windows':
-        from win32com.shell import shell, shellcon
-        if fno == 1:
-            fld = shell.SHGetSpecialFolderPath(0, shellcon.CSIDL_DESKTOP)
-        elif fno == 2:
-            fld = shell.SHGetSpecialFolderPath(0, shellcon.CSIDL_PERSONAL)                                   
+    if fno == 4:
+        fld = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+    else:
+        fld = os.path.expanduser('~')
+        if fno > 0:
+            fld = os.path.join(fld, flds[fno - 1])
+        if pf == 'Windows':
+            from win32com.shell import shell, shellcon
+            if fno == 1:
+                fld = shell.SHGetSpecialFolderPath(0, shellcon.CSIDL_DESKTOP)
+            elif fno == 2:
+                fld = shell.SHGetSpecialFolderPath(0, shellcon.CSIDL_PERSONAL)                                   
     return fld
 
+async def screenUpdating(p):
+    try:
+        flag = p["f"]
+        g.xlApp.screen_updating = flag
+    except Exception as e:
+        return g.errReturn()
+    
 async def osJoinPath(p):
     return os.path.join(*p["p"])
 
@@ -80,6 +101,7 @@ def addCallbacks():
     g.addCallback("xl", "co", "le", launchExcel)
     g.addCallback("xl", "co", "qu", quitExcel)
     g.addCallback("xl", "co", "ff", findFile)
+    g.addCallback("xl", "co", "su", screenUpdating)
     g.addCallback("xl", "co", "sfp", specialFolderPath)
     g.addCallback("xl", "co", "ojp", osJoinPath)
     g.addCallback("xl", "co", "bcs", setCellValue)

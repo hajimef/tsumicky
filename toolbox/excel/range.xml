@@ -1,5 +1,7 @@
 <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_excel_range" style="display: none">
   <category name="%{BKY_TSUMICKY_CATEGORY_EXCEL_RANGE}" id="category_excel_range" colour="#5b67a5">
+    <block type="excel_active_cell"></block>
+    <block type="excel_selection_range"></block>
     <block type="excel_cell_rc">
       <value name="sheet">
         <block type="excel_active_sheet">
@@ -33,6 +35,35 @@
         </shadow>
       </value>
     </block>
+    <block type="excel_range_rc">
+      <value name="sheet">
+        <block type="excel_active_sheet">
+          <value name="workbook">
+            <block type="excel_active_workbook"></block>
+          </value>
+        </block>
+      </value>
+      <value name="r1">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="c1">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="r2">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="c2">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+    </block>
     <block type="excel_set_range_do">
       <value name="range">
         <block type="excel_cell_rc">
@@ -57,19 +88,34 @@
       </value>
     </block>
     <block type="excel_current_cell"></block>
+    <block type="excel_range_info_number">
+      <value name="range">
+        <block type="excel_active_cell"></block>
+      </value>
+    </block>
+    <block type="excel_range_info_count">
+      <value name="range">
+        <block type="excel_active_cell"></block>
+      </value>
+    </block>
+    <block type="excel_range_info_address">
+      <value name="range">
+        <block type="excel_active_cell"></block>
+      </value>
+    </block>
     <block type="excel_set_cell_value">
       <value name="range">
-        <block type="excel_current_cell"></block>
+        <block type="excel_active_cell"></block>
       </value>
     </block>
     <block type="excel_get_cell_value">
       <value name="range">
-        <block type="excel_current_cell"></block>
+        <block type="excel_active_cell"></block>
       </value>
     </block>
     <block type="excel_set_cell_formula">
       <value name="range">
-        <block type="excel_current_cell"></block>
+        <block type="excel_active_cell"></block>
       </value>
       <value name="formula">
         <shadow type="text">
@@ -77,9 +123,14 @@
         </shadow>
       </value>
     </block>
+    <block type="excel_get_cell_formula">
+      <value name="range">
+        <block type="excel_active_cell"></block>
+      </value>
+    </block>
     <block type="excel_set_cell_number_format">
       <value name="range">
-        <block type="excel_current_cell"></block>
+        <block type="excel_active_cell"></block>
       </value>
       <value name="format">
         <shadow type="text">
@@ -87,25 +138,40 @@
         </shadow>
       </value>
     </block>
+    <block type="excel_get_cell_number_format">
+      <value name="range">
+        <block type="excel_active_cell"></block>
+      </value>
+    </block>
     <block type="excel_set_cell_font_color">
       <value name="range">
-        <block type="excel_current_cell"></block>
+        <block type="excel_active_cell"></block>
       </value>
       <value name="color">
         <block type="colour_picker"></block>
+      </value>
+    </block>
+    <block type="excel_get_cell_font_color">
+      <value name="range">
+        <block type="excel_active_cell"></block>
       </value>
     </block>
     <block type="excel_set_cell_interior_color">
       <value name="range">
-        <block type="excel_current_cell"></block>
+        <block type="excel_active_cell"></block>
       </value>
       <value name="color">
         <block type="colour_picker"></block>
       </value>
     </block>
+    <block type="excel_get_cell_interior_color">
+      <value name="range">
+        <block type="excel_active_cell"></block>
+      </value>
+    </block>
     <block type="excel_set_cell_font_name">
       <value name="range">
-        <block type="excel_current_cell"></block>
+        <block type="excel_active_cell"></block>
       </value>
       <value name="fontname">
         <shadow type="text">
@@ -113,9 +179,14 @@
         </shadow>
       </value>
     </block>
+    <block type="excel_get_cell_font_name">
+      <value name="range">
+        <block type="excel_active_cell"></block>
+      </value>
+    </block>
     <block type="excel_set_cell_font_size">
       <value name="range">
-        <block type="excel_current_cell"></block>
+        <block type="excel_active_cell"></block>
       </value>
       <value name="fontsize">
         <shadow type="math_number">
@@ -123,9 +194,14 @@
         </shadow>
       </value>
     </block>
+    <block type="excel_get_cell_font_size">
+      <value name="range">
+        <block type="excel_active_cell"></block>
+      </value>
+    </block>
     <block type="excel_set_cell_font_bold">
       <value name="range">
-        <block type="excel_current_cell"></block>
+        <block type="excel_active_cell"></block>
       </value>
       <value name="is_bold">
         <block type="logic_boolean">
@@ -133,9 +209,14 @@
         </block>
       </value>
     </block>
+    <block type="excel_get_cell_font_bold">
+      <value name="range">
+        <block type="excel_active_cell"></block>
+      </value>
+    </block>
     <block type="excel_set_cell_font_italic">
       <value name="range">
-        <block type="excel_current_cell">
+        <block type="excel_active_cell">
           <field name="BOOL">TRUE</field>
         </block>
       </value>
@@ -143,21 +224,39 @@
         <block type="logic_boolean"></block>
       </value>
     </block>
+    <block type="excel_get_cell_font_italic">
+      <value name="range">
+        <block type="excel_active_cell"></block>
+      </value>
+    </block>
     <block type="excel_set_cell_border_type">
       <value name="range">
-        <block type="excel_current_cell">
+        <block type="excel_active_cell">
           <field name="BOOL">TRUE</field>
         </block>
       </value>
     </block>
+    <block type="excel_get_cell_border_type">
+      <value name="range">
+        <block type="excel_active_cell">
+          <field name="BOOL">TRUE</field>
+        </block>
+      </value>
+    </block>
+    <block type="excel_cell_border_type">
+    </block>
     <block type="excel_set_cell_border_color">
       <value name="range">
-        <block type="excel_current_cell"></block>
+        <block type="excel_active_cell"></block>
       </value>
       <value name="color">
         <block type="colour_picker"></block>
       </value>
-
+    </block>
+    <block type="excel_get_cell_border_color">
+      <value name="range">
+        <block type="excel_active_cell"></block>
+      </value>
     </block>
   </category>
 </xml>

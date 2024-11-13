@@ -18,6 +18,30 @@ def getRange(sheet, adrs, r1, c1, r2, c2):
         else:
             return sheet.range((r1, c1))
 
+async def rangeRCInfo(p):
+    wbName, sheetIndex, adrs, r1, c1, r2, c2 = getParam(p)
+    sheet = g.xlApp.books[wbName].sheets[sheetIndex]
+    try:
+        rn = getRange(sheet, adrs, r1, c1, r2, c2)
+        return { "a": rn.get_address(False, False), "r": rn.row, "c": rn.column, "rc": rn.rows.count, "cc": rn.columns.count }
+    except Exception as e:
+        return g.errReturn()
+
+async def activeCell(p):
+    try:
+        macro = g.xlApp.macro("tmkActiveCell")
+        i = macro()
+        return { "b": i[0], "s": i[1], "a": i[3], "r": i[4], "c": i[5], "rc": i[6], "cc": i[7] }
+    except Exception as e:
+        return g.errReturn()
+   
+async def selectedRange(p):
+    try:
+        sr = g.xlApp.selection
+        return { "b": sr.sheet.book.name, "s": sr.sheet.name, "a": sr.get_address(False, False), "r": sr.row, "c": sr.column, "rc": sr.rows.count, "cc": sr.columns.count }
+    except Exception as e:
+        return g.errReturn()
+   
 async def setCellValue(p):
     wbName, sheetIndex, adrs, r1, c1, r2, c2 = getParam(p)
     value = p["v"]
@@ -197,6 +221,17 @@ async def setCellBorderType(p):
     except Exception as e:
         return g.errReturn()
 
+async def getCellBorderType(p):
+    wbName, sheetIndex, adrs, r1, c1, r2, c2 = getParam(p)
+    sheet = g.xlApp.books[wbName].sheets[sheetIndex]
+    try:
+        rn = getRange(sheet, adrs, r1, c1, r2, c2)
+        macro = g.xlApp.macro("tmkGetRangeBorderType")
+        rt = macro(rn, p["p"])
+        return { "w": rt[0], "s": rt[1] }
+    except Exception as e:
+        return g.errReturn()
+
 async def setCellBorderColor(p):
     wbName, sheetIndex, adrs, r1, c1, r2, c2 = getParam(p)
     sheet = g.xlApp.books[wbName].sheets[sheetIndex]
@@ -209,7 +244,20 @@ async def setCellBorderColor(p):
     except Exception as e:
         return g.errReturn()
 
+async def getCellBorderColor(p):
+    wbName, sheetIndex, adrs, r1, c1, r2, c2 = getParam(p)
+    sheet = g.xlApp.books[wbName].sheets[sheetIndex]
+    try:
+        macro = g.xlApp.macro("tmkGetRangeBorderColor")
+        rn = getRange(sheet, adrs, r1, c1, r2, c2)
+        return macro(rn, p["p"])
+    except Exception as e:
+        return g.errReturn()
+
 def addCallbacks():
+    g.addCallback("xl", "rn", "ri", rangeRCInfo)
+    g.addCallback("xl", "rn", "ac", activeCell)
+    g.addCallback("xl", "rn", "sr", selectedRange)
     g.addCallback("xl", "rn", "scv", setCellValue)
     g.addCallback("xl", "rn", "gcv", getCellValue)
     g.addCallback("xl", "rn", "scf", setCellFormula)
@@ -229,4 +277,6 @@ def addCallbacks():
     g.addCallback("xl", "rn", "scic", setCellInteriorColor)
     g.addCallback("xl", "rn", "gcic", getCellInteriorColor)
     g.addCallback("xl", "rn", "scbt", setCellBorderType)
+    g.addCallback("xl", "rn", "gcbt", getCellBorderType)
     g.addCallback("xl", "rn", "scbc", setCellBorderColor)
+    g.addCallback("xl", "rn", "gcbc", getCellBorderColor)

@@ -1,0 +1,69 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_sl_pca" style="display: none">
+  <category id="category_sl_pca" name="%{BKY_TSUMICKY_CATEGORY_SL_PCA}" colour="#5b80a5">
+    <block type="sl_pca_init">
+      <value name="n_components">
+        <shadow type="math_number">
+          <field name="NUM">0.8</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="sl_pca_transform">
+    </block>
+    <block type="sl_pca_rdim">
+    </block>
+    <block type="sl_pca_ev">
+      <value name="range">
+        <block type="excel_range">
+          <value name="sheet">
+            <block type="excel_active_sheet">
+              <value name="workbook">
+                <block type="excel_active_workbook"></block>
+              </value>
+            </block>
+          </value>
+          <value name="range">
+            <shadow type="text">
+              <field name="TEXT">A1</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block type="sl_pca_evr">
+      <value name="range">
+        <block type="excel_range">
+          <value name="sheet">
+            <block type="excel_active_sheet">
+              <value name="workbook">
+                <block type="excel_active_workbook"></block>
+              </value>
+            </block>
+          </value>
+          <value name="range">
+            <shadow type="text">
+              <field name="TEXT">A1</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block type="sl_pca_components">
+      <value name="range">
+        <block type="excel_range">
+          <value name="sheet">
+            <block type="excel_active_sheet">
+              <value name="workbook">
+                <block type="excel_active_workbook"></block>
+              </value>
+            </block>
+          </value>
+          <value name="range">
+            <shadow type="text">
+              <field name="TEXT">A1</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+    </block>
+  </category>
+</xml>

@@ -1,0 +1,228 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_mpl_chart" style="display: none">
+  <category name="%{BKY_TSUMICKY_CATEGORY_MPL_CHART}" id="category_mpl_chart" colour="#9fa55b">
+    <block type="mpl_chart_bar">
+      <field name="xy">0</field>
+      <value name="row">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="col">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="x">
+        <block type="lists_create_with"></block>
+      </value>
+      <value name="y">
+        <block type="lists_create_with"></block>
+      </value>
+      <value name="linewidth">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="linestyle">
+        <block type="mpl_chart_linestyles">
+          <field name="linestyles">-</field>
+        </block>
+      </value>
+      <value name="linecolor">
+        <block type="colour_picker"></block>
+      </value>
+      <value name="color">
+        <block type="colour_picker"></block>
+      </value>
+      <value name="width">
+        <shadow type="math_number">
+          <field name="NUM">80</field>
+        </shadow>
+      </value>
+      <value name="pos">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="label">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="mpl_chart_bar_datalabel">
+      <field name="xy">0</field>
+      <value name="row">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="col">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <field name="xpos">1</field>
+      <field name="ypos">0</field>
+      <value name="xofs">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="yofs">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <field name="xalign">1</field>
+      <field name="yalign">0</field>
+      <value name="angle">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="mpl_chart_clear_stack_y">
+    </block>
+    <block type="mpl_chart_plot">
+      <value name="row">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="col">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="x">
+        <block type="lists_create_with"></block>
+      </value>
+      <value name="y">
+        <block type="lists_create_with"></block>
+      </value>
+      <value name="linewidth">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="linestyle">
+        <block type="mpl_chart_linestyles">
+          <field name="linestyles">-</field>
+        </block>
+      </value>
+      <value name="color">
+        <block type="colour_picker"></block>
+      </value>
+      <value name="label">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+      <value name="marker">
+        <block type="mpl_chart_markers">
+          <field name="markers">none</field>
+        </block>
+      </value>
+      <value name="markercolor">
+        <block type="colour_picker"></block>
+      </value>
+      <value name="markersize">
+        <shadow type="math_number">
+          <field name="NUM">5</field>
+        </shadow>
+      </value>
+      <field name="sort_x">1</field>
+    </block>
+    <block type="mpl_chart_plot_datalabel">
+      <value name="row">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="col">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="xofs">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="yofs">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <field name="xalign">1</field>
+      <field name="yalign">0</field>
+      <value name="angle">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="mpl_chart_pie">
+      <value name="row">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="col">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="x">
+        <block type="lists_create_with"></block>
+      </value>
+      <value name="label">
+        <block type="lists_create_with"></block>
+      </value>
+      <value name="labeldistance">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+<!--
+      <value name="rotatelabels">
+      </value>
+      <value name="colors">
+      </value>
+      <value name="explode">
+      </value>
+-->
+      <value name="radius">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="autopct">
+        <block type="text"></block>
+      </value>
+      <value name="pctdistance">
+        <shadow type="math_number">
+          <field name="NUM">0.5</field>
+        </shadow>
+      </value>
+      <value name="c_radius">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+<!--
+      <value name="edgecolor">
+      </value>
+-->
+    </block>
+    <block type="mpl_chart_linestyles">
+      <field name="linestyles">-</field>
+    </block>
+    <block type="mpl_chart_markers">
+      <field name="markers">o</field>
+    </block>
+    <block type="mpl_chart_top_label">
+    </block>
+  </category>
+</xml>

@@ -1,0 +1,34 @@
+[
+  {
+    "name": "text_basen",
+    "after": "text_getSubstring"
+  },
+  {
+    "name": "text_ml",
+    "before": "text_join"
+  },
+  {
+    "name": "math_dec",
+    "after": "math_round"
+  },
+  {
+    "name": "colour_split",
+    "after": "colour_blend"
+  },
+  {
+    "name": "colour_grey",
+    "after": "colour_split"
+  },
+  {
+    "name": "colour_sepia",
+    "after": "colour_grey"
+  },
+  {
+    "name": "list_pop_shift",
+    "after": "lists_getSublist"
+  },
+  {
+    "name": "list_push_unshift",
+    "before": "list_pop_shift"
+  }
+]

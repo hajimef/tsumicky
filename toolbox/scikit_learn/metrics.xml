@@ -1,0 +1,31 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_sl_metrics" style="display: none">
+  <category id="category_sl_metrics" name="" colour="#5b6da5">
+    <block type="sl_metrics_mse">
+      <field name="type">0</field>
+    </block>
+    <block type="sl_metrics_rmse">
+      <field name="type">0</field>
+    </block>
+    <block type="sl_metrics_r2_score">
+      <field name="type">0</field>
+    </block>
+    <block type="sl_metrics_confusion_matrix">
+      <field name="type">0</field>
+    </block>
+    <block type="sl_metrics_accuracy_score">
+      <field name="type">0</field>
+    </block>
+    <block type="sl_metrics_precision_score">
+      <field name="type">0</field>
+      <field name="average">binary</field>
+    </block>
+    <block type="sl_metrics_recall_score">
+      <field name="type">0</field>
+      <field name="average">binary</field>
+    </block>
+    <block type="sl_metrics_f1_score">
+      <field name="type">0</field>
+      <field name="average">binary</field>
+    </block>
+  </category>
+</xml>

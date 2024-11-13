@@ -1,0 +1,24 @@
+export function addMessages() {
+  Blockly.Msg["TEXT_BASEN"] = "to %1 %2";
+  Blockly.Msg["TEXT_BASEN_TOOLTIP"] = "Convert a decimal number to a binary/octal/hexadecimal string.";
+  Blockly.Msg["TEXT_BASEN_BIN"] = "binary";
+  Blockly.Msg["TEXT_BASEN_OCT"] = "octal";
+  Blockly.Msg["TEXT_BASEN_HEX"] = "hexadecimal";
+  Blockly.Msg["TEXT_ML_TOOLTIP"] = "Input multiline text";
+  Blockly.Msg["MATH_DEC"] = "Convert %2 in %1 to a decimal number";
+  Blockly.Msg["MATH_DEC_TOOLTIP"] = "Convert a binary/octal/hexadecimal string to a decimal number.";
+  Blockly.Msg["COLOUR_SPLIT"] = "RGB decomposition of %1";
+  Blockly.Msg["COLOUR_SPLIT_TOOLTIP"] = "Returns a list of the RGB decomposition of the color.";
+  Blockly.Msg["COLOUR_GREY"] = "to greyscale %1";
+  Blockly.Msg["COLOUR_GREY_TOOLTIP"] = "Returns the color converted to grayscale.";
+  Blockly.Msg["COLOUR_SEPIA"] = "to sepia tone %1";
+  Blockly.Msg["COLOUR_SEPIA_TOOLTIP"] = "Returns the color converted to sepia tone.";
+  Blockly.Msg["PROCEDURE_JS_FUNCTION"] = "JavaScript function %1 %2";
+  Blockly.Msg["PROCEDURE_JS_FUNCTION_TOOLTIP"] = "It allows JavaScript functions to be executed in the same way as Blockly functions.";
+  Blockly.Msg["LIST_PUSH_UNSHIFT"] = "add %3 %4 to %2 of list %1 %5";
+  Blockly.Msg["LIST_PUSH_UNSHIFT_TOOLTIP"] = "Add an element to the first or last of a list.";
+  Blockly.Msg["LIST_POP_SHIFT"] = "remove element from %2 of list %1 %3";
+  Blockly.Msg["LIST_POP_SHIFT_TOOLTIP"] = "Remove elements from the first or last of a list.";
+  Blockly.Msg["LIST_PUSH_UNSHIFT_PUSH"] = "last";
+  Blockly.Msg["LIST_PUSH_UNSHIFT_UNSHIFT"] = "first";
+};

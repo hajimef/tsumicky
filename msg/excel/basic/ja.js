@@ -1,11 +1,12 @@
 export function addMessages() {
   Blockly.Msg["TSUMICKY_CATEGORY_EXCEL_BASIC"] = "Excel基本";
   Blockly.Msg["TSUMICKY_CATEGORY_EXCEL_SUB_BASIC"] = "基本";
-  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH"] = "ホスト %1 %2 のポート %3 %4 に接続し、Excelを起動 %5";
+  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH"] = "ホスト %1 %2 のポート %3 %4 に接続し、%5";
   Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_TOOLTIP"] = "Pythonのxlserver.pyに接続します。";
-  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_VISIBLE"] = "して表示する";
-  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_INVISIBLE"] = "するが表示しない";
-  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_CONNECT"] = "せずに接続だけ行う";
+  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_VISIBLE"] = "Excelを起動して表示する";
+  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_INVISIBLE"] = "Excelを起動するが表示しない";
+  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_CONNECT"] = "Excelを起動せずに接続だけ行う";
+  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_ACTIVE"] = "アクティブなExcelに接続する";
   Blockly.Msg["TSUMICKY_EXCEL_QUIT"] = "Excelを終了する";
   Blockly.Msg["TSUMICKY_EXCEL_QUIT_TOOLTIP"] = "Excelを終了します。";
   Blockly.Msg["TSUMICKY_EXCEL_NEW_FILE"] = "ブックを新規作成する";
@@ -17,6 +18,9 @@ export function addMessages() {
   Blockly.Msg["TSUMICKY_EXCEL_SAVE_AS_FILE_TOOLTIP"] = "ブックにファイル名を付けて保存します。";
   Blockly.Msg["TSUMICKY_EXCEL_SAVE_FILE"] = "ブックを上書き保存する";
   Blockly.Msg["TSUMICKY_EXCEL_SAVE_FILE_TOOLTIP"] = "ブックを上書き保存します。";
+  Blockly.Msg["TSUMICKY_EXCEL_SCREEN_UPDATING_TOOLTIP"] = "Excelの画面表示を更新するかどうかを選択します。\n画面表示の更新を止めると、プログラムの動作が速くなります。";
+  Blockly.Msg["TSUMICKY_EXCEL_SCREEN_UPDATING_ON"] = "表示を更新する";
+  Blockly.Msg["TSUMICKY_EXCEL_SCREEN_UPDATING_OFF"] = "表示の更新を止める";
   Blockly.Msg["TSUMICKY_EXCEL_OS_SPECIAL_FOLDER_PATH"] = "%1 フォルダのパス";
   Blockly.Msg["TSUMICKY_EXCEL_OS_SPECIAL_FOLDER_PATH_TOOLTIP"] = "HOMEなどの特殊なフォルダのパスを得ます。";
   Blockly.Msg["TSUMICKY_EXCEL_OS_JOIN_PATH"] = "以下を結合したパス";
@@ -36,5 +40,6 @@ export function addMessages() {
   Blockly.Msg["TSUMICKY_EXCEL_SPECIAL_FOLDER_DESKTOP"] = "デスクトップ";
   Blockly.Msg["TSUMICKY_EXCEL_SPECIAL_FOLDER_DOCUMENTS"] = "ドキュメント";
   Blockly.Msg["TSUMICKY_EXCEL_SPECIAL_FOLDER_DOWNLOADS"] = "ダウンロード";
+  Blockly.Msg["TSUMICKY_EXCEL_SPECIAL_FOLDER_TSUMICKY"] = "Tsumicky";
   Blockly.Msg["TSUMICKY_XLSERVER_CANT_LOAD_FILE"] = "そのファイルは扱うことができません";
 };

@@ -3,6 +3,8 @@ export function addMessages() {
   Blockly.Msg["TSUMICKY_CATEGORY_EXCEL_SUB_SHEET"] = "シート";
   Blockly.Msg["TSUMICKY_EXCEL_ACTIVE_SHEET"] = "%1 のアクティブなシート";
   Blockly.Msg["TSUMICKY_EXCEL_ACTIVE_SHEET_TOOLTIP"] = "指定したブックのアクティブなシートを得ます。";
+  Blockly.Msg["TSUMICKY_EXCEL_SHEET_ACTIVATE"] = "%1 をアクティブにする %2";
+  Blockly.Msg["TSUMICKY_EXCEL_SHEET_ACTIVATE_TOOLTIP"] = "指定したシートをアクティブにします。";
   Blockly.Msg["TSUMICKY_EXCEL_SHEET_BY_INDEX"] = "%1 の %2 番目のシート";
   Blockly.Msg["TSUMICKY_EXCEL_SHEET_BY_INDEX_TOOLTIP"] = "ブックの中で指定した番号のシートを得ます。";
   Blockly.Msg["TSUMICKY_EXCEL_SHEET_BY_NAME"] = "%1 の名前が %2 のシート";

@@ -17,6 +17,27 @@ export function addBlocks() {
         "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/sheet/blocks.php#active_sheet"
     },
     {
+      "type": "excel_sheet_activate",
+      "tooltip": "%{BKY_TSUMICKY_EXCEL_SHEET_ACTIVATE_TOOLTIP}",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/excel/sheet/blocks.php#sheet_activate",
+      "message0": "%{BKY_TSUMICKY_EXCEL_SHEET_ACTIVATE}",
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "sheet",
+          "check": "xlSheet"
+        },
+        {
+          "type": "input_dummy",
+          "name": ""
+        }
+      ],
+      "previousStatement": null,
+      "nextStatement": null,
+      "colour": 260,
+      "inputsInline": true
+    },    
+    {
         "type": "excel_sheet_by_index",
         "message0": "%{BKY_TSUMICKY_EXCEL_SHEET_BY_INDEX}",
         "args0": [

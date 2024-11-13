@@ -4,8 +4,9 @@ export function addMessages() {
   Blockly.Msg["TSUMICKY_EXCEL_LAUNCH"] = "connect to host %1 %2 port %3 %4 , %5";
   Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_TOOLTIP"] = "Connect to Python's xlserver.py.";
   Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_VISIBLE"] = "launch Excel and show Excel";
-  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_INVISIBLE"] = "launch Excel but hide excel";
+  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_INVISIBLE"] = "launch Excel but hide Excel";
   Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_CONNECT"] = "doesn't launch Excel, only connect";
+  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_ACTIVE"] = "connect to active Excel";
   Blockly.Msg["TSUMICKY_EXCEL_QUIT"] = "quit Excel";
   Blockly.Msg["TSUMICKY_EXCEL_QUIT_TOOLTIP"] = "Quit Excel.";
   Blockly.Msg["TSUMICKY_EXCEL_NEW_FILE"] = "create new workbook";
@@ -17,6 +18,9 @@ export function addMessages() {
   Blockly.Msg["TSUMICKY_EXCEL_SAVE_AS_FILE_TOOLTIP"] = "Save the workbook with a file name.";
   Blockly.Msg["TSUMICKY_EXCEL_SAVE_FILE"] = "save workbook";
   Blockly.Msg["TSUMICKY_EXCEL_SAVE_FILE_TOOLTIP"] = "Save the workbook.";
+  Blockly.Msg["TSUMICKY_EXCEL_SCREEN_UPDATING_TOOLTIP"] = "Select whether to update the Excel display. \nTurning off screen update will make the program run faster.";
+  Blockly.Msg["TSUMICKY_EXCEL_SCREEN_UPDATING_ON"] = "update display";
+  Blockly.Msg["TSUMICKY_EXCEL_SCREEN_UPDATING_OFF"] = "stop updating display";
   Blockly.Msg["TSUMICKY_EXCEL_OS_SPECIAL_FOLDER_PATH"] = "path of folder %1";
   Blockly.Msg["TSUMICKY_EXCEL_OS_SPECIAL_FOLDER_PATH_TOOLTIP"] = "Get the path of special folders such as Home.";
   Blockly.Msg["TSUMICKY_EXCEL_OS_JOIN_PATH"] = "path that combines the following";
@@ -36,5 +40,6 @@ export function addMessages() {
   Blockly.Msg["TSUMICKY_EXCEL_SPECIAL_FOLDER_DESKTOP"] = "Desktop";
   Blockly.Msg["TSUMICKY_EXCEL_SPECIAL_FOLDER_DOCUMENTS"] = "Documents";
   Blockly.Msg["TSUMICKY_EXCEL_SPECIAL_FOLDER_DOWNLOADS"] = "Downloads";
+  Blockly.Msg["TSUMICKY_EXCEL_SPECIAL_FOLDER_TSUMICKY"] = "Tsumicky";
   Blockly.Msg["TSUMICKY_XLSERVER_CANT_LOAD_FILE"] = "cannot open this file";
 };

@@ -35,6 +35,8 @@
         </block>
         <block type="excel_save_file">
         </block>
+        <block type="excel_screen_updating">
+        </block>
         <block type="excel_os_special_folder_path">
             <field name="folder">0</field>
         </block>

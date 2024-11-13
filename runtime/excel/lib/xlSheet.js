@@ -69,6 +69,11 @@ export class _Sheet {
         return rng;
     }
 
+    CellsRange(r1, c1, r2, c2) {
+        let rng = new _Range(this.workbook, this, null, r1, c1, r2, c2);
+        return rng;
+    }
+
     async activate() {
         Blockly.checkStop();
         let param = { 'f': this.workbook.name, 'i': this.index };

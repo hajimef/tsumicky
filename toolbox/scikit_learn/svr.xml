@@ -1,0 +1,26 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_sl_svr" style="display: none">
+  <category id="category_sl_svr" name="%{BKY_TSUMICKY_CATEGORY_SL_SVR}" colour="#5ba55b">
+    <block type="sl_linear_svr_init">
+      <value name="c">
+        <shadow type="math_number">
+          <field name="NUM">100</field>
+        </shadow>
+      </value>
+      <value name="epsilon">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="sl_svr_fit">
+    </block>
+    <block type="sl_svr_coef">
+    </block>
+    <block type="sl_svr_intercept">
+    </block>
+    <block type="sl_svr_support_vectors">
+    </block>
+    <block type="sl_svr_support">
+    </block>
+  </category>
+</xml>

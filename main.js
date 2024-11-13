@@ -6,6 +6,13 @@ var $_BF = Blockly.tsmFuncs;
 Blockly.runTimeJS = {};
 
 (async() => {
+    registerFieldColour();
+    colourPicker.installBlock();
+    colourRgb.installBlock();
+    colourRandom.installBlock();
+    colourBlend.installBlock();
+    registerFieldMultilineInput();
+    textMultiline.installBlock();
     let settings_res;
     if (typeof settingsFile == "undefined") {
         settings_res = await fetch('settings.json');
@@ -66,6 +73,40 @@ Blockly.runTimeJS = {};
                 }
                 modMsg.addMessages();
             }
+        }
+    }
+//    registerFieldColour();
+//    installAllBlocks();
+
+    // append additional blocks to blockly original blocks
+    let append_res = await fetch('append.json');
+    const append_json = await append_res.text();
+    let appends = JSON.parse(append_json);
+    let appendJS = await import('/javascript/append.js');
+    appendJS.addJS();
+    let appendBlk = await import('/blocks/append.js');
+    appendBlk.addBlocks();
+    let appendMsg;
+    try {
+        appendMsg = await import('/msg/append/' + _tsmLang + '.js');
+    }
+    catch(e) {
+        appendMsg = await import('/msg/append/en.js');
+    }
+    appendMsg.addMessages();
+    let append_tb = await fetch('/toolbox/append.xml');
+    let append_data = await append_tb.text();
+    let append_doc = await parser.parseFromString(append_data, 'application/xml');
+    for (let i = 0; i < appends.length; i++) {
+        let append = appends[i];
+        let node = append_doc.querySelector('block[type="' + append.name + '"]');
+        if (append.hasOwnProperty('before')) {
+            let targetNode = doc_tb.querySelector('block[type="' + append.before + '"]');
+            targetNode.before(node);
+        }
+        else if (append.hasOwnProperty('after')) {
+            let targetNode = doc_tb.querySelector('block[type="' + append.after + '"]');
+            targetNode.after(node);
         }
     }
     if (settings.hasOwnProperty('tree')) {
@@ -143,10 +184,27 @@ Blockly.runTimeJS = {};
     	}
     };
     workspace = await Blockly.inject('blocklyDiv', options);
+    const cpplugin = new CrossTabCopyPaste();
+    cpplugin.init({ contextMenu: true, shortcut: true });
+    const backpack = new Backpack(workspace);
+    backpack.init();
     var workspaceBlocks = document.getElementById("workspaceBlocks"); 
     await Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
     workspace.addChangeListener(updateCode);
     workspace.addChangeListener(Blockly.Events.disableOrphans);
+    let proc_func = workspace.toolboxCategoryCallbacks.get("PROCEDURE");
+    workspace.registerToolboxCategoryCallback('PROCEDURE', function(ws) {
+        let blocklist = proc_func(ws);
+        let block = document.createElement('block');
+        block.setAttribute('type', 'procedure_js_function');
+        for (let i = 0; i < blocklist.length; i++) {
+            if (blocklist[i].attributes.type.value == 'procedures_ifreturn') {
+                blocklist.splice(i, 0, block);
+                break;
+            }
+        }
+        return blocklist;
+    });
     const blocklyArea = document.getElementById('blocklyArea');
     const blocklyDiv = document.getElementById('blocklyDiv');
     const onresize = function(e) {

@@ -51,6 +51,52 @@ export function addJS() {
         return [code, Blockly.JavaScript.ORDER_MEMBER];
     };
 
+    javascript.javascriptGenerator.forBlock['excel_range_rc'] = function(block, generator) {
+        setRuntimeName();
+        var sheet = generator.valueToCode(block, 'sheet', javascript.Order.FUNCTION_CALL);
+        var r1 = generator.valueToCode(block, 'r1', javascript.Order.ATOMIC);
+        var r2 = generator.valueToCode(block, 'r2', javascript.Order.ATOMIC);
+        var c1 = generator.valueToCode(block, 'c1', javascript.Order.ATOMIC);
+        var c2 = generator.valueToCode(block, 'c2', javascript.Order.ATOMIC);
+        var code = sheet + '.CellsRange(' + r1 + ', ' + c1 + ', ' + r2 + ', ' + c2 + ')';
+        return [code, Blockly.JavaScript.ORDER_MEMBER];
+    };
+
+    javascript.javascriptGenerator.forBlock['excel_active_cell'] = function(block, generator) {
+        setRuntimeName();
+        var code = 'await $_' + modName + '.ActiveCell()';
+        return [code, Blockly.JavaScript.ORDER_NONE];
+    };
+
+    javascript.javascriptGenerator.forBlock['excel_selection_range'] = function(block, generator) {
+        setRuntimeName();
+        var code = 'await $_' + modName + '.SelectedRange()';
+        return [code, Blockly.JavaScript.ORDER_NONE];
+    };
+
+    javascript.javascriptGenerator.forBlock['excel_range_info_number'] = function(block, generator) {
+        setRuntimeName();
+        const range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
+        const info = block.getFieldValue('info');
+        const code = 'await ' + range + '.' + info + '()';
+        return [code, Blockly.JavaScript.ORDER_NONE];
+    };
+
+    javascript.javascriptGenerator.forBlock['excel_range_info_count'] = function(block, generator) {
+        setRuntimeName();
+        const range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
+        const info = block.getFieldValue('info');
+        const code = 'await ' + range + '.' + info + '()';
+        return [code, Blockly.JavaScript.ORDER_NONE];
+    };
+
+    javascript.javascriptGenerator.forBlock['excel_range_info_address'] = function(block, generator) {
+        setRuntimeName();
+        const range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
+        const code = 'await ' + range + '.address()';
+        return [code, Blockly.JavaScript.ORDER_NONE];
+    };
+
     javascript.javascriptGenerator.forBlock['excel_set_range_do'] = function(block, generator) {
         setRuntimeName();
         var range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
@@ -91,12 +137,26 @@ export function addJS() {
         return code;
     };
       
+    javascript.javascriptGenerator.forBlock['excel_get_cell_formula'] = function(block, generator) {
+        setRuntimeName();
+        var range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
+        var code = 'await ' + range + '.getFormula()';
+        return [code, Blockly.JavaScript.ORDER_MEMBER];
+    };
+      
     javascript.javascriptGenerator.forBlock['excel_set_cell_number_format'] = function(block, generator) {
         setRuntimeName();
         var range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
         var format = generator.valueToCode(block, 'format', javascript.Order.ATOMIC);
         var code = 'await ' + range + '.setNumberFormat(' + format + ');\n';
         return code;
+    };
+      
+    javascript.javascriptGenerator.forBlock['excel_get_cell_number_format'] = function(block, generator) {
+        setRuntimeName();
+        var range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
+        var code = 'await ' + range + '.getNumberFormat()';
+        return [code, Blockly.JavaScript.ORDER_MEMBER];
     };
       
     javascript.javascriptGenerator.forBlock['excel_set_cell_font_color'] = function(block, generator) {
@@ -107,6 +167,13 @@ export function addJS() {
         return code;
     };
 
+    javascript.javascriptGenerator.forBlock['excel_get_cell_font_color'] = function(block, generator) {
+        setRuntimeName();
+        var range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
+        var code = '$_' + modName + '.rgbToCSS(await ' + range + '.getFontColor())';
+        return [code, Blockly.JavaScript.ORDER_MEMBER];
+    };
+      
     javascript.javascriptGenerator.forBlock['excel_set_cell_font_name'] = function(block, generator) {
         setRuntimeName();
         var range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
@@ -115,6 +182,13 @@ export function addJS() {
         return code;
     };
 
+    javascript.javascriptGenerator.forBlock['excel_get_cell_font_name'] = function(block, generator) {
+        setRuntimeName();
+        var range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
+        var code =  'await ' + range + '.getFontName()';
+        return [code, Blockly.JavaScript.ORDER_MEMBER];
+    };
+      
     javascript.javascriptGenerator.forBlock['excel_set_cell_font_size'] = function(block, generator) {
         setRuntimeName();
         var range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
@@ -123,6 +197,13 @@ export function addJS() {
         return code;
     };
 
+    javascript.javascriptGenerator.forBlock['excel_get_cell_font_size'] = function(block, generator) {
+        setRuntimeName();
+        var range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
+        var code =  'await ' + range + '.getFontSize()';
+        return [code, Blockly.JavaScript.ORDER_MEMBER];
+    };
+      
     javascript.javascriptGenerator.forBlock['excel_set_cell_font_bold'] = function(block, generator) {
         setRuntimeName();
         var range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
@@ -131,12 +212,26 @@ export function addJS() {
         return code;
     };
 
+    javascript.javascriptGenerator.forBlock['excel_get_cell_font_bold'] = function(block, generator) {
+        setRuntimeName();
+        var range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
+        var code =  'await ' + range + '.getFontBold()';
+        return [code, Blockly.JavaScript.ORDER_MEMBER];
+    };
+      
     javascript.javascriptGenerator.forBlock['excel_set_cell_font_italic'] = function(block, generator) {
         setRuntimeName();
         var range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
         var is_italic = generator.valueToCode(block, 'is_italic', javascript.Order.ATOMIC);
         var code = 'await ' + range + '.setFontItalic(' + is_italic + ');\n';
         return code;
+    };
+
+    javascript.javascriptGenerator.forBlock['excel_get_cell_font_italic'] = function(block, generator) {
+        setRuntimeName();
+        var range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
+        var code =  'await ' + range + '.getFontItalic()';
+        return [code, Blockly.JavaScript.ORDER_MEMBER];
     };
 
     javascript.javascriptGenerator.forBlock['excel_set_cell_border_type'] = function(block, generator) {
@@ -148,6 +243,20 @@ export function addJS() {
         return code;
     };
 
+    javascript.javascriptGenerator.forBlock['excel_get_cell_border_type'] = function(block, generator) {
+        setRuntimeName();
+        var range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
+        var position = block.getFieldValue('position');
+        var code = 'await ' + range + '.getBorderType($_' + modName + '.' + border_position[position] + ')';
+        return [code, Blockly.JavaScript.ORDER_MEMBER];
+    };
+
+    javascript.javascriptGenerator.forBlock['excel_cell_border_type'] = function(block, generator) {
+        setRuntimeName();
+        var code = "'" + block.getFieldValue('type') + "'";
+        return [code, Blockly.JavaScript.ORDER_NONE];
+    };
+
     javascript.javascriptGenerator.forBlock['excel_set_cell_border_color'] = function(block, generator) {
         setRuntimeName();
         var range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
@@ -157,11 +266,26 @@ export function addJS() {
         return code;
     };
 
+    javascript.javascriptGenerator.forBlock['excel_get_cell_border_color'] = function(block, generator) {
+        setRuntimeName();
+        var range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
+        var position = block.getFieldValue('position');
+        var code = '$_' + modName + '.rgbValueToCSS(await ' + range + '.getBorderColor($_' + modName + '.' + border_position[position] + ')).toString(16)';
+        return [code, Blockly.JavaScript.ORDER_MEMBER];
+    };
+
     javascript.javascriptGenerator.forBlock['excel_set_cell_interior_color'] = function(block, generator) {
         setRuntimeName();
         var range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
         var color = generator.valueToCode(block, 'color', javascript.Order.ATOMIC);
         var code = 'await ' + range + '.setInteriorColor($_' + modName + '.cssToRGB(' + color + '));\n';
         return code;
+    };
+
+    javascript.javascriptGenerator.forBlock['excel_get_cell_interior_color'] = function(block, generator) {
+        setRuntimeName();
+        var range = generator.valueToCode(block, 'range', javascript.Order.FUNCTION_CALL);
+        var code = '$_' + modName + '.rgbToCSS(await ' + range + '.getInteriorColor())';
+        return [code, Blockly.JavaScript.ORDER_MEMBER];
     };
 }

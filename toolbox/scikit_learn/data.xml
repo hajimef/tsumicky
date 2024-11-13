@@ -1,0 +1,198 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_sl_data" style="display: none">
+  <category id="category_sl_data" name="" colour="#a5745b">
+    <block type="sl_data_load_dataset">
+      <value name="range">
+        <block type="excel_range">
+          <value name="sheet">
+            <block type="excel_active_sheet">
+              <value name="workbook">
+                <block type="excel_active_workbook"></block>
+              </value>
+            </block>
+          </value>
+          <value name="range">
+            <shadow type="text">
+              <field name="TEXT">A1</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block type="sl_data_load">
+      <field name="type">0</field>
+      <field name="xy">0</field>
+      <value name="data">
+        <block type="excel_range">
+          <value name="sheet">
+            <block type="excel_active_sheet">
+              <value name="workbook">
+                <block type="excel_active_workbook"></block>
+              </value>
+            </block>
+          </value>
+          <value name="range">
+            <shadow type="text">
+              <field name="TEXT">A1</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+    </block>
+<!--
+    <block type="sl_data_load">
+      <field name="type">0</field>
+      <field name="xy">0</field>
+      <field name="has_label">1</field>
+      <value name="data">
+        <block type="lists_create_with"></block>
+      </value>
+    </block>
+-->
+    <block type="sl_data_split">
+      <field name="train_size">0</field>
+      <field name="test_size">0.2</field>
+      <value name="random_state">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+    </block>
+<!--
+    <block type="sl_data_loadx">
+      <field name="type">0</field>
+      <value name="x">
+        <block type="excel_range">
+          <value name="sheet">
+            <block type="excel_active_sheet">
+              <value name="workbook">
+                <block type="excel_active_workbook"></block>
+              </value>
+            </block>
+          </value>
+          <value name="range">
+            <shadow type="text">
+              <field name="TEXT">A1</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block type="sl_data_loadx">
+      <field name="type">0</field>
+      <value name="x">
+        <block type="lists_create_with"></block>
+      </value>
+    </block>
+    <block type="sl_data_loady">
+      <field name="type">0</field>
+      <value name="y">
+        <block type="excel_range">
+          <value name="sheet">
+            <block type="excel_active_sheet">
+              <value name="workbook">
+                <block type="excel_active_workbook"></block>
+              </value>
+            </block>
+          </value>
+          <value name="range">
+            <shadow type="text">
+              <field name="TEXT">A1</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block type="sl_data_loady">
+      <field name="type">0</field>
+      <value name="y">
+        <block type="lists_create_with"></block>
+      </value>
+    </block>
+-->
+    <block type="sl_data_backup">
+    </block>
+    <block type="sl_data_restore">
+    </block>
+    <block type="sl_data_slice">
+      <mutation items="1"></mutation>
+    </block>
+    <block type="sl_data_slice_number">
+      <value name="num">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="sl_data_slice_label">
+      <value name="label">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="sl_data_standardize">
+    </block>
+    <block type="sl_data_save">
+<!--
+      <field name="type">0</field>
+      <field name="xy">0</field>
+-->
+      <value name="range">
+        <block type="excel_range">
+          <value name="sheet">
+            <block type="excel_active_sheet">
+              <value name="workbook">
+                <block type="excel_active_workbook"></block>
+              </value>
+            </block>
+          </value>
+          <value name="range">
+            <shadow type="text">
+              <field name="TEXT">A1</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+      <value name="data">
+        <block type="sl_data_mpl">
+          <field name="type">0</field>
+          <field name="xy">0</field>
+        </block>
+      </value>
+      <field name="type">0</field>
+    </block>
+<!--
+    <block type="sl_save_predict">
+      <field name="type">0</field>
+      <value name="range">
+        <block type="excel_range">
+          <value name="sheet">
+            <block type="excel_active_sheet">
+              <value name="workbook">
+                <block type="excel_active_workbook"></block>
+              </value>
+            </block>
+          </value>
+          <value name="range">
+            <shadow type="text">
+              <field name="TEXT">A1</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+    </block>
+-->
+    <block type="sl_data_mpl">
+      <field name="type">0</field>
+      <field name="xy">0</field>
+    </block>
+<!--
+    <block type="sl_data_x">
+      <field name="type">0</field>
+    </block>
+    <block type="sl_data_y">
+      <field name="type">0</field>
+    </block>
+-->
+  </category>
+</xml>

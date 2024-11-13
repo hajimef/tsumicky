@@ -1,0 +1,36 @@
+export function addMessages() {
+  Blockly.Msg["TSUMICKY_CATEGORY_MPL_CHART_ELEMENT"] = "グラフ要素";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_FIGURE_TITLE"] = "グラフ全体のタイトルを %1 にする %2";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_FIGURE_TITLE_TOOLTIP"] = "グラフ全体にタイトルを付けます。\n個々のグラフにタイトルを付けたい場合は、「行○列○のタイトルを○にする」のブロックを使います。";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_TITLE"] = "行 %1 列 %2 のグラフのタイトルを %3 にする %4"
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_TITLE_TOOLTIP"] = "グラフのタイトルを設定します。"
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_LEGEND"] = "行 %1 列 %2 のグラフに凡例を表示する %3 タイトル %4 位置 %5 %6 列数 %7";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_LEGEND_TOOLTIP"] = "グラフに凡例を追加します。";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_LEGEND_LOC_BEST"] = "自動";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_LEGEND_LOC_UPPER_LEFT"] = "左上";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_LEGEND_LOC_UPPER_CENTER"] = "中央上";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_LEGEND_LOC_UPPER_RIGHT"] = "右上";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_LEGEND_LOC_CENTER_LEFT"] = "左中央";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_LEGEND_LOC_CENTER"] = "中央";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_LEGEND_LOC_CENTER_RIGHT"] = "右中央";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_LEGEND_LOC_LOWER_LEFT"] = "左下";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_LEGEND_LOC_LOWER_CENTER"] = "中央下";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_LEGEND_LOC_LOWER_RIGHT"] = "右下";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_AXIS_X"] = "X軸";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_AXIS_Y"] = "Y軸";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_AXIS_LABEL"] = "行 %1 列 %2 のグラフの %3 %4 のラベルを %5 にする %6"
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_AXIS_LABEL_TOOLTIP"] = "X軸／Y軸のラベルを設定します。";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_TICKS"] = "行 %1 列 %2 のグラフの %3 %4 の目盛りを %5 にする %6";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_TICKS_TOOLTIP"] = "X／Y軸の目盛りを設定します。";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_TICK_LABELS"] = "行 %1 列 %2 のグラフの %3 %4 の目盛りを %5 %6 ラベルを %7 %8 にする";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_TICK_LABELS_TOOLTIP"] = "X／Y軸の目盛りとラベルを設定します。";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_TICK_LIST"] = "開始 %1 終了 %2 刻み %3";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_TICK_LIST_TOOLTIP"] = "軸の目盛りを開始値から終了値まで、一定間隔にします。";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_LIM"] = "行 %1 列 %2 のグラフの %3 %4 の範囲を %5 ～ %6 にする %7";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_LIM_TOOLTIP"] = "X軸／Y軸の目盛りの範囲を設定します。";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_GRID"] = "行 %1 列 %2 のグラフに目盛線を引く %3 線幅 %4 線種 %5 %6 線色 %7 位置 %8 %9";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_GRID_TOOLTIP"] = "グラフに目盛線を描画します。";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_GRID_BOTH"] = "X/Y軸両方";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_GRID_X"] = "X軸のみ";
+  Blockly.Msg["TSUMICKY_MPL_CHART_ELEMENT_GRID_Y"] = "Y軸のみ";
+};

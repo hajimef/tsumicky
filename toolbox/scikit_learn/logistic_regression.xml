@@ -1,0 +1,76 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_sl_logr" style="display: none">
+  <category id="category_sl_logr" name="%{BKY_TSUMICKY_CATEGORY_SL_LOGR}" colour="#5aa45a">
+    <block type="sl_logr_init">
+      <value name="max_iter">
+        <shadow type="math_number">
+          <field name="NUM">100</field>
+        </shadow>
+      </value>
+      <value name="c">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="l1_ratio">
+        <block type="math_number">
+          <field name="NUM">0.5</field>
+        </block>
+      </value>
+      <value name="random_state">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="sl_logr_fit">
+    </block>
+    <block type="sl_logr_plot">
+      <value name="row">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="col">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="sl_logr_decision_function">
+      <value name="range">
+        <block type="excel_range">
+          <value name="sheet">
+            <block type="excel_active_sheet">
+              <value name="workbook">
+                <block type="excel_active_workbook"></block>
+              </value>
+            </block>
+          </value>
+          <value name="range">
+            <shadow type="text">
+              <field name="TEXT">A1</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block type="sl_logr_predict_proba">
+      <value name="range">
+        <block type="excel_range">
+          <value name="sheet">
+            <block type="excel_active_sheet">
+              <value name="workbook">
+                <block type="excel_active_workbook"></block>
+              </value>
+            </block>
+          </value>
+          <value name="range">
+            <shadow type="text">
+              <field name="TEXT">A1</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+    </block>
+  </category>
+</xml>
