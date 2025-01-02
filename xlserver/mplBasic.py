@@ -1,4 +1,5 @@
 import mplGlobal as m
+import mplChartCommon as cc
 import xlGlobal as g
 import matplotlib.pyplot as plt
 import matplotlib_fontja
@@ -13,11 +14,13 @@ async def dispose(p):
     m.axs = None
     m.row = 1
     m.col = 1
+    cc.stack_y = None
   except Exception as e:
     return g.errReturn()
 
 async def subplots(p):
   try:
+    cc.stack_y = None
     m.row = p["r"]
     m.col = p["c"]
     width = p["w"]

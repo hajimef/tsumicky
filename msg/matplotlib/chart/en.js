@@ -15,7 +15,7 @@ export function addMessages() {
   Blockly.Msg["TSUMICKY_MPL_CHART_DATALABEL_POS_TOP"] = "Top";
   Blockly.Msg["TSUMICKY_MPL_CHART_DATALABEL_POS_BOTTOM"] = "Bottom";
   Blockly.Msg["TSUMICKY_MPL_CHART_BAR"] = "draw a %1 chart %2 row %3 column %4 X %5 Y %6 line width %7 line style %8 line color %9 inner color %10 bar width (%) %11 bar position (%) %12 label %13"
-  Blockly.Msg["TSUMICKY_MPL_CHART_BAR_TOOLTIP"] = "Draw vertical / horizontal bar graphs (and their stacked types).";
+  Blockly.Msg["TSUMICKY_MPL_CHART_BAR_TOOLTIP"] = "Draw vertical / horizontal bar charts (and their stacked types).";
   Blockly.Msg["TSUMICKY_MPL_CHART_BAR_VERTICAL"] = "vertical bar";
   Blockly.Msg["TSUMICKY_MPL_CHART_BAR_HORIZONTAL"] = "horizontal bar";
   Blockly.Msg["TSUMICKY_MPL_CHART_BAR_VERTICAL_STACK"] = "stacked vertical bar";
@@ -63,6 +63,6 @@ export function addMessages() {
   Blockly.Msg["TSUMICKY_MPL_CHART_MARKER_THIN_DIAMOND"] = "thin diamond";
   Blockly.Msg["TSUMICKY_MPL_CHART_MARKER_HLINE"] = "horizontal line";
   Blockly.Msg["TSUMICKY_MPL_CHART_MARKER_VLINE"] = "vertical line";
-  Blockly.Msg["TSUMICKY_MPL_CHART_CLEAR_STACK_Y"] = "Clear height calculation buffer for stacked chart %1";
+  Blockly.Msg["TSUMICKY_MPL_CHART_CLEAR_STACK_Y"] = "clear height calculation buffer for stacked chart %1";
   Blockly.Msg["TSUMICKY_MPL_CHART_CLEAR_STACK_Y_TOOLTIP"] = "Clear the buffers used for internal calculations when drawing stacked vertical / horizontal bar charts.";
 };

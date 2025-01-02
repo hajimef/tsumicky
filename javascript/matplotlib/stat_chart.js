@@ -15,7 +15,7 @@ export function addJS() {
     var markersize = generator.valueToCode(block, 'markersize', javascript.Order.ATOMIC);
     var color = generator.valueToCode(block, 'color', javascript.Order.ATOMIC);
     var label = generator.valueToCode(block, 'label', javascript.Order.ATOMIC);
-    var code = 'await $_' + modName + '.scatter(' + row + ', ' + col + ', ' + x + ', ' + y + ', \'' + marker + '\', ' + markersize + ', ' + color + ', ' + label + ');\n';
+    var code = 'await $_' + modName + '.scatter(' + row + ', ' + col + ', ' + x + ', ' + y + ', ' + marker + ', ' + markersize + ', ' + color + ', ' + label + ');\n';
     return code;
   };
 

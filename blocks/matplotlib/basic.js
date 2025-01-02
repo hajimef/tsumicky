@@ -3,7 +3,7 @@ export function addBlocks() {
     {
       "type": "mpl_pyplot_subplots",
       "tooltip": "%{BKY_TSUMICKY_CATEGORY_MPL_PYPLOT_SUBPLOTS_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/basic/blocks.php#subplots",
       "message0": "%{BKY_TSUMICKY_CATEGORY_MPL_PYPLOT_SUBPLOTS}",
       "args0": [
         {
@@ -35,7 +35,7 @@ export function addBlocks() {
     {
       "type": "mpl_pyplot_show",
       "tooltip": "%{BKY_TSUMICKY_CATEGORY_MPL_PYPLOT_SHOW_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/basic/blocks.php#show",
       "message0": "%{BKY_TSUMICKY_CATEGORY_MPL_PYPLOT_SHOW}",
       "args0": [
         {
@@ -50,7 +50,7 @@ export function addBlocks() {
     {
       "type": "mpl_pyplot_draw",
       "tooltip": "%{BKY_TSUMICKY_CATEGORY_MPL_PYPLOT_DRAW_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/basic/blocks.php#draw",
       "message0": "%{BKY_TSUMICKY_CATEGORY_MPL_PYPLOT_DRAW}",
       "args0": [
         {
@@ -65,7 +65,7 @@ export function addBlocks() {
     {
       "type": "mpl_pyplot_pause",
       "tooltip": "%{BKY_TSUMICKY_CATEGORY_MPL_PYPLOT_PAUSE_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/basic/blocks.php#pause",
       "message0": "%{BKY_TSUMICKY_CATEGORY_MPL_PYPLOT_PAUSE}",
       "args0": [
         {
@@ -80,7 +80,7 @@ export function addBlocks() {
     {
       "type": "mpl_pyplot_cla",
       "tooltip": "%{BKY_TSUMICKY_CATEGORY_MPL_PYPLOT_CLA_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/basic/blocks.php#cla",
       "message0": "%{BKY_TSUMICKY_CATEGORY_MPL_PYPLOT_CLA}",
       "args0": [
         {
@@ -106,7 +106,7 @@ export function addBlocks() {
     {
       "type": "mpl_pyplot_close",
       "tooltip": "%{BKY_TSUMICKY_CATEGORY_MPL_PYPLOT_CLOSE_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/basic/blocks.php#close",
       "message0": "%{BKY_TSUMICKY_CATEGORY_MPL_PYPLOT_CLOSE}",
       "args0": [
         {

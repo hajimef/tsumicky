@@ -1,7 +1,7 @@
 export function addMessages() {
   Blockly.Msg["TSUMICKY_CATEGORY_EXCEL_BASIC"] = "Excel基本";
   Blockly.Msg["TSUMICKY_CATEGORY_EXCEL_SUB_BASIC"] = "基本";
-  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH"] = "ホスト %1 %2 のポート %3 %4 に接続し、%5";
+  Blockly.Msg["TSUMICKY_EXCEL_LAUNCH"] = "ホスト %1 %2 のポート %3 %4 に接続し、%5 %6 変数に割り当てる %7";
   Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_TOOLTIP"] = "Pythonのxlserver.pyに接続します。";
   Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_VISIBLE"] = "Excelを起動して表示する";
   Blockly.Msg["TSUMICKY_EXCEL_LAUNCH_INVISIBLE"] = "Excelを起動するが表示しない";

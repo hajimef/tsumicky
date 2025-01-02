@@ -18,6 +18,10 @@ import mplBasic
 import mplChart
 import mplStatChart
 import mplChartElement
+try:
+    import xlCustomBlock
+except Exception as e:
+    pass
 import sys
 import traceback
 
@@ -25,7 +29,8 @@ port = 8001
 if len(sys.argv) > 1:
     port = sys.argv[1]
 
-async def proc(websocket, path):
+async def proc(websocket):
+    g.ws = websocket
     async for message in websocket:
         data = json.loads(message)
         group = data["g"]
@@ -50,7 +55,6 @@ async def proc(websocket, path):
                 t = traceback.format_exc()
                 print(t)
 
-
 async def main():
     print("xlServer started on port " + str(port))
     async with websockets.serve(proc, "localhost", port):
@@ -72,4 +76,8 @@ mplBasic.addCallbacks()
 mplChart.addCallbacks()
 mplStatChart.addCallbacks()
 mplChartElement.addCallbacks()
+try:
+    xlCustomBlock.addCallbacks()
+except Exception as e:
+    pass
 asyncio.run(main())

@@ -22,6 +22,7 @@ export async function runExcel(host, port, visible) {
       xl.Workbooks().add_active(wb_data)
     }
   }
+  return sock;
 };
 
 export async function quitExcel() {

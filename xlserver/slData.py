@@ -366,7 +366,7 @@ async def standardize(p):
   try:
     sc = skp.StandardScaler()
     xtrain_s = sc.fit_transform(xtrain)
-    if xtest_s is not None:
+    if xtest is not None:
       xtest_s = sc.transform(xtest)
   except Exception as e:
     return g.errReturn()

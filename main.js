@@ -136,6 +136,21 @@ Blockly.runTimeJS = {};
             }
         }
     }
+    if (settings.hasOwnProperty('move')) {
+        let mvs = settings.move;
+        for (let i = 0; i < mvs.length; i++) {
+            let node = mvs[i];
+            let catNode = doc_tb.querySelector('#' + node.id);
+            if (node.hasOwnProperty('after_name')) {
+                let toNode = doc_tb.querySelector('category[name="' + node.after_name + '"]');
+                toNode.after(catNode);
+            }
+            else if (node.hasOwnProperty('before_name')) {
+                let toNode = doc_tb.querySelector('category[name="' + node.before_name + '"]');
+                toNode.before(catNode);
+            }
+        }
+    }
     if (settings.hasOwnProperty('hiddenBlock')) {
         let hiddenBlocks = settings.hiddenBlock;
         for (let i = 0; i < hiddenBlocks.length; i++) {

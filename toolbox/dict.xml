@@ -1,0 +1,47 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_dict" style="display: none">
+  <category name="%{BKY_TSUMICKY_CATEGORY_DICT}" id="category_dict" colour="#a55b80">
+    <block type="dict_create_with">
+      <mutation items="0"></mutation>
+    </block>
+    <block type="dict_create_with">
+      <mutation items="3"></mutation>
+    </block>
+    <block type="dict_item">
+      <value name="key">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="dict_set_item">
+      <value name="key">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="dict_get_item">
+      <value name="key">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="dict_keys"></block>
+    <block type="dict_has_key">
+      <value name="key">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="dict_values"></block>
+    <block type="dict_from_json">
+      <value name="json">
+        <block type="text_ml"></block>
+      </value>
+    </block>
+    <block type="dict_to_json"></block>
+    <block type="dict_each"></block>
+  </category>
+</xml>

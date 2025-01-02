@@ -3,7 +3,7 @@
     {
       "type": "sl_lr_init",
       "tooltip": "%{BKY_TSUMICKY_SL_LR_INIT_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/regression/linear-regression/blocks.php#init",
       "message0": "%{BKY_TSUMICKY_SL_LR_INIT}",
       "args0": [
         {
@@ -97,7 +97,7 @@
     {
       "type": "sl_lr_fit",
       "tooltip": "%{BKY_TSUMICKY_SL_LR_FIT_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/regression/linear-regression/blocks.php#fit",
       "message0": "%{BKY_TSUMICKY_SL_LR_FIT}",
       "args0": [
         {
@@ -112,7 +112,7 @@
     {
       "type": "sl_lr_coef",
       "tooltip": "%{BKY_TSUMICKY_SL_LR_COEF_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/regression/linear-regression/blocks.php#coef",
       "message0": "%{BKY_TSUMICKY_SL_LR_COEF}",
       "args0": [
         {
@@ -126,7 +126,7 @@
     {
       "type": "sl_lr_intercept",
       "tooltip": "%{BKY_TSUMICKY_SL_LR_INTERCEPT_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/regression/linear-regression/blocks.php#intercept",
       "message0": "%{BKY_TSUMICKY_SL_LR_INTERCEPT}",
       "args0": [
         {

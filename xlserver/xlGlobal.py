@@ -2,6 +2,7 @@ import traceback
 import os.path
 
 xlApp = None
+ws = None
 funcTable = {}
 
 class xlErr:

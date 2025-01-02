@@ -134,6 +134,42 @@ Blockly.Extensions.registerMutator(
   [ 'excel_os_join_path_item' ]
 );
 
+const excel_launch_mutator_mixin = {
+  saveExtraState: function() {
+  },
+
+  loadExtraState: function(state) {
+//    this.updateShape_();
+  },
+
+  updateShape_: function (checked) {
+    console.log(checked);
+    if (this.getInput('v_dummy')) {
+      this.removeInput('v_dummy');
+    }
+    if (checked == 'TRUE') {
+      let v_dummy = this.appendDummyInput('v_dummy');
+      let fld = new Blockly.FieldVariable('sock');
+      v_dummy.appendField(fld, 'var');
+    }
+  }
+};
+
+const excel_launch_mutator_extension = function() {
+  this.getField('assign').setValidator(
+    function (checked) {
+      this.getSourceBlock().updateShape_(checked);
+      return undefined;
+    },
+  );
+};
+
+Blockly.Extensions.registerMutator(
+  'tsumicky_excel_launch_mutator',
+  excel_launch_mutator_mixin,
+  excel_launch_mutator_extension,
+);
+
 export function addBlocks() {
   Blockly.defineBlocksWithJsonArray([
     {
@@ -176,8 +212,18 @@ export function addBlocks() {
               "2"
             ]
           ]
-        }
+        },
+        {
+          "type": "field_checkbox",
+          "name": "assign",
+          "checked": "FALSE"
+        },
+        {
+          "type": "input_dummy",
+          "name": "assign_dummy"
+        },
       ],
+      "mutator": "tsumicky_excel_launch_mutator",
       "inputsInline": true,
       "previousStatement": null,
       "nextStatement": null,

@@ -16,7 +16,7 @@ export function addBlocks() {
     {
       "type": "mpl_chartelm_figure_title",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_ELEMENT_FIGURE_TITLE_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/chart-element/blocks.php#figure_title",
       "message0": "%{BKY_TSUMICKY_MPL_CHART_ELEMENT_FIGURE_TITLE}",
       "args0": [
         {
@@ -37,7 +37,7 @@ export function addBlocks() {
     {
       "type": "mpl_chartelm_title",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_ELEMENT_TITLE_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/chart-element/blocks.php#title",
       "message0": "%{BKY_TSUMICKY_MPL_CHART_ELEMENT_TITLE}",
       "args0": [
         {
@@ -68,7 +68,7 @@ export function addBlocks() {
     {
       "type": "mpl_chartelm_legend",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_ELEMENT_LEGEND_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/chart-element/blocks.php#legend",
       "message0": "%{BKY_TSUMICKY_MPL_CHART_ELEMENT_LEGEND}",
       "args0": [
         {
@@ -154,7 +154,7 @@ export function addBlocks() {
     {
       "type": "mpl_chartelm_axis_label",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_ELEMENT_AXIS_LABEL_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/chart-element/blocks.php#label",
       "message0": "%{BKY_TSUMICKY_MPL_CHART_ELEMENT_AXIS_LABEL}",
       "args0": [
         {
@@ -194,7 +194,7 @@ export function addBlocks() {
     {
       "type": "mpl_chartelm_ticks",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_ELEMENT_TICKS_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/chart-element/blocks.php#ticks",
       "message0": "%{BKY_TSUMICKY_MPL_CHART_ELEMENT_TICKS}",
       "args0": [
         {
@@ -234,7 +234,7 @@ export function addBlocks() {
     {
       "type": "mpl_chartelm_tick_labels",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_ELEMENT_TICK_LABELS_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/chart-element/blocks.php#tick_labels",
       "message0": "%{BKY_TSUMICKY_MPL_CHART_ELEMENT_TICK_LABELS}",
       "args0": [
         {
@@ -283,7 +283,7 @@ export function addBlocks() {
     {
       "type": "mpl_tick_list",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_ELEMENT_TICK_LIST_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/chart-element/blocks.php#tick_list",
       "message0": "%{BKY_TSUMICKY_MPL_CHART_ELEMENT_TICK_LIST}",
       "args0": [
         {
@@ -309,7 +309,7 @@ export function addBlocks() {
     {
       "type": "mpl_chartelm_lim",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_ELEMENT_LIM_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/chart-element/blocks.php#lim",
       "message0": "%{BKY_TSUMICKY_MPL_CHART_ELEMENT_LIM}",
       "args0": [
         {
@@ -354,7 +354,7 @@ export function addBlocks() {
     {
       "type": "mpl_chartelm_grid",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_ELEMENT_GRID_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/chart-element/blocks.php#grid",
       "message0": "%{BKY_TSUMICKY_MPL_CHART_ELEMENT_GRID}",
       "args0": [
         {

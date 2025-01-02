@@ -45,7 +45,7 @@ export function addBlocks() {
     {
       "type": "mpl_chart_scatter",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_SCATTER_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/statistical-chart/blocks.php#scatter",
       "message0": "%{BKY_TSUMICKY_MPL_CHART_SCATTER}",
       "args0": [
         {
@@ -101,7 +101,7 @@ export function addBlocks() {
     {
       "type": "mpl_chart_scatter_datalabel",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_SCATTER_DATALABEL_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/statistical-chart/blocks.php#scatter_datalabel",
       "message0": "%{BKY_TSUMICKY_MPL_CHART_SCATTER_DATALABEL}",
       "args0": [
         {
@@ -187,7 +187,7 @@ export function addBlocks() {
     {
       "type": "mpl_chart_histgram",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_HISTGRAM_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/statistical-chart/blocks.php#histgram",
       "message0": "%{BKY_TSUMICKY_MPL_CHART_HISTGRAM}",
       "args0": [
         {
@@ -275,7 +275,7 @@ export function addBlocks() {
     {
       "type": "mpl_chart_histgram_excel_bins",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_HISTGRAM_EXCEL_BINS_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/statistical-chart/blocks.php#histgram_excel_bins",
       "message0": "%{BKY_TSUMICKY_MPL_CHART_HISTGRAM_EXCEL_BINS}",
       "args0": [
         {
@@ -296,7 +296,7 @@ export function addBlocks() {
     {
       "type": "mpl_chart_histgram_excel_n",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_HISTGRAM_EXCEL_N_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/statistical-chart/blocks.php#histgram_excel_n",
       "message0": "%{BKY_TSUMICKY_MPL_CHART_HISTGRAM_EXCEL_N}",
       "args0": [
         {

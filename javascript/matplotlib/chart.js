@@ -7,13 +7,13 @@ function setRuntimeName() {
 export function addJS() {
   javascript.javascriptGenerator.forBlock['mpl_chart_linestyles'] = function(block, generator) {
     setRuntimeName();
-    var linestyle = block.getFieldValue('linestyles');
+    var linestyle = "'" + block.getFieldValue('linestyles') + "'";
     return [linestyle, Blockly.JavaScript.ORDER_ATOMIC];
   }
 
   javascript.javascriptGenerator.forBlock['mpl_chart_markers'] = function(block, generator) {
     setRuntimeName();
-    var marker = block.getFieldValue('markers');
+    var marker = "'" + block.getFieldValue('markers') + "'";
     return [marker, Blockly.JavaScript.ORDER_ATOMIC];
   }
 
@@ -38,7 +38,7 @@ export function addJS() {
     var pos = generator.valueToCode(block, 'pos', javascript.Order.ATOMIC);
     var color = generator.valueToCode(block, 'color', javascript.Order.ATOMIC);
     var label = generator.valueToCode(block, 'label', javascript.Order.ATOMIC);
-    var code = 'await $_' + modName + '.bar(' + xy + ', ' + row + ', ' + col + ', ' + x + ', ' + y + ', ' + linewidth + ', \'' + linestyle + '\', ' + linecolor + ', ' + color + ', ' + width + ', ' + pos + ', ' + label + ');\n';
+    var code = 'await $_' + modName + '.bar(' + xy + ', ' + row + ', ' + col + ', ' + x + ', ' + y + ', ' + linewidth + ', ' + linestyle + ', ' + linecolor + ', ' + color + ', ' + width + ', ' + pos + ', ' + label + ');\n';
     return code;
   };
 
@@ -72,7 +72,7 @@ export function addJS() {
     var markercolor = generator.valueToCode(block, 'markercolor', javascript.Order.ATOMIC);
     var label = generator.valueToCode(block, 'label', javascript.Order.ATOMIC);
     var sort_x = block.getFieldValue('sort_x') == 'TRUE' ? 1 : 0;
-    var code = 'await $_' + modName + '.plot(' + row + ', ' + col + ', ' + x + ', ' + y + ', ' + linewidth + ', \'' + linestyle + '\', ' + color + ', \'' + marker + '\', ' + markersize + ', ' + markercolor + ', ' + label + ', ' + sort_x + ');\n';
+    var code = 'await $_' + modName + '.plot(' + row + ', ' + col + ', ' + x + ', ' + y + ', ' + linewidth + ', ' + linestyle + ', ' + color + ', ' + marker + ', ' + markersize + ', ' + markercolor + ', ' + label + ', ' + sort_x + ');\n';
     return code;
   };
 

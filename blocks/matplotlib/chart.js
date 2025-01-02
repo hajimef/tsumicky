@@ -53,7 +53,7 @@ export function addBlocks() {
     {
       "type": "mpl_chart_bar",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_BAR_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/general-chart/blocks.php#bar",
       "message0": "%{BKY_TSUMICKY_MPL_CHART_BAR}",
       "args0": [
         {
@@ -129,7 +129,7 @@ export function addBlocks() {
     {
       "type": "mpl_chart_bar_datalabel",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_BAR_DATALABEL_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/general-chart/blocks.php#bar_datalabel",
       "message0": "%{BKY_TSUMICKY_MPL_CHART_BAR_DATALABEL}",
       "args0": [
         {
@@ -211,7 +211,7 @@ export function addBlocks() {
     {
       "type": "mpl_chart_clear_stack_y",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_CLEAR_STACK_Y_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/general-chart/blocks.php#clear_stack_y",
       "message0": "%{BKY_TSUMICKY_MPL_CHART_CLEAR_STACK_Y}",
       "args0": [
         {
@@ -227,7 +227,7 @@ export function addBlocks() {
     {
       "type": "mpl_chart_plot",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_PLOT_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/general-chart/blocks.php#plot",
       "message0": "%{BKY_TSUMICKY_MPL_CHART_PLOT}",
       "args0": [
         {
@@ -303,7 +303,7 @@ export function addBlocks() {
     {
       "type": "mpl_chart_plot_datalabel",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_PLOT_DATALABEL_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/general-chart/blocks.php#plot_datalabel",
       "message0": "%{BKY_TSUMICKY_MPL_CHART_PLOT_DATALABEL}",
       "args0": [
         {
@@ -362,7 +362,7 @@ export function addBlocks() {
     {
       "type": "mpl_chart_pie",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_PIE_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/general-chart/blocks.php#pie",
       "message0": "%{BKY_TSUMICKY_MPL_CHART_PIE}",
       "args0": [
         {
@@ -447,7 +447,7 @@ export function addBlocks() {
     {
       "type": "mpl_chart_markers",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_MARKER_LIST_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/general-chart/blocks.php#markers",
       "message0": "%1",
       "args0": [
         {
@@ -462,7 +462,7 @@ export function addBlocks() {
     {
       "type": "mpl_chart_linestyles",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_LINESTYLE_LIST_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/general-chart/blocks.php#linestyles",
       "message0": "%1",
       "args0": [
         {
@@ -477,7 +477,7 @@ export function addBlocks() {
     {
       "type": "mpl_chart_top_label",
       "tooltip": "%{BKY_TSUMICKY_MPL_CHART_TOP_LABEL_TOOLTIP}",
-      "helpUrl": "",
+      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/matplotlib/general-chart/blocks.php#top_label",
       "message0": "%{BKY_TSUMICKY_MPL_CHART_TOP_LABEL}",
       "args0": [
         {

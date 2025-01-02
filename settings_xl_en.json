@@ -20,7 +20,8 @@
     "matplotlib/stat_chart",
     "matplotlib/chart_element",
     "sep",
-    "custom"
+    "custom",
+    "dict"
   ],
   "tree":[
     {
@@ -158,6 +159,12 @@
           "catname": "%{BKY_TSUMICKY_CATEGORY_MPL_CHART_ELEMENT}"
         }
       ]
+    }
+  ],
+  "move": [
+    {
+      "id": "category_dict",
+      "after_name": "%{BKY_TSUMICKY_CATEGORY_LISTS}"
     }
   ],
   "hiddenBlock": [
