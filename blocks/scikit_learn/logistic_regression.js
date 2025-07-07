@@ -14,7 +14,7 @@ export function addBlocks() {
     {
       "type": "sl_logr_init",
       "tooltip": "%{BKY_TSUMICKY_SL_LOGR_INIT_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/classification/logistic-regression/blocks.php#init",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/classification/logistic-regression/blocks.php#init",
       "message0": "%{BKY_TSUMICKY_SL_LOGR_INIT}",
       "args0": [
         {
@@ -116,7 +116,7 @@ export function addBlocks() {
     {
       "type": "sl_logr_fit",
       "tooltip": "%{BKY_TSUMICKY_SL_LOGR_FIT_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/classification/logistic-regression/blocks.php#fit",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/classification/logistic-regression/blocks.php#fit",
       "message0": "%{BKY_TSUMICKY_SL_LOGR_FIT}",
       "args0": [
         {
@@ -131,7 +131,7 @@ export function addBlocks() {
     {
       "type": "sl_logr_plot",
       "tooltip": "%{BKY_TSUMICKY_SL_LOGR_PLOT_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/classification/logistic-regression/blocks.php#plot",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/classification/logistic-regression/blocks.php#plot",
       "message0": "%{BKY_TSUMICKY_SL_LOGR_PLOT}",
       "args0": [
         {
@@ -162,7 +162,7 @@ export function addBlocks() {
     {
       "type": "sl_logr_decision_function",
       "tooltip": "%{BKY_TSUMICKY_SL_LOGR_DECISION_FUNCTION_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/classification/logistic-regression/blocks.php#decision_function",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/classification/logistic-regression/blocks.php#decision_function",
       "message0": "%{BKY_TSUMICKY_SL_LOGR_DECISION_FUNCTION}",
       "args0": [
         {
@@ -188,7 +188,7 @@ export function addBlocks() {
     {
       "type": "sl_logr_predict_proba",
       "tooltip": "%{BKY_TSUMICKY_SL_LOGR_PREDICT_PROBA_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/classification/logistic-regression/blocks.php#predict_proba",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/classification/logistic-regression/blocks.php#predict_proba",
       "message0": "%{BKY_TSUMICKY_SL_LOGR_PREDICT_PROBA}",
       "args0": [
         {

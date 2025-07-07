@@ -3,7 +3,7 @@
     {
       "type": "lcd_init",
       "tooltip": "%{BKY_TSUMICKY_LCD_INIT_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/display/lcd/blocks.php#init",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/display/lcd/blocks.php#init",
       "message0": "%{BKY_TSUMICKY_LCD_INIT}",
       "args0": [
         {
@@ -52,7 +52,7 @@
     {
       "type": "lcd_init_i2c",
       "tooltip": "%{BKY_TSUMICKY_LCD_INIT_I2C_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/display/lcd/blocks.php#init_i2c",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/display/lcd/blocks.php#init_i2c",
       "message0": "%{BKY_TSUMICKY_LCD_INIT_I2C}",
       "args0": [
         {
@@ -113,7 +113,7 @@
     {
       "type": "lcd_clear",
       "tooltip": "%{BKY_TSUMICKY_LCD_CLEAR_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/display/lcd/blocks.php#clear",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/display/lcd/blocks.php#clear",
       "message0": "%{BKY_TSUMICKY_LCD_CLEAR}",
       "args0": [
         {
@@ -134,7 +134,7 @@
     {
       "type": "lcd_cursor_pos",
       "tooltip": "%{BKY_TSUMICKY_LCD_CURSOR_POS_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/display/lcd/blocks.php#cursor_pos",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/display/lcd/blocks.php#cursor_pos",
       "message0": "%{BKY_TSUMICKY_LCD_CURSOR_POS}",
       "args0": [
         {
@@ -169,7 +169,7 @@
     {
       "type": "lcd_print",
       "tooltip": "%{BKY_TSUMICKY_LCD_PRINT_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/display/lcd/blocks.php#print",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/display/lcd/blocks.php#print",
       "message0": "%{BKY_TSUMICKY_LCD_PRINT}",
       "args0": [
         {

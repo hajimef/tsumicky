@@ -3,7 +3,7 @@ export function addBlocks() {
     {
       "type": "sl_pca_init",
       "tooltip": "%{BKY_TSUMICKY_SL_PCA_INIT_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/decomposition/pca/blocks.php#init",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/decomposition/pca/blocks.php#init",
       "message0": "%{BKY_TSUMICKY_SL_PCA_INIT}",
       "args0": [
         {
@@ -24,7 +24,7 @@ export function addBlocks() {
     {
       "type": "sl_pca_transform",
       "tooltip": "%{BKY_TSUMICKY_SL_PCA_TRANSFORM_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/decomposition/pca/blocks.php#transform",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/decomposition/pca/blocks.php#transform",
       "message0": "%{BKY_TSUMICKY_SL_PCA_TRANSFORM}",
       "args0": [
         {
@@ -40,7 +40,7 @@ export function addBlocks() {
     {
       "type": "sl_pca_rdim",
       "tooltip": "%{BKY_TSUMICKY_SL_PCA_RDIM_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/decomposition/pca/blocks.php#rdim",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/decomposition/pca/blocks.php#rdim",
       "message0": "%{BKY_TSUMICKY_SL_PCA_RDIM}",
       "args0": [
         {
@@ -55,7 +55,7 @@ export function addBlocks() {
     {
       "type": "sl_pca_ev",
       "tooltip": "%{BKY_TSUMICKY_SL_PCA_EV_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/decomposition/pca/blocks.php#ev",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/decomposition/pca/blocks.php#ev",
       "message0": "%{BKY_TSUMICKY_SL_PCA_EV}",
       "args0": [
         {
@@ -76,7 +76,7 @@ export function addBlocks() {
     {
       "type": "sl_pca_evr",
       "tooltip": "%{BKY_TSUMICKY_SL_PCA_EVR_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/decomposition/pca/blocks.php#evr",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/decomposition/pca/blocks.php#evr",
       "message0": "%{BKY_TSUMICKY_SL_PCA_EVR}",
       "args0": [
         {
@@ -97,7 +97,7 @@ export function addBlocks() {
     {
       "type": "sl_pca_components",
       "tooltip": "%{BKY_TSUMICKY_SL_PCA_COMPONENTS_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/decomposition/pca/blocks.php#components",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/decomposition/pca/blocks.php#components",
       "message0": "%{BKY_TSUMICKY_SL_PCA_COMPONENTS}",
       "args0": [
         {

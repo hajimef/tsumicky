@@ -44,7 +44,7 @@
       "nextStatement": null,
       "colour": 260,
       "tooltip": "%{BKY_TSUMICKY_SERVO_ATTACH_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/servo/blocks.php#attach"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/servo/blocks.php#attach"
     },
     {
       "type": "servo_write",
@@ -77,7 +77,7 @@
       "nextStatement": null,
       "colour": 260,
       "tooltip": "%{BKY_TSUMICKY_SERVO_WRITE_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/servo/blocks.php#write"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/servo/blocks.php#write"
     }
   ]);
 };

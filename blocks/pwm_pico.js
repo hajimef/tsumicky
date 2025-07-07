@@ -23,7 +23,7 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 210,
       "tooltip": "%{BKY_TSUMICKY_PWM_PICO_SETUP_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/pwm/pico.php#setup"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/pwm/pico.php#setup"
     },
     {
       "type": "pwm_pico_analog_write",
@@ -53,7 +53,7 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 210,
       "tooltip": "%{BKY_TSUMICKY_PWM_PICO_ANALOG_WRITE_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/pwm/pico.php#write"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/pwm/pico.php#write"
     }
   ]);
 };

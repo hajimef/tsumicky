@@ -29,7 +29,7 @@
       "nextStatement": null,
       "colour": 260,
       "tooltip": "%{BKY_TSUMICKY_BMP280_INIT_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/sensor/tph/bmp280/blocks.php#init"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/sensor/tph/bmp280/blocks.php#init"
     },
     {
       "type": "bmp280_init_i2c",
@@ -72,7 +72,7 @@
       "nextStatement": null,
       "colour": 260,
       "tooltip": "%{BKY_TSUMICKY_BMP280_INIT_I2C_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/sensor/tph/bmp280/blocks.php#init_i2c"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/sensor/tph/bmp280/blocks.php#init_i2c"
     },
     {
       "type": "bmp280_temperature",
@@ -88,7 +88,7 @@
       "output": "Number",
       "colour": 260,
       "tooltip": "%{BKY_TSUMICKY_BMP280_TEMPERATURE_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/sensor/tph/bmp280/blocks.php#temperature"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/sensor/tph/bmp280/blocks.php#temperature"
     },
     {
       "type": "bmp280_pressure",
@@ -104,7 +104,7 @@
       "output": "Number",
       "colour": 260,
       "tooltip": "%{BKY_TSUMICKY_BMP280_PRESSURE_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/sensor/tph/bmp280/blocks.php#pressure"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/sensor/tph/bmp280/blocks.php#pressure"
     }
   ]);
 };

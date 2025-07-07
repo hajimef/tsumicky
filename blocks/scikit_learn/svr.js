@@ -3,7 +3,7 @@ export function addBlocks() {
     {
       "type": "sl_linear_svr_init",
       "tooltip": "%{BKY_TSUMICKY_SL_LINEAR_SVR_INIT_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/regression/svr/blocks.php#init",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/regression/svr/blocks.php#init",
       "message0": "%{BKY_TSUMICKY_SL_LINEAR_SVR_INIT}",
       "args0": [
         {
@@ -29,7 +29,7 @@ export function addBlocks() {
     {
       "type": "sl_svr_fit",
       "tooltip": "%{BKY_TSUMICKY_SL_SVR_FIT_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/regression/svr/blocks.php#fit",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/regression/svr/blocks.php#fit",
       "message0": "%{BKY_TSUMICKY_SL_SVR_FIT}",
       "args0": [
         {
@@ -44,7 +44,7 @@ export function addBlocks() {
     {
       "type": "sl_svr_coef",
       "tooltip": "%{BKY_TSUMICKY_SL_LR_COEF_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/regression/svr/blocks.php#coef",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/regression/svr/blocks.php#coef",
       "message0": "%{BKY_TSUMICKY_SL_LR_COEF}",
       "args0": [
         {
@@ -58,7 +58,7 @@ export function addBlocks() {
     {
       "type": "sl_svr_intercept",
       "tooltip": "%{BKY_TSUMICKY_SL_LR_INTERCEPT_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/regression/svr/blocks.php#intercept",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/regression/svr/blocks.php#intercept",
       "message0": "%{BKY_TSUMICKY_SL_LR_INTERCEPT}",
       "args0": [
         {
@@ -72,7 +72,7 @@ export function addBlocks() {
     {
       "type": "sl_svr_support_vectors",
       "tooltip": "%{BKY_TSUMICKY_SL_SVR_SUPPORT_VECTORS_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/regression/svr/blocks.php#support_vectors",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/regression/svr/blocks.php#support_vectors",
       "message0": "%{BKY_TSUMICKY_SL_SVR_SUPPORT_VECTORS}",
       "args0": [
         {
@@ -87,7 +87,7 @@ export function addBlocks() {
     {
       "type": "sl_svr_support",
       "tooltip": "%{BKY_TSUMICKY_SL_SVR_SUPPORT_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/regression/svr/blocks.php#support",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/regression/svr/blocks.php#support",
       "message0": "%{BKY_TSUMICKY_SL_SVR_SUPPORT}",
       "args0": [
         {

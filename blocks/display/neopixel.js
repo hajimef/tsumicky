@@ -84,7 +84,7 @@
       "nextStatement": null,
       "colour": 20,
       "tooltip": "%{BKY_TSUMICKY_NEOPIXEL_INIT_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/display/neopixel/blocks.php#init"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/display/neopixel/blocks.php#init"
     },
     {
       "type": "neopixel_set_pixel_color",
@@ -139,7 +139,7 @@
       "nextStatement": null,
       "colour": 20,
       "tooltip": "%{BKY_TSUMICKY_NEOPIXEL_SET_PIXEL_COLOR_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/display/neopixel/blocks.php#set_pixel_color"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/display/neopixel/blocks.php#set_pixel_color"
     },
     {
       "type": "neopixel_set_all_pixel_color",
@@ -189,7 +189,7 @@
       "nextStatement": null,
       "colour": 20,
       "tooltip": "%{BKY_TSUMICKY_NEOPIXEL_SET_ALL_PIXEL_COLOR_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/display/neopixel/blocks.php#set_all_pixel_color"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/display/neopixel/blocks.php#set_all_pixel_color"
     },
     {
       "type": "neopixel_show",
@@ -232,7 +232,7 @@
       "nextStatement": null,
       "colour": 20,
       "tooltip": "%{BKY_TSUMICKY_NEOPIXEL_SHOW_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/display/neopixel/blocks.php#show"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/display/neopixel/blocks.php#show"
     }
   ]);
 };

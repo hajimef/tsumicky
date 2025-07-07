@@ -64,12 +64,12 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 20,
       "tooltip": "%{BKY_TSUMICKY_BASIC_CONSOLE_LOG_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/basic/blocks.php#console_log"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/basic/blocks.php#console_log"
     },
     {
       "type": "basic_format_float",
       "tooltip": "%{BKY_TSUMICKY_BASIC_FORMAT_FLOAT_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/basic/blocks.php#format_float",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/basic/blocks.php#format_float",
       "message0": "%{BKY_TSUMICKY_BASIC_FORMAT_FLOAT}",
       "args0": [
         {
@@ -113,7 +113,7 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 20,
       "tooltip": "%{BKY_TSUMICKY_BASIC_SLEEP_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/basic/blocks.php#sleep"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/basic/blocks.php#sleep"
     },
     {
       "type": "basic_stop",
@@ -121,7 +121,7 @@ export function addBlocks() {
       "previousStatement": null,
       "colour": 20,
       "tooltip": "%{BKY_TSUMICKY_BASIC_END_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/basic/blocks.php#stop"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/basic/blocks.php#stop"
     }
   ]);
 };

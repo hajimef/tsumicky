@@ -51,7 +51,7 @@ export function addBlocks() {
       "output": "Number",
       "colour": 225,
       "tooltip": "%{BKY_TSUMICKY_SL_METRICS_MSE_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/metrics/blocks.php#mse"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/metrics/blocks.php#mse"
     },
     {
       "type": "sl_metrics_rmse",
@@ -66,7 +66,7 @@ export function addBlocks() {
       "output": "Number",
       "colour": 225,
       "tooltip": "%{BKY_TSUMICKY_SL_METRICS_RMSE_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/metrics/blocks.php#rmse"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/metrics/blocks.php#rmse"
     },
     {
       "type": "sl_metrics_r2_score",
@@ -81,7 +81,7 @@ export function addBlocks() {
       "output": "Number",
       "colour": 225,
       "tooltip": "%{BKY_TSUMICKY_SL_METRICS_R2_SCORE_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/metrics/blocks.php#r2score"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/metrics/blocks.php#r2score"
     },
     {
       "type": "sl_metrics_confusion_matrix",
@@ -96,7 +96,7 @@ export function addBlocks() {
       "output": "Number",
       "colour": 225,
       "tooltip": "%{BKY_TSUMICKY_SL_METRICS_CONFUSION_MATRIX_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/metrics/blocks.php#confusion_matrix"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/metrics/blocks.php#confusion_matrix"
     },
     {
       "type": "sl_metrics_accuracy_score",
@@ -111,7 +111,7 @@ export function addBlocks() {
       "output": "Number",
       "colour": 225,
       "tooltip": "%{BKY_TSUMICKY_SL_METRICS_ACCURACY_SCORE_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/metrics/blocks.php#accuracy_score"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/metrics/blocks.php#accuracy_score"
     },
     {
       "type": "sl_metrics_precision_score",
@@ -131,7 +131,7 @@ export function addBlocks() {
       "output": "Number",
       "colour": 225,
       "tooltip": "%{BKY_TSUMICKY_SL_METRICS_PRECISION_SCORE_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/metrics/blocks.php#precision_score"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/metrics/blocks.php#precision_score"
     },
     {
       "type": "sl_metrics_recall_score",
@@ -151,7 +151,7 @@ export function addBlocks() {
       "output": "Number",
       "colour": 225,
       "tooltip": "%{BKY_TSUMICKY_SL_METRICS_RECALL_SCORE_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/metrics/blocks.php#recall_score"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/metrics/blocks.php#recall_score"
     },
     {
       "type": "sl_metrics_f1_score",
@@ -171,7 +171,7 @@ export function addBlocks() {
       "output": "Number",
       "colour": 225,
       "tooltip": "%{BKY_TSUMICKY_SL_METRICS_F1_SCORE_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/metrics/blocks.php#f1_score"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/metrics/blocks.php#f1_score"
     }
   ]);
 }

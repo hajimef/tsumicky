@@ -27,7 +27,7 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 210,
       "tooltip": "%{BKY_TSUMICKY_PWM_RPI_SET_FREQUENCY_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/pwm/rpi.php#setup"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/pwm/rpi.php#setup"
     },
     {
       "type": "pwm_rpi_analog_write",
@@ -57,7 +57,7 @@ export function addBlocks() {
       "nextStatement": null,
       "colour": 210,
       "tooltip": "%{BKY_TSUMICKY_PWM_RPI_ANALOG_WRITE_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/pwm/rpi.php#write"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/pwm/rpi.php#write"
     }
   ]);
 };

@@ -3,7 +3,7 @@ export function addBlocks() {
     {
       "type": "pwm_esp32n_attach",
       "tooltip": "%{BKY_TSUMICKY_PWM_ESP32N_ATTACH_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/pwm/esp32n.php#setup",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/pwm/esp32n.php#setup",
       "message0": "%{BKY_TSUMICKY_PWM_ESP32N_ATTACH}",
       "args0": [
         {
@@ -47,7 +47,7 @@ export function addBlocks() {
     {
       "type": "pwm_esp32n_write",
       "tooltip": "%{BKY_TSUMICKY_PWM_ESP32N_WRITE_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/pwm/esp32n.php#write",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/pwm/esp32n.php#write",
       "message0": "%{BKY_TSUMICKY_PWM_ESP32N_WRITE}",
       "args0": [
         {

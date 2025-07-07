@@ -285,7 +285,7 @@ export function addBlocks() {
     {
       "type": "sl_data_load_dataset",
       "tooltip": "%{BKY_TSUMICKY_SL_DATA_LOAD_DATASET_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/data/blocks.php#load_dataset",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/data/blocks.php#load_dataset",
       "message0": "%{BKY_TSUMICKY_SL_DATA_LOAD_DATASET}",
       "args0": [
         {
@@ -328,7 +328,7 @@ export function addBlocks() {
     {
       "type": "sl_data_load",
       "tooltip": "%{BKY_TSUMICKY_SL_DATA_LOAD_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/data/blocks.php#load",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/data/blocks.php#load",
       "message0": "%{BKY_TSUMICKY_SL_DATA_LOAD}",
       "args0": [
         {
@@ -367,7 +367,7 @@ export function addBlocks() {
     {
       "type": "sl_data_split",
       "tooltip": "%{BKY_TSUMICKY_SL_DATA_SPLIT_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/data/blocks.php#split",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/data/blocks.php#split",
       "message0": "%{BKY_TSUMICKY_SL_DATA_SPLIT}",
       "args0": [
         {
@@ -410,7 +410,7 @@ export function addBlocks() {
     {
       "type": "sl_data_backup",
       "tooltip": "%{BKY_TSUMICKY_SL_DATA_BACKUP_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/data/blocks.php#backup",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/data/blocks.php#backup",
       "message0": "%{BKY_TSUMICKY_SL_DATA_BACKUP}",
       "previousStatement": null,
       "nextStatement": null,
@@ -420,7 +420,7 @@ export function addBlocks() {
     {
       "type": "sl_data_restore",
       "tooltip": "%{BKY_TSUMICKY_SL_DATA_RESTORE_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/data/blocks.php#restore",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/data/blocks.php#restore",
       "message0": "%{BKY_TSUMICKY_SL_DATA_RESTORE}",
       "previousStatement": null,
       "nextStatement": null,
@@ -430,7 +430,7 @@ export function addBlocks() {
     {
       "type": "sl_data_slice",
       "tooltip": "%{BKY_TSUMICKY_SL_DATA_SLICE_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/data/blocks.php#slice",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/data/blocks.php#slice",
       "message0": "%{BKY_TSUMICKY_SL_DATA_SLICE}",
       "extraState": {
         "itemCount": 1
@@ -444,7 +444,7 @@ export function addBlocks() {
     {
       "type": "sl_data_slice_number",
       "tooltip": "%{BKY_TSUMICKY_SL_DATA_SLICE_NUMBER_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/data/blocks.php#slice_number",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/data/blocks.php#slice_number",
       "message0": "%{BKY_TSUMICKY_SL_DATA_SLICE_NUMBER}",
       "args0": [
         {
@@ -459,7 +459,7 @@ export function addBlocks() {
     {
       "type": "sl_data_slice_label",
       "tooltip": "%{BKY_TSUMICKY_SL_DATA_SLICE_LABEL_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/data/blocks.php#slice_label",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/data/blocks.php#slice_label",
       "message0": "%{BKY_TSUMICKY_SL_DATA_SLICE_LABEL}",
       "args0": [
         {
@@ -560,7 +560,7 @@ export function addBlocks() {
     {
       "type": "sl_data_standardize",
       "tooltip": "%{BKY_TSUMICKY_SL_DATA_STANDARDIZE_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/data/blocks.php#standardize",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/data/blocks.php#standardize",
       "message0": "%{BKY_TSUMICKY_SL_DATA_STANDARDIZE}",
       "args0": [
         {
@@ -575,7 +575,7 @@ export function addBlocks() {
     {
       "type": "sl_data_save",
       "tooltip": "%{BKY_TSUMICKY_SL_DATA_SAVE_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/data/blocks.php#save",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/data/blocks.php#save",
       "message0": "%{BKY_TSUMICKY_SL_DATA_SAVE}",
       "args0": [
         {
@@ -730,7 +730,7 @@ export function addBlocks() {
     {
       "type": "sl_data_mpl",
       "tooltip": "%{BKY_TSUMICKY_SL_DATA_MPL_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/scikit-learn/data/blocks.php#mpl",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/scikit-learn/data/blocks.php#mpl",
       "message0": "%{BKY_TSUMICKY_SL_DATA_MPL}",
       "args0": [
         {

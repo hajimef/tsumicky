@@ -3,7 +3,7 @@
     {
       "type": "mpu6050_init",
       "tooltip": "%{BKY_TSUMICKY_MPU6050_INIT_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/sensor/motion/mpu6050/blocks.php#init",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/sensor/motion/mpu6050/blocks.php#init",
       "message0": "%{BKY_TSUMICKY_MPU6050_INIT}",
       "args0": [
         {
@@ -24,7 +24,7 @@
     {
       "type": "mpu6050_init_pin",
       "tooltip": "%{BKY_TSUMICKY_MPU6050_INIT_PIN_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/sensor/motion/mpu6050/blocks.php#init_pin",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/sensor/motion/mpu6050/blocks.php#init_pin",
       "message0": "%{BKY_TSUMICKY_MPU6050_INIT_PIN}",
       "args0": [
         {
@@ -56,7 +56,7 @@
     {
       "type": "mpu6050_update",
       "tooltip": "%{BKY_TSUMICKY_MPU6050_UPDATE_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/sensor/motion/mpu6050/blocks.php#update",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/sensor/motion/mpu6050/blocks.php#update",
       "message0": "%{BKY_TSUMICKY_MPU6050_UPDATE}",
       "args0": [
         {
@@ -76,7 +76,7 @@
     {
       "type": "mpu6050_read",
       "tooltip": "%{BKY_TSUMICKY_MPU6050_READ_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/sensor/motion/mpu6050/blocks.php#read",
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/sensor/motion/mpu6050/blocks.php#read",
       "message0": "%{BKY_TSUMICKY_MPU6050_READ}",
       "args0": [
         {

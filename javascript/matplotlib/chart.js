@@ -110,7 +110,10 @@ export function addJS() {
       explode = 'null';
     }
     const radius = generator.valueToCode(block, 'radius', javascript.Order.ATOMIC);
-    const autopct = generator.valueToCode(block, 'autopct', javascript.Order.ATOMIC);
+    let autopct = generator.valueToCode(block, 'autopct', javascript.Order.ATOMIC);
+    if (autopct == "") {
+      autopct = 'null';
+    }
     const pctdistance = generator.valueToCode(block, 'pctdistance', javascript.Order.ATOMIC);
     const c_radius = generator.valueToCode(block, 'c_radius', javascript.Order.ATOMIC);
     let edgecolor = generator.valueToCode(block, 'edgecolor', javascript.Order.ATOMIC);

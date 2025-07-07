@@ -35,7 +35,7 @@
       "nextStatement": null,
       "colour": 230,
       "tooltip": "%{BKY_TSUMICKY_DHT_INIT_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/sensor/tph/dht/blocks.php#init"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/sensor/tph/dht/blocks.php#init"
     },
     {
       "type": "dht_temperature",
@@ -51,7 +51,7 @@
       "output": "Number",
       "colour": 230,
       "tooltip": "%{BKY_TSUMICKY_DHT_TEMPERATURE_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/sensor/tph/dht/blocks.php#temperature"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/sensor/tph/dht/blocks.php#temperature"
     },
     {
       "type": "dht_humidity",
@@ -67,7 +67,7 @@
       "output": "Number",
       "colour": 230,
       "tooltip": "%{BKY_TSUMICKY_DHT_HUMIDITY_TOOLTIP}",
-      "helpUrl": "https://www.hfchannel.net/tsumicky/cmn/ref/sensor/tph/dht/blocks.php#humidity"
+      "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/sensor/tph/dht/blocks.php#humidity"
     }
   ]);
 };
