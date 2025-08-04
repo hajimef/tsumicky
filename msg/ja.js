@@ -15,7 +15,9 @@ Blockly.Msg["TSUMICKY_CATEGORY_PWM"] = "PWM出力";
 Blockly.Msg["TSUMICKY_CATEGORY_DISPLAY"] = "表示";
 Blockly.Msg["TSUMICKY_CATEGORY_SENSOR"] = "センサー";
 Blockly.Msg["TSUMICKY_CATEGORY_TPH"] = "温度／気圧／湿度";
+Blockly.Msg["TSUMICKY_CATEGORY_HUMAN"] = "人体";
 Blockly.Msg["TSUMICKY_CATEGORY_MOTION"] = "モーション";
+Blockly.Msg["TSUMICKY_CATEGORY_MOTOR"] = "モーター";
 Blockly.Msg["TSUMICKY_CATEGORY_EXCEL"] = "Excel";
 Blockly.Msg["TSUMICKY_CATEGORY_SL_REGRESSION"] = "回帰";
 Blockly.Msg["TSUMICKY_CATEGORY_SL_CLASSIFICATION"] = "分類";
@@ -29,4 +31,5 @@ Blockly.Msg["EMPTY_BACKPACK"] = 'バックパックを空にする';
 Blockly.Msg["REMOVE_FROM_BACKPACK"] = 'バックパックから削除する';
 Blockly.Msg["COPY_TO_BACKPACK"] = 'バックパックにコピーする';
 Blockly.Msg["COPY_ALL_TO_BACKPACK"] = '全てをバックパックにコピーする';
-Blockly.Msg["PASTE_ALL_FROM_BACKPACK"] = '全てをバックパックから貼り付ける';
+Blockly.Msg['PASTE_ALL_FROM_BACKPACK'] = '全てをバックパックから貼り付ける';
+

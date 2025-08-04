@@ -4,6 +4,7 @@
 #include <map>
 #include <functional>
 #include <Arduino_JSON.h>
+#include <WebSocketsServer.h>
 
 #define NO_RETURN 0
 #define USE_RETURN 1
@@ -15,7 +16,12 @@
 #define TYPE_OBJ 3
 
 extern JSONVar r_stat;
+extern WebSocketsServer ws;
+extern uint8_t ws_num;
 
 void addCallback(String group, String subgrp, String command, void (*func)(JSONVar& param));
 void runCallback(String group, String subgrp, String command, JSONVar& param);
+void sendWebSocket(String group, String subgrp, String command, JSONVar &param);
+void sendWebSocket(String group, String subgrp, String command, int param);
+void sendWebSocketSub(String group, String subgrp, String command, JSONVar &param);
 #endif

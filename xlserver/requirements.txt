@@ -1,0 +1,8 @@
+matplotlib
+matplotlib-fontja
+mlxtend
+numpy
+pandas
+scikit-learn
+websockets
+xlwings

@@ -15,3 +15,33 @@ void runCallback(String group, String subgrp, String command, JSONVar &param) {
     r_stat["s"] = (int) NOT_EXIST;
   }
 }
+
+void sendWebSocket(String group, String subgrp, String command, JSONVar &param) {
+  sendWebSocketSub(group, subgrp, command, param);
+}
+
+void sendWebSocket(String group, String subgrp, String command, int param) {
+  JSONVar d;
+  d = JSON.parse("{}");
+  sendWebSocketSub(group, subgrp, command, d);
+}
+
+void sendWebSocketSub(String group, String subgrp, String command, JSONVar &param) {
+  JSONVar cbdata;
+  String j_str;
+
+  cbdata["g"] = (char *) group.c_str();
+  cbdata["s"] = (char *) subgrp.c_str();
+  cbdata["cb"] = (int) 1;
+  cbdata["c"] = (char *) command.c_str();
+  if (param == NULL) {
+    cbdata["d"] = JSON.parse("{}");
+  }
+  else {
+    cbdata["d"] = param;
+  }
+  j_str = JSON.stringify(cbdata);
+  //Serial.print("send callback ");
+  //Serial.println(j_str);
+  ws.sendTXT(ws_num, j_str);
+}

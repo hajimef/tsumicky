@@ -8,11 +8,14 @@
     "pwm_rpi",
     "pwm_pico",
     "servo",
+    "motor/pca9685",
     "display/lcd",
     "display/neopixel",
+    "display/oled",
     "sensor/bmp280",
     "sensor/dht",
     "sensor/mpu6050",
+    "sensor/max30100",
     "sep",
     "excel/basic",
     "excel/workbook",
@@ -60,6 +63,22 @@
       ]
     },
     {
+      "catname": "%{BKY_TSUMICKY_CATEGORY_MOTOR}",
+      "colour": "#4284f4",
+      "before": "category_pca9685",
+      "id": "category_motor",
+      "children": [
+        {
+          "id": "category_servo",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_SERVO}"
+        },
+        {
+          "id": "category_pca9685",
+          "catname": "PCA9685"
+        }
+      ]
+    },
+    {
       "catname": "%{BKY_TSUMICKY_CATEGORY_DISPLAY}",
       "colour": "#a5745b",
       "before": "category_lcd",
@@ -72,6 +91,10 @@
         {
           "id": "category_neopixel",
           "catname": "NeoPixel"
+        },
+        {
+          "id": "category_oled",
+          "catname": "OLED"
         }
       ]
     },
@@ -92,8 +115,20 @@
       ]
     },
     {
-      "catname": "%{BKY_TSUMICKY_CATEGORY_MOTION}",
+      "catname": "%{BKY_TSUMICKY_CATEGORY_HUMAN}",
+      "colour": "#a5745b",
       "after": "category_tph",
+      "id": "category_human",
+      "children": [
+        {
+          "id": "category_max30100",
+          "catname": "MAX30100"
+        }
+      ]
+    },
+    {
+      "catname": "%{BKY_TSUMICKY_CATEGORY_MOTION}",
+      "after": "category_human",
       "id": "category_motion",
       "colour": "#5ba55b",
       "children": [
@@ -112,6 +147,10 @@
         {
           "id": "category_tph",
           "catname": "%{BKY_TSUMICKY_CATEGORY_TPH}"
+        },
+        {
+          "id": "category_human",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_HUMAN}"
         },
         {
           "id": "category_motion",

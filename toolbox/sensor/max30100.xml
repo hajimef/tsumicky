@@ -1,0 +1,19 @@
+<category id="category_max30100" name="MAX30100" colour="15">
+  <block type="max30100_init">
+    <field name="ws_var">sock</field>
+  </block>
+  <block type="max30100_init_wire">
+    <field name="ws_var">sock</field>
+    <field name="SDA">21</field>
+    <field name="SCL">22</field>
+  </block>
+  <block type="max30100_read_heartrate">
+    <field name="ws_var">sock</field>
+  </block>
+  <block type="max30100_read_spo2">
+    <field name="ws_var">sock</field>
+  </block>
+  <block type="max30100_beat_callback">
+    <field name="ws_var">sock</field>
+  </block>
+</category>

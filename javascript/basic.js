@@ -32,8 +32,9 @@ function createDisposeList(generator) {
     code += generator.INDENT + 'await $_' + rt.modName + '.dispose();\n';
   }
   code += generator.INDENT + 'Blockly.__wsobjs.forEach(function(ws) {\n';
-  code += generator.INDENT + generator.INDENT + 'ws.send(\'{"g":"close","c":"close","p":{"p":0}}\');\n';
+  code += generator.INDENT + generator.INDENT + 'ws.send(\'{"g":"close","c":"close","i":\' + Blockly.__listener_no + \',"p":{"p":0}}\');\n';
   code += generator.INDENT + generator.INDENT + 'ws.close();\n';
+  code += generator.INDENT + generator.INDENT + 'Blockly.__listener_no++;\n';
   code += generator.INDENT + '});\n';
   code += generator.INDENT + 'Blockly.__wsobjs = [];\n';
   code += generator.INDENT + 'Blockly.stopCode();\n';

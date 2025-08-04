@@ -9,7 +9,7 @@
 #include <LEAmDNS.h>
 #endif
 #include "fw_common.h"
-#include "basic_io.h"
+#include "basic_io.h" 
 #include "pwm.h"
 #include "fw_servo.h"
 #ifdef ENABLE_CUSTOM_BLOCK
@@ -24,14 +24,17 @@ const int port = 8000;
 
 WiFiMulti WiFiMulti;
 WebSocketsServer ws = WebSocketsServer(port);
+uint8_t ws_num;
 
 void wsEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t length) {
   JSONVar msg, param;
   String grp, subgrp, com;
+  int id;
 
   switch(type) {
     case WStype_CONNECTED:
       {
+          ws_num = num;
           IPAddress ip = ws.remoteIP(num);
           Serial.printf("[%u] Connected from %d.%d.%d.%d url: %s\n", num, ip[0], ip[1], ip[2], ip[3], payload);
       }
@@ -54,6 +57,7 @@ void wsEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t length) {
             com = (const char*) msg["c"];
             if (msg.hasOwnProperty("p")) {
               param = (JSONVar) msg["p"];
+              id = (int) msg["i"];
               //Serial.print("start");
               //Serial.print("group = ");
               //Serial.print(grp);
@@ -70,6 +74,7 @@ void wsEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t length) {
               r_value["g"] = grp;
               r_value["sg"] = subgrp;
               r_value["c"] = com;
+              r_value["i"] = id;
               if (stat == NOT_EXIST) {
                 r_value["ne"] = 1;
               }
@@ -127,7 +132,6 @@ void setup() {
         Serial.print(host);
         Serial.println(".local");
     }
-
     basic_io_setup();
     pwm_setup();
     servo_setup();

@@ -210,10 +210,9 @@ Blockly.runTimeJS = {};
     let proc_func = workspace.toolboxCategoryCallbacks.get("PROCEDURE");
     workspace.registerToolboxCategoryCallback('PROCEDURE', function(ws) {
         let blocklist = proc_func(ws);
-        let block = document.createElement('block');
-        block.setAttribute('type', 'procedure_js_function');
+        let block = { "kind": "block", "type": "procedure_js_function", "gap": 16, "fields": { "NAME": Blockly.Msg['TSUMICKY_JS_FUNCTION'] } };
         for (let i = 0; i < blocklist.length; i++) {
-            if (blocklist[i].attributes.type.value == 'procedures_ifreturn') {
+            if (blocklist[i].type == 'procedures_ifreturn') {
                 blocklist.splice(i, 0, block);
                 break;
             }
@@ -294,6 +293,9 @@ function runCode() {
     Blockly.isStop = false;
     Blockly.isEnd = false;
     Blockly.__wsobjs = [];
+    Blockly.__callbacks = {};
+    Blockly.__listeners = {};
+    Blockly.__listener_no = 0;
     btnRun.setAttribute('disabled', 'disabled');
     btnStop.removeAttribute('disabled');
     let code = javascript.javascriptGenerator.workspaceToCode(workspace);

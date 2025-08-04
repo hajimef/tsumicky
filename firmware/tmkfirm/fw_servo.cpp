@@ -24,6 +24,9 @@ void servo_attach(JSONVar &p) {
   servo_no = (int) p["n"] - 1;
   pmin = (int) p["mi"];
   pmax = (int) p["mx"];
+#if defined(ESP32)
+  sv[servo_no].setPeriodHertz(50);
+#endif
   sv[servo_no].attach(pin, pmin, pmax);
   r_stat["s"] = (int) NO_RETURN;
 }

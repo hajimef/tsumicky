@@ -36,14 +36,15 @@ async def proc(websocket):
         group = data["g"]
         subgroup = data["sg"] if "sg" in data else None
         command = data["c"]
+        id = data["i"]
         param = data["p"]
         #print(data, group, subgroup, command, param)
         ret = await g.runCallback(group, subgroup, command, param)
         if isinstance(ret, g.xlErr):
-            send_data = { "g": group, "sg": subgroup, "c": command, "e": 1, "msg": ret.msg }
+            send_data = { "g": group, "sg": subgroup, "c": command, "e": 1, "i": id, "msg": ret.msg }
 #        elif ret is not None:
         else:
-            send_data = { "g": group, "sg": subgroup, "c": command, "v": ret }
+            send_data = { "g": group, "sg": subgroup, "c": command, "i": id, "v": ret }
 #        else:
 #            send_data = { "g": group, "sg": subgroup, "c": command, "v": 1 }
         try:

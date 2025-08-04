@@ -24,9 +24,11 @@ except Exception as e:
     pass
 import mods.displays.tmkLCD as tmkLCD
 import mods.displays.tmkNeoPixel as tmkNeoPixel
+import mods.displays.tmkOLED as tmkOLED
 import mods.sensors.env.tmkDHT as tmkDHT
 import mods.sensors.env.tmkBMP280 as tmkBMP280
 import mods.sensors.motion.tmkMPU6050 as tmkMPU6050
+import mods.motors.tmkPCA9685 as tmkPCA9685
 import traceback
 
 if g.tmkMode == "pico" or g.tmkMode == "ft232h":
@@ -39,20 +41,21 @@ elif g.tmkMode == "rpi":
     if port is None:
         port = 8000
 
-async def proc(websocket, path):
+async def proc(websocket):
     async for message in websocket:
         data = json.loads(message)
         group = data["g"]
         subgroup = data["sg"] if "sg" in data else ""
         command = data["c"]
+        id = data["i"]
         param = data["p"]
         #print(data, subgroup, command, param)
         ret = await g.runCallback(group, subgroup, command, param)
         if isinstance(ret, g.tmkErr):
-            send_data = { "g": group, "sg": subgroup, "c": command, "e": 1, "msg": ret.msg }
+            send_data = { "g": group, "sg": subgroup, "c": command, "e": 1, "i": id, "msg": ret.msg }
 #        elif ret is not None:
         else:
-            send_data = { "g": group, "sg": subgroup, "c": command, "v": ret }
+            send_data = { "g": group, "sg": subgroup, "c": command, "i": id, "v": ret }
 #        else:
 #            send_data = { "g": group, "sg": subgroup, "c": command, "v": 1 }
         try:
@@ -79,7 +82,9 @@ except Exception as e:
     pass
 tmkLCD.addCallbacks()
 tmkNeoPixel.addCallbacks()
+tmkOLED.addCallbacks()
 tmkDHT.addCallbacks()
 tmkBMP280.addCallbacks()
 tmkMPU6050.addCallbacks()
+tmkPCA9685.addCallbacks()
 asyncio.run(main())
