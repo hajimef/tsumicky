@@ -1,0 +1,44 @@
+<category id="category_misc_speech" name="%{BKY_TSUMICKY_SPEECH_CATEGORY}" colour="120">
+    <block type="speech_speak">
+        <value name="TEXT">
+            <shadow type="text">
+                <field name="TEXT">hello</field>
+            </shadow>
+        </value>
+    </block>
+    <block type="speech_set_voice"></block>
+    <block type="speech_set_lang"></block>
+    <block type="speech_set_speed"></block>
+    <block type="speech_set_pitch"></block>
+    <block type="speech_set_volume"></block>
+    <block type="speech_cancel"></block>
+    <block type="speech_pause"></block>
+    <block type="speech_resume"></block>
+    <block type="speech_paused"></block>
+    <!--<block type="speech_pending"></block>-->
+    <block type="speech_speaking"></block>
+    <block type="speech_recognition_start"></block>
+    <block type="speech_recognition_set_lang"></block>
+    <block type="speech_recognition_stop"></block>
+    <block type="speech_recognition_on_result">
+        <statement name="DO">
+        </statement>
+    </block>
+    <block type="speech_recognition_on_error">
+        <statement name="DO">
+        </statement>
+    </block>
+    <block type="speech_recognition_get_transcript"></block>
+    <block type="speech_recognition_is_interim"></block>
+    <block type="speech_recognition_error"></block>
+    <block type="speech_recognition_errmsg"></block>
+<!--
+    <block type="speech_recognition_set_grammars">
+        <value name="GRAMMARS">
+            <shadow type="text">
+                <field name="TEXT">word1,word2</field>
+            </shadow>
+        </value>
+    </block>
+-->
+</category>

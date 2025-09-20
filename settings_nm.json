@@ -1,0 +1,185 @@
+{
+  "language": "ja",
+  "categories": [
+    "basic",
+    "sep",
+    "excel/basic",
+    "excel/workbook",
+    "excel/sheet",
+    "excel/range",
+    "excel/macro",
+    "scikit_learn/data",
+    "scikit_learn/linear_regression",
+    "scikit_learn/svr",
+    "scikit_learn/logistic_regression",
+    "scikit_learn/kmeans",
+    "scikit_learn/pca",
+    "scikit_learn/metrics",
+    "matplotlib/basic",
+    "matplotlib/chart",
+    "matplotlib/stat_chart",
+    "matplotlib/chart_element",
+    "sep",
+    "web/browser",
+    "sep",
+    "misc/common",
+    "misc/turtle",
+    "misc/speech",
+    "sep",
+    "custom",
+    "dict"
+  ],
+  "tree":[
+    {
+      "catname": "%{BKY_TSUMICKY_CATEGORY_EXCEL}",
+      "colour": "#5ba55b",
+      "before": "category_excel_basic",
+      "id": "category_excel",
+      "children": [
+        {
+          "id": "category_excel_basic",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_EXCEL_SUB_BASIC}"
+        },
+        {
+          "id": "category_excel_workbook",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_EXCEL_SUB_WORKBOOK}"
+        },
+        {
+          "id": "category_excel_sheet",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_EXCEL_SUB_SHEET}"
+        },
+        {
+          "id": "category_excel_range",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_EXCEL_SUB_RANGE}"
+        },
+        {
+          "id": "category_excel_macro",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_EXCEL_SUB_MACRO}"
+        }
+      ]
+    },
+    {
+      "catname": "regression",
+      "colour": "#9fa55b",
+      "before": "category_sl_lr",
+      "id": "category_sl_regression",
+      "children": [
+        {
+          "id": "category_sl_lr",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_SL_LR}"
+        },        
+        {
+          "id": "category_sl_svr",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_SL_SVR}"
+        }        
+      ]
+    },
+    {
+      "catname": "classification",
+      "colour": "#5aa45a",
+      "before": "category_sl_logr",
+      "id": "category_sl_classification",
+      "children": [
+        {
+          "id": "category_sl_logr",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_SL_LOGR}"
+        }
+      ]
+    },
+    {
+      "catname": "clustering",
+      "colour": "#5ba593",
+      "before": "category_sl_kmeans",
+      "id": "category_sl_clustering",
+      "children": [
+        {
+          "id": "category_sl_kmeans",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_SL_KMEANS}"
+        }
+      ]
+    },
+    {
+      "catname": "dimensionality reduction",
+      "colour": "#5b80a5",
+      "before": "category_sl_pca",
+      "id": "category_sl_dr",
+      "children": [
+        {
+          "id": "category_sl_pca",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_SL_PCA}"
+        }
+      ]
+    },
+    {
+      "catname": "scikit-learn",
+      "colour": "#a5745b",
+      "before": "category_sl_data",
+      "id": "category_scikit_learn",
+      "children": [
+        {
+          "id": "category_sl_data",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_SL_DATA}"
+        },
+        {
+          "id": "category_sl_regression",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_SL_REGRESSION}"
+        },
+        {
+          "id": "category_sl_classification",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_SL_CLASSIFICATION}"
+        },
+        {
+          "id": "category_sl_clustering",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_SL_CLUSTERING}"
+        },
+        {
+          "id": "category_sl_dr",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_SL_DR}"
+        },
+        {
+          "id": "category_sl_metrics",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_SL_METRICS}"
+        }
+      ]
+    },
+    {
+      "catname": "matplotlib",
+      "colour": "#9fa55b",
+      "before": "category_mpl_basic",
+      "id": "category_matplotlib",
+      "children": [
+        {
+          "id": "category_mpl_basic",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_MPL_BASIC}"
+        },
+        {
+          "id": "category_mpl_chart",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_MPL_CHART}"
+        },
+        {
+          "id": "category_mpl_stat_chart",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_MPL_STAT_CHART}"
+        },
+        {
+          "id": "category_mpl_chart_element",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_MPL_CHART_ELEMENT}"
+        }
+      ]
+    }
+  ],
+  "move": [
+    {
+      "id": "category_dict",
+      "after_name": "%{BKY_TSUMICKY_CATEGORY_LISTS}"
+    }
+  ],
+  "hiddenBlock": [
+    "excel_launch",
+    "excel_find_file",
+    "excel_run_book_macro"
+  ],
+  "hiddenCategory": [
+    "category_misc_common"
+  ],
+  "workspace": "workspace_nm"
+}

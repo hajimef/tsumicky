@@ -19,7 +19,7 @@ function createRuntimeList(generator) {
     var code = '';
     for (let key in Blockly.runTimeJS) {
         let rt = Blockly.runTimeJS[key];
-        code += generator.INDENT + '$_' + rt.modName + ' = await import(\'/runtime/' + rt.file + '.js\');\n'
+        code += generator.INDENT + '$_' + rt.modName + ' = await import(\'./runtime/' + rt.file + '.js\');\n'
         code += generator.INDENT + '$_' + rt.modName + '.setup();\n';
     }
     return code;
@@ -109,7 +109,8 @@ export function addJS() {
       code += generator.INDENT + generator.INDENT + generator.INDENT + 'alert(Blockly.convertMsg("TSUMICKY_ERROR") + "\\n" + e);\n';
       code += generator.INDENT + generator.INDENT + '}\n';
       code += generator.INDENT + '}\n';
-      code += generator.INDENT + 'Blockly.stopCode();\n';
+      code += generator.INDENT + 'Blockly.isStop = false;\n';
+//      code += generator.INDENT + 'Blockly.stopCode();\n';
       code += createDisposeList(generator);
       code += '})()\n';
       return code;

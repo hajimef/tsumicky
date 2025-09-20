@@ -39,7 +39,27 @@ The Tsumicky project consists of three main components:
     *   `xlserver/xlServer.py`: Likely the main entry point for the backend server.
     *   `xlserver/*.py`: Various Python modules implementing specific functionalities (e.g., `xlBasic.py` for Excel basics, `mplBasic.py` for Matplotlib, `slData.py` for scikit-learn data handling).
 
-### 2.3. Firmware (`firmware/tmkfirm` - Arduino IDE)
+### 2.3. Backend (`msserver` - Python)
+
+*   **Technologies:** Python, `websockets`.
+*   **Purpose:** provides various functions that cannot be directly executed on a web browser and cannot be categorized into groups. It likely communicates with the frontend via WebSockets.
+*   **Core Files:**
+    *   `msserver/`: Root directory for the Python backend.
+    *   `msserver/requirements.txt`: Lists all Python dependencies.
+    *   `msserver/msServer.py`: Likely the main entry point for the backend server.
+    *   `msserver/*.py`: Various Python modules implementing specific functionalities (e.g., `msTurtle.py` for turtle graphics).
+
+### 2.4. Backend (`rpserver` - Python)
+
+*   **Technologies:** Python, `websockets`.
+*   **Purpose:** Provides server-side functions for RPA-related processes that cannot be executed directly in the browser (file access, image file operations, etc.). It likely communicates with the frontend via WebSockets.
+*   **Core Files:**
+    *   `rpserver/`: Root directory for the Python backend.
+    *   `rpserver/requirements.txt`: Lists all Python dependencies.
+    *   `rpserver/rpServer.py`: Likely the main entry point for the backend server.
+    *   `rpserver/*.py`: Various Python modules implementing specific functionalities.
+
+### 2.5. Firmware (`firmware/tmkfirm` - Arduino IDE)
 
 *   **Technologies:** Arduino IDE (C++), ESP32/RP2040 platform, `WebSocketsServer`, `Arduino_JSON`, `WiFi`, `mDNS`.
 *   **Purpose:** Runs on microcontrollers to provide low-level hardware control. It communicates with the frontend (or an intermediary) via WebSockets to receive commands and send back sensor data or execution results.
@@ -48,7 +68,7 @@ The Tsumicky project consists of three main components:
     *   `firmware/tmkfirm/*.cpp`/`.h`: C++ source and header files for various hardware modules (e.g., `basic_io.cpp`, `pwm.cpp`, `fw_servo.cpp`, `fw_bmp280.cpp`, `fw_lcd.cpp`).
     *   `firmware/tmkfirm/custom_block/`: Directory for custom block-related firmware code.
 
-### 2.4. Firmware (`firmware/blinka` - Python)
+### 2.6. Firmware (`firmware/blinka` - Python)
 
 *   **Technologies:** Blinka (Python), Raspberry Pi platform, `websockets`, `Arduino_JSON`, `WiFi`, `mDNS`.
 *   **Purpose:** Runs on Raspberry Pi series to provide low-level hardware control. It communicates with the frontend (or an intermediary) via WebSockets to receive commands and send back sensor data or execution results.
@@ -93,10 +113,10 @@ To add a new Blockly block, you generally need to:
         *   The following code will be returned as the return value.
             *    If there is no return value, 'await $_' + modName + '.' + runtime function name + '(' + list of parameters + ');\n'
             *    If there is a return value, [ 'await $_' + modename + '.' + runtime function name + '(' + list of parameters + ')', Blockly.JavaScript.ORDER_NONE ]
-3.  **Generate Runtime Code:**
+3.  **Generate Runtime Code for Arduino firmware and Blinka firmware:**
     *   Create a corresponding Runtime file (e.g., `runtime/my_new_block.js`) or add to an existing one.
     *   Runtime files are created according to the following rules.
-        * Include the statement import * as ws from '/lib/websocket.js'; at the beginning.
+        * include the statement import * as ws from '/lib/websocket.js'; at the beginning.
         * Define the group name and subgroup name with the const statement.
         * Assign {} to the variable wss.
         * Define the setup function as follows.
@@ -104,7 +124,7 @@ To add a new Blockly block, you generally need to:
             export function setup() {
             }
             ```
-        * Define the dispose function as follows.
+        * The dispose function is defined as follows:
             ```
             export async function dispose(_ws) {
               for (let ws_name in wss) {
@@ -133,16 +153,40 @@ To add a new Blockly block, you generally need to:
             * Keep JSON keys as short as possible (ideally just one character).
             * Communicate with the firmware using the ws.send function. Pass _ws, group name, subgroup name, firmware callback name, and variable param as parameters.
             * firmware callback name must not overlap with other functions in the runtime and must be as short as possible.
-4.  **Add Messages (Localization):**
+4.  **Generate Runtime Code for msserver and rpserver:**
+    *   Create a corresponding Runtime file (e.g., `runtime/my_new_block.js`) or add to an existing one.
+    *   Runtime files are created according to the following rules.
+        * In the runtimes for msserver, include the statement import { ws, __ws } from './msWebSocket.js'; at the beginning.
+        * In the runtimes for rpserver, include the statement import { ws, __ws } from './rpWebSocket.js'; at the beginning.
+        * Define the setup function as follows.
+            ```
+            export function setup() {
+            }
+            ```
+        * The dispose function is defined as follows:
+            ```
+            export async function dispose() {
+              Blockly.checkStop();
+              await ws.send(__ws, group, subgroup, 'd', {});
+            }
+            ```
+        * Create each runtime function according to the following rules.
+            * Add export async to the beginning of the function statement.
+            * call Blockly.checkStop();
+            * Organize parameters in JSON format and assign them to the variable param.
+            * Keep JSON keys as short as possible (ideally just one character).
+            * Communicate with the firmware using the ws.send function. Pass __ws, group name, subgroup name, firmware callback name, and variable param as parameters.
+            * firmware callback name must not overlap with other functions in the runtime and must be as short as possible.
+5.  **Add Messages (Localization):**
     *   Add display strings for your block to the appropriate language files in `msg/` (e.g., `msg/en.js`, `msg/ja.js`).
     *   Add "TSUMICKY_" to the beginning of the constant name.
     *   Enclose the process that defines the constant name in export function addMessages() { }.
-5.  **Update Toolbox:**
+6.  **Update Toolbox:**
     *   Create a new XML file (e.g., `toolbox/my_new_category.xml`) for a new category, or add your block to an existing `toolbox/*.xml` file.
     *   The xml element should have an id attribute prefixed with "toolbox_".
     *   Enclose the blocks in a category element. Give the category element an id attribute with a "category_" prefix, give it a name with the name attribute, and give it a color with the color attribute.
     *   Define the block within a `<block type="my_new_block"></block>` tag.
-6.  **Update `settings.json`:**
+7.  **Update `settings.json`:**
     *   Add your new block category to the `categories` array in `settings.json` to make it appear in the Blockly toolbox.
     *   If your block requires specific setup or runtime logic, ensure it's loaded in `main.js` (similar to how existing categories are loaded).
 
@@ -204,6 +248,10 @@ To extend Rspberry Pi's capabilities:
     * Change tsumicky.py as follows.
         *   Add an import statement to load the modules you added to firmware/blinka/mods/.
         *   Before asyncio.run(main()), add a statement to call the addCallbacks function of the imported module.
+2.  **Update `requirements.txt`:**
+    *   If your new module uses external Python libraries, add them to `rpserver/requirements.txt`.
+3.  **Integrate with Server Logic:**
+    *   Modify `firmware/blinka/tsumicky.py` (or relevant entry point) to import and expose your new functionality, typically via WebSocket endpoints that the frontend can call.
 
 ### 3.3. Adding New Backend Functionality (Python)
 
@@ -217,6 +265,31 @@ To extend the `xlserver` backend:
 3.  **Integrate with Server Logic:**
     *   Modify `xlserver/xlServer.py` (or relevant entry point) to import and expose your new functionality, typically via WebSocket endpoints that the frontend can call.
 
+To extend the `msserver` and `rpserver` backend:
+
+1.  **Create Python Modules:**
+    *   In `msserver` backend, create new `.py` files in `msserver/mods` (e.g., `msserver/mods/my_new_feature.py`).
+    *   In `rpserver` backend, Create new `.py` files in `rpserver/mods` (e.g., `rpserver/mods/my_new_feature.py`).
+    *   Implement the desired functionality using Python libraries.
+    *   Assign the variables group and subgroup the same group/subgroup names you set at runtime.
+    *   In the dispose function, releases objects that are no longer needed.
+    *   The processing corresponding to each block is defined as a function like the following.
+        *   Receives the JSON sent from the runtime in the p parameter, and extracts the necessary information from its members.
+        *   Function must be async.
+        *   The entire function processing is surrounded by try ...except exception handling, and when an exception occurs, g.errReturn() is used as the return value.
+        *   If you have a return value that you want to return to the runtime, use the return statement to return that value.
+    * Define the addCallbacks function as follows.
+        *   The statement g.addDispose(group, subgroup, dispose) ensures that the dispose function is executed.
+        *   The statement g.addCallback(group, subgroup, firmware callback name in runtime, function that performs the processing corresponding to the block) causes the processing corresponding to the block to be performed.
+    * Change rpServer.py as follows.
+        *   Add an import statement to load the modules you added to rpserver/mods.
+        *   Before asyncio.run(main()), add a statement to call the addCallbacks function of the imported module.
+2.  **Update `requirements.txt`:**
+    *   If your new module uses external Python libraries, add them to `rpserver/requirements.txt`.
+3.  **Integrate with Server Logic:**
+    *   In `msserver` backend, Modify `msserver/msServer.py` (or relevant entry point) to import and expose your new functionality, typically via WebSocket endpoints that the frontend can call.
+    *   In `rpserver` backend, Modify `rpserver/rpServer.py` (or relevant entry point) to import and expose your new functionality, typically via WebSocket endpoints that the frontend can call.
+
 ## 4. Important Files and Directories
 
 *   current directory: Project root.
@@ -229,8 +302,12 @@ To extend the `xlserver` backend:
 *   `./runtime/`: The runtime library for executing JavaScript code converted by blockly.
 *   `./msg/`: Blockly localization files.
 *   `./toolbox/`: Custom Blockly toolbox XML files.
-*   `./xlserver/`: Python backend root.
-*   `./xlserver/requirements.txt`: Python dependencies.
+*   `./xlserver/`: Python backend root for working with Excel.
+*   `./xlserver/requirements.txt`: Dependencies of python backend for working with Excel.
+*   `./msserver/`: Python backend root for miscellaneous function.
+*   `./msserver/requirements.txt`: Dependencies of python backend for miscellaneous function.
+*   `./rpserver/`: Python backend root for RPA(Robot Process Automation).
+*   `./rpserver/requirements.txt`: Dependencies of python backend for RPA.
 *   `./firmware/tmkfirm/`: Arduino firmware project root.
 *   `./firmware/tmkfirm/tmkfirm.ino`: Main Arduino sketch.
 *   `./firmware/tmkfirm/*.cpp`/`.h`: Firmware hardware modules.
@@ -241,7 +318,9 @@ To extend the `xlserver` backend:
 ## 5. Development Workflow
 
 *   **Frontend:** Open `index.html` in a web browser. Changes to JavaScript, CSS, HTML, `settings.json`, `toolbox.xml`, `blocks/`, `javascript/`, `runtime/`, `msg/` will be reflected upon page refresh.
-*   **Backend:** Navigate to `xlserver/` and run the main server script (e.g., `python xlServer.py`).
+*   **Python Backend for Excel:** Navigate to `xlserver/` and run the main server script (e.g., `python xlServer.py`).
+*   **Python Backend for RPA:** Navigate to `rpserver/` and run the main server script (e.g., `python rpServer.py`).
+*   **Python Backend for miscellaneous function:** Navigate to `msserver/` and run the main server script (e.g., `python msServer.py`).
 *   **Firmware:**
     * Use Arduino IDE to open `firmware/tmkfirm/tmkfirm.ino`, compile, and upload to your target microcontroller. Ensure correct board and port are selected.
     * Run `firmware/blinka/tsumicky.py` script on Raspberry Pi series.

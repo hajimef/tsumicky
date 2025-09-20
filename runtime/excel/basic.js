@@ -1,4 +1,4 @@
-import * as ws from '/lib/websocket.js';
+import * as ws from '../../lib/websocket.js';
 import * as xl from './xlBase.js';
 
 const LAUNCH_ACTIVE = 3

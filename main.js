@@ -4,6 +4,12 @@ Blockly.tsmFuncs = {};
 var $_B = Blockly;
 var $_BF = Blockly.tsmFuncs;
 Blockly.runTimeJS = {};
+Blockly.voices = [];
+let env, iniLang, iniWS, openModal, loadWSName;
+
+const MODE_LAUNCH = 1;
+const MODE_CHANGE = 2;
+const MODE_SETTING = 3;
 
 (async() => {
     registerFieldColour();
@@ -13,8 +19,45 @@ Blockly.runTimeJS = {};
     colourBlend.installBlock();
     registerFieldMultilineInput();
     textMultiline.installBlock();
-    let settings_res;
+    const env_res = await fetch('env.json');
+    const env_json = await env_res.text();
+    env = JSON.parse(env_json);
+    let settingsFile, settings_res;
+    if ('speechSynthesis' in window) {
+        speechSynthesis.onvoiceschanged = function(e) {
+            Blockly.voices = speechSynthesis.getVoices()
+        }
+    }
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    let langName;
+    loadWSName = urlParams.get('ws');
+    if (loadWSName == null) {
+        loadWSName = localStorage.getItem('wsName');
+    }
+    langName = urlParams.get('lang');
+    if (langName == null) {
+        langName = localStorage.getItem('lang');
+    }
+    if (langName == null) {
+        if (navigator.language == 'ja' ||  navigator.language == 'ja-JP') {
+            langName = 'ja';
+        }
+        else {
+            langName = 'en';
+        }
+    }
+    _tsmLang = langName
+    if (env.settings.hasOwnProperty(loadWSName)) {
+        settingsFile = env.settings[loadWSName];
+    }
+
     if (typeof settingsFile == "undefined") {
+        iniLang = _tsmLang;
+        iniWS = 'el';
+        setModal(MODE_LAUNCH, 'nm');
+        openModal = new bootstrap.Modal(document.getElementById('setting_modal'));
+        openModal.show();
         settings_res = await fetch('settings.json');
     }
     else {
@@ -22,7 +65,7 @@ Blockly.runTimeJS = {};
     }
     const settings_json = await settings_res.text();
     let settings = JSON.parse(settings_json);
-    _tsmLang = settings.language;
+    settings.language = langName;
     let msgScr = document.createElement('script');
     msgScr.setAttribute('type', 'text/javascript');
     msgScr.setAttribute('src',  'https://unpkg.com/blockly/msg/' + _tsmLang + '.js');
@@ -33,11 +76,13 @@ Blockly.runTimeJS = {};
     catch(e) {
         await import('./msg/en.js');
     }
-    document.getElementById('run').innerHTML = Blockly.Msg['TSUMICKY_MESSAGE_RUN'];
-    document.getElementById('stop').innerHTML = Blockly.Msg['TSUMICKY_MESSAGE_STOP'];
-    document.getElementById('new').innerHTML = Blockly.Msg['TSUMICKY_MESSAGE_NEW'];
-    document.getElementById('open').innerHTML = Blockly.Msg['TSUMICKY_MESSAGE_OPEN'];
-    document.getElementById('save').innerHTML = Blockly.Msg['TSUMICKY_MESSAGE_SAVE'];
+    document.getElementById('run').innerHTML = '<i class="bi bi-play-fill"></i> ' + Blockly.Msg['TSUMICKY_MESSAGE_RUN'];
+    document.getElementById('stop').innerHTML = '<i class="bi bi-stop-fill"></i> ' + Blockly.Msg['TSUMICKY_MESSAGE_STOP'];
+    document.getElementById('new').innerHTML = '<i class="bi bi-file-earmark"></i> ' + Blockly.Msg['TSUMICKY_MESSAGE_NEW'];
+    document.getElementById('open').innerHTML = '<i class="bi bi-folder2-open"></i> ' + Blockly.Msg['TSUMICKY_MESSAGE_OPEN'];
+    document.getElementById('save').innerHTML = '<i class="bi bi-download"></i> ' + Blockly.Msg['TSUMICKY_MESSAGE_SAVE'];
+    document.getElementById('chenv').innerHTML = '<i class="bi bi-arrow-left-right"></i> ' + Blockly.Msg['TSUMICKY_MESSAGE_ENV'];
+    document.getElementById('setting').innerHTML = '<i class="bi bi-gear"></i> ' + Blockly.Msg['TSUMICKY_MESSAGE_SETTING'];
     let data_cats = settings.categories
     const parser = new DOMParser();
     const res_tb = await fetch('toolbox.xml');
@@ -53,23 +98,38 @@ Blockly.runTimeJS = {};
             }
             else {
                 let cat_fname = 'toolbox/' + cat_name + '.xml';
+                let cat_dir_match = cat_fname.match(/(.*)\/.*?.xml/);
+                let cat_dir = cat_dir_match[1];
                 let cat_tb = await fetch(cat_fname);
                 let cat_data = await cat_tb.text();
+                while (true) {
+                    let matches = cat_data.match(/(<xi:include.*href="(.*?)".*\/>)/);
+                    if (matches == null) {
+                        break;
+                    }
+                    console.log("find ", matches[1], matches[2])
+                    let found = matches[1];
+                    let href = matches[2];
+                    let inc_fname = cat_dir + href;
+                    let inc_tb = await fetch(inc_fname);
+                    let inc_data = await inc_tb.text();
+                    cat_data = cat_data.replace(found, inc_data);
+                }
                 let cat_doc = await parser.parseFromString(cat_data, 'application/xml');
                 let cats = cat_doc.getElementsByTagName('category');
                 for (let j = 0; j < cats.length; j++) {
                     tbTop.before(cats[j]);
                 }
-                let modJS = await import('/javascript/' + cat_name + '.js');
+                let modJS = await import('./javascript/' + cat_name + '.js');
                 modJS.addJS();
-                let modBlk = await import('/blocks/' + cat_name + '.js');
+                let modBlk = await import('./blocks/' + cat_name + '.js');
                 modBlk.addBlocks();
                 let modMsg;
                 try {
-                    modMsg = await import('/msg/' + cat_name + '/' + _tsmLang + '.js');
+                    modMsg = await import('./msg/' + cat_name + '/' + _tsmLang + '.js');
                 }
                 catch(e) {
-                    modMsg = await import('/msg/' + cat_name + '/en.js');
+                    modMsg = await import('./msg/' + cat_name + '/en.js');
                 }
                 modMsg.addMessages();
             }
@@ -82,19 +142,19 @@ Blockly.runTimeJS = {};
     let append_res = await fetch('append.json');
     const append_json = await append_res.text();
     let appends = JSON.parse(append_json);
-    let appendJS = await import('/javascript/append.js');
+    let appendJS = await import('./javascript/append.js');
     appendJS.addJS();
-    let appendBlk = await import('/blocks/append.js');
+    let appendBlk = await import('./blocks/append.js');
     appendBlk.addBlocks();
     let appendMsg;
     try {
-        appendMsg = await import('/msg/append/' + _tsmLang + '.js');
+        appendMsg = await import('./msg/append/' + _tsmLang + '.js');
     }
     catch(e) {
-        appendMsg = await import('/msg/append/en.js');
+        appendMsg = await import('./msg/append/en.js');
     }
     appendMsg.addMessages();
-    let append_tb = await fetch('/toolbox/append.xml');
+    let append_tb = await fetch('toolbox/append.xml');
     let append_data = await append_tb.text();
     let append_doc = await parser.parseFromString(append_data, 'application/xml');
     for (let i = 0; i < appends.length; i++) {
@@ -158,10 +218,20 @@ Blockly.runTimeJS = {};
             hiddenElm.remove();
         }
     }
+    if (settings.hasOwnProperty('hiddenCategory')) {
+        let hiddenCats = settings.hiddenCategory;
+        for (let i = 0; i < hiddenCats.length; i++) {
+            let hiddenCat = doc_tb.querySelector('#' + hiddenCats[i]);
+            hiddenCat.remove();
+        }
+    }
     document.body.appendChild(doc_tb.documentElement);
     const toolbox = document.getElementById("toolbox");
     let wsName = 'workspace';
-    if (settings.hasOwnProperty('workspace')) {
+    if (loadWSName != null) {
+        wsName = env.workspace[loadWSName];
+    }
+    else if (settings.hasOwnProperty('workspace')) {
         wsName = settings.workspace;
     }
     const res_ws = await fetch(wsName + '.xml');
@@ -219,6 +289,12 @@ Blockly.runTimeJS = {};
         }
         return blocklist;
     });
+    if (localStorage.hasOwnProperty('curProg')) {
+        const wsCode = localStorage.getItem('curProg');
+        const ws = JSON.parse(wsCode);
+        Blockly.serialization.workspaces.load(ws, workspace);
+        localStorage.removeItem('curProg');
+    }
     const blocklyArea = document.getElementById('blocklyArea');
     const blocklyDiv = document.getElementById('blocklyDiv');
     const onresize = function(e) {
@@ -242,7 +318,7 @@ Blockly.runTimeJS = {};
     onresize();
 })();
 
-var btnRun, btnStop, btnNew, btnLoad, btnSave, fileName = 'tsumicky.json', isSaveCanceled = false;
+var btnRun, btnStop, btnNew, btnLoad, btnSave, btnChangeEnv, btnSetting, fileName = 'tsumicky.json', isSaveCanceled = false;
 
 function updateCode(event) {
     const code = javascript.javascriptGenerator.workspaceToCode(workspace);
@@ -271,6 +347,17 @@ function loadWS(e) {
             let wsCode = reader.result;
             document.getElementById('ws').value = wsCode;
             let ws = JSON.parse(wsCode);
+            if (ws.tsumicky !== undefined) {
+                if (loadWSName != ws.tsumicky.env_name) {
+                    if (confirm(Blockly.Msg["TSUMICKY_DIFFRENT_ENV"])) {
+                        let loc = location.origin + location.pathname;
+                        localStorage.setItem('curProg', wsCode);
+                        loc += '?lang=' + _tsmLang;
+                        loc += '&ws=' + ws.tsumicky.env_name;
+                        location.href = loc;
+                    }
+                }
+            }
             Blockly.serialization.workspaces.load(ws, workspace);
         }
     }
@@ -278,6 +365,11 @@ function loadWS(e) {
 
 function saveWS(event) {
     let ws = Blockly.serialization.workspaces.save(workspace);
+    if (ws.tsumicky === undefined) {
+        ws.tsumicky = {};
+        ws.tsumicky.file_version = '0.1';
+        ws.tsumicky.env_name = loadWSName;
+    }
     let wsCode = JSON.stringify(ws);
     document.getElementById('ws').value = wsCode;
     let blobedText = new Blob([ wsCode ],  {type: 'text/plain' });
@@ -339,6 +431,167 @@ Blockly.convertMsg = function(msg) {
     }
 }
 
+function doSetting() {
+    iniLang = _tsmLang;
+    const wsName = localStorage.getItem('wsName') == null ? loadWSName : localStorage.getItem('wsName');
+    setModal(MODE_SETTING, wsName, localStorage.getItem('wsName') == null ? 'ev' : 'de');
+    openModal = new bootstrap.Modal(document.getElementById('setting_modal'));
+    openModal.show();
+}
+
+function saveSetting() {
+    if (getSelectedDef() == 'ev') {
+        localStorage.removeItem('lang');
+        localStorage.removeItem('wsName');
+    }
+    else {
+        localStorage.setItem('lang', iniLang);
+        localStorage.setItem('wsName', getSelectedEnv());
+    }
+    openModal.hide();
+}
+
+function cancelSetting() {
+    openModal.hide();
+}
+
+function doChangeEnv() {
+    iniLang = _tsmLang;
+    setModal(MODE_CHANGE, loadWSName, null);
+    openModal = new bootstrap.Modal(document.getElementById('setting_modal'));
+    openModal.show();
+}
+
+function setModal(mode, selInp, selLaunchInp) {
+    const lblElm = document.getElementById('modalLabel');
+    const btnElm = document.getElementById('btn_ok');
+    const selElm = document.getElementById('sel_lang');
+    const selEnv = document.getElementById('sel_env');
+    const selLaunchElm = document.getElementById('sel_launch');
+    const cancelElm = document.getElementById('btn_cancel');
+    if (mode == MODE_LAUNCH) {
+        lblElm.innerText = env.env_msg[iniLang];
+        btnElm.innerText = env.launch_msg[iniLang];
+        selElm.innerText = env.lang_msg[iniLang];
+        selElm.onclick = function() { return changeLang(MODE_LAUNCH); }
+        btnElm.onclick = function() { selectEnvironment(false); }
+        selLaunchElm.style.display = 'none';
+        cancelElm.style.display = 'none';
+    }
+    else if (mode == MODE_CHANGE) {
+        lblElm.innerText = env.change_msg[iniLang];
+        btnElm.innerText = env.ok_msg[iniLang];
+        btnElm.onclick = function() { selectEnvironment(true); }
+        selElm.innerText = env.lang_msg[iniLang];
+        selElm.onclick = function() { return changeLang(MODE_CHANGE); }
+        selLaunchElm.style.display = 'none';
+        selEnv.style.display = 'flex';
+        cancelElm.innerText = env.cancel_msg[iniLang];
+        cancelElm.style.display = 'block';
+        cancelElm.onclick = cancelSetting;
+    }
+    else if (mode == MODE_SETTING) {
+        const everyInp = document.getElementById('every_launch');
+        const defaultInp = document.getElementById('use_default');
+        everyInp.onchange = function() {
+            selEnv.style.display = everyInp.checked ? 'none' : 'flex';
+        }
+        defaultInp.onchange = function() {
+            selEnv.style.display = defaultInp.checked ? 'flex' : 'none';
+        }
+        if (selLaunchInp == 'ev') {
+            everyInp.checked = true;
+            defaultInp.checked = false;
+            selEnv.style.display = 'none';
+        }
+        else {
+            everyInp.checked = false;
+            defaultInp.checked = true;
+            selEnv.style.display = 'flex';
+        }
+        lblElm.innerText = env.setting_msg[iniLang];
+        btnElm.innerText = env.ok_msg[iniLang];
+        btnElm.onclick = saveSetting;
+        selElm.innerText = env.lang_msg[iniLang];
+        selElm.onclick = function() { return changeLang(MODE_SETTING); }
+        selLaunchElm.style.display = 'block';
+        const everyLaunchMsgElm = document.getElementById('every_launch_msg');
+        const useDefaultMsgElm = document.getElementById('use_default_msg');
+        everyLaunchMsgElm.innerText = env.sel_launch_every_msg[iniLang];
+        useDefaultMsgElm.innerText = env.sel_launch_default_msg[iniLang];
+        cancelElm.innerText = env.cancel_msg[iniLang];
+        cancelElm.style.display = 'block';
+        cancelElm.onclick = cancelSetting;
+    }
+    let env_html = "";
+    for (let i = 0; i < env.envs.length; i++) {
+        let env_name = env.envs[i];
+        let env_str = env.m_desc[iniLang][env_name];
+        if (mode != MODE_CHANGE) {
+            const env_str2 = env.m_desc2[iniLang][env_name];
+            if (env_str2 != "") {
+                env_str += '<br />' + env_str2;
+            }
+        }
+        env_html += '<div class="col-md-4">\n';
+        env_html += '<p><img src="img/' + env_name + '_' + iniLang + '.png" width="100%" /></p>\n';
+        env_html += '<h2 class="fs-5"><label for="inp_' + env_name + '"><input type="radio" value="' + env_name + '" name="env" id="inp_' + env_name + '">&nbsp;' + env.m_title[iniLang][env_name] + '</label></h2>\n';
+        env_html += '<p>' + env_str + '</p>\n';
+        env_html += '</div>\n';
+    }
+    selEnv.innerHTML = env_html;
+    if (selInp != null) {
+        const inpElm = document.getElementById('inp_' + selInp);
+        inpElm.checked = true;
+    }
+}
+
+function changeLang(mode) {
+    iniLang = (iniLang == 'ja') ? 'en' : 'ja';
+    let env_name = getSelectedEnv();
+    let def_value = getSelectedDef();
+    setModal(mode, env_name, def_value);
+    return false;
+}
+
+function selectEnvironment(isSave) {
+    let loc = location.origin + location.pathname;
+    let env_name = getSelectedEnv();
+    if (iniLang == _tsmLang && iniWS == env_name) {
+        loadWSName = iniWS;
+        openModal.hide();
+        return false;
+    }
+    if (isSave) {
+        const ws = Blockly.serialization.workspaces.save(workspace);
+        const wsCode = JSON.stringify(ws);
+        localStorage.setItem('curProg', wsCode);
+    }
+    loc += '?lang=' + iniLang;
+    loc += '&ws=' + env_name;
+    location.href = loc;
+}
+
+function getSelectedEnv() {
+    let env_name;
+    for (let i = 0; i < env.envs.length; i++) {
+        env_name = env.envs[i];
+        let inpElm = document.getElementById('inp_' + env_name);
+        if (inpElm.checked) {
+            break;
+        }
+    }
+    return env_name;
+}
+
+function getSelectedDef() {
+    if (document.getElementById('every_launch').checked) {
+        return 'ev';
+    }
+    else {
+        return 'de';
+    }
+}
 
 window.onload = function() {
     btnRun = document.getElementById('run');
@@ -351,5 +604,9 @@ window.onload = function() {
     btnLoad.onchange = loadWS;
     btnSave = document.getElementById('save');
     btnSave.onclick = saveWS;
+    btnChangeEnv = document.getElementById('chenv');
+    btnChangeEnv.onclick = doChangeEnv;
+    btnSetting = document.getElementById('setting');
+    btnSetting.onclick = doSetting;
     btnStop.setAttribute('disabled', 'disabled');
 }

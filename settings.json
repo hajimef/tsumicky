@@ -34,6 +34,12 @@
     "matplotlib/stat_chart",
     "matplotlib/chart_element",
     "sep",
+    "web/browser",
+    "sep",
+    "misc/common",
+    "misc/turtle",
+    "misc/speech",
+    "sep",
     "custom",
     "dict"
   ],
@@ -304,6 +310,9 @@
   "hiddenBlock": [
     "excel_find_file",
     "excel_run_book_macro"
+  ],
+  "hiddenCategory": [
+    "category_misc_common"
   ],
   "workspace": "workspace"
 }

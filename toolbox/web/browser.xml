@@ -1,0 +1,147 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_wbb_browser" style="display: none">
+  <category id="category_wbb_browser" name="%{BKY_TSUMICKY_CATEGORY_WBB_BROWSER}" colour="#5ba55b">
+    <block type="browser_open">
+      <value name="url">
+        <shadow type="text">
+          <field name="TEXT">html/</field>
+        </shadow>
+      </value>
+      <value name="width">
+        <shadow type="math_number">
+          <field name="NUM">800</field>
+        </shadow>
+      </value>
+      <value name="height">
+        <shadow type="math_number">
+          <field name="NUM">600</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="browser_navigate">
+      <value name="url">
+        <shadow type="text">
+          <field name="TEXT">html/</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="browser_close">
+    </block>
+    <block type="browser_alert">
+      <value name="msg">
+        <block type="text_ml"></block>
+      </value>
+    </block>
+    <block type="browser_select">
+      <value name="selector">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="browser_find">
+      <value name="selector">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="browser_create_element">
+      <value name="html">
+        <block type="text_ml"></block>
+      </value>
+    </block>
+    <block type="browser_set_inner">
+      <value name="html">
+        <block type="text_ml"></block>
+      </value>
+    </block>
+    <block type="browser_get_inner">
+    </block>
+    <block type="browser_set_value">
+    </block>
+    <block type="browser_get_value">
+    </block>
+    <block type="browser_get_selected_text">
+    </block>
+    <block type="browser_get_checked_value">
+    </block>
+    <block type="browser_set_checked">
+    </block>
+    <block type="browser_get_checked">
+    </block>
+    <block type="browser_add_element">
+    </block>
+    <block type="browser_remove_element">
+    </block>
+    <block type="browser_add_class">
+      <value name="class">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="browser_remove_class">
+      <value name="class">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="browser_has_class">
+      <value name="class">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="browser_set_css">
+      <value name="prop">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+      <value name="val">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="browser_get_css">
+      <value name="prop">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="browser_set_attr">
+      <value name="attr">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+      <value name="value">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="browser_get_attr">
+      <value name="attr">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="browser_remove_attr">
+      <value name="attr">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="browser_on">
+    </block>
+    <block type="browser_event_property">
+    </block>
+  </category>
+</xml>

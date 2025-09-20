@@ -1,0 +1,155 @@
+<xml id="toolbox_misc_turtle" style="display: none" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <category id="category_misc_turtle" name="Turtle" colour="60">
+    <xi:include href="./connect.xml" parse="xml" />
+    <block type="turtle_init">
+      <value name="width">
+        <shadow type="math_number">
+          <field name="NUM">800</field>
+        </shadow>
+      </value>
+      <value name="height">
+        <shadow type="math_number">
+          <field name="NUM">600</field>
+        </shadow>
+      </value>
+      <value name="startx">
+        <shadow type="math_number">
+          <field name="NUM">100</field>
+        </shadow>
+      </value>
+      <value name="starty">
+        <shadow type="math_number">
+          <field name="NUM">100</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="turtle_color">
+      <value name="color">
+        <block type="colour_picker">
+          <field name="COLOUR">#000000</field>
+        </block>
+      </value>
+      <value name="fillcolor">
+        <block type="colour_picker">
+          <field name="COLOUR">#ffffff</field>
+        </block>
+      </value>
+    </block>
+    <block type="turtle_pendown"></block>
+    <block type="turtle_penup"></block>
+    <block type="turtle_pensize">
+      <value name="width">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+    </block>
+        <block type="turtle_forward">
+      <value name="distance">
+        <shadow type="math_number">
+          <field name="NUM">100</field>
+        </shadow>
+      </value>
+    </block>
+        <block type="turtle_backward">
+      <value name="distance">
+        <shadow type="math_number">
+          <field name="NUM">100</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="turtle_goto">
+      <value name="x">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="y">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="turtle_right">
+      <value name="angle">
+        <shadow type="math_number">
+          <field name="NUM">90</field>
+        </shadow>
+      </value>
+    </block>
+        <block type="turtle_left">
+      <value name="angle">
+        <shadow type="math_number">
+          <field name="NUM">90</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="turtle_setheading">
+      <value name="angle">
+        <shadow type="math_number">
+          <field name="NUM">90</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="turtle_dot">
+      <value name="size">
+        <shadow type="math_number">
+          <field name="NUM">10</field>
+        </shadow>
+      </value>
+      <value name="color">
+        <block type="colour_picker">
+          <field name="COLOUR">#000000</field>
+        </block>
+      </value>
+    </block>
+    <block type="turtle_circle">
+      <value name="radius">
+        <shadow type="math_number">
+          <field name="NUM">100</field>
+        </shadow>
+      </value>
+      <value name="angle">
+        <shadow type="math_number">
+          <field name="NUM">90</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="turtle_stamp"></block>
+    <block type="turtle_shape"></block>
+    <block type="turtle_write">
+      <value name="text">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+      <value name="font">
+        <shadow type="text">
+          <field name="TEXT">Arial</field>
+        </shadow>
+      </value>
+      <value name="size">
+        <shadow type="math_number">
+          <field name="NUM">12</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="turtle_begin_fill"></block>
+    <block type="turtle_end_fill"></block>
+    <block type="turtle_speed">
+      <value name="speed">
+        <shadow type="math_number">
+          <field name="NUM">10</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="turtle_reset"></block>
+    <block type="turtle_show_hide"></block>
+    <block type="turtle_update"></block>
+    <block type="turtle_end"></block>
+    <block type="turtle_get_x"></block>
+    <block type="turtle_get_y"></block>
+    <block type="turtle_get_heading"></block>
+    <block type="turtle_is_down"></block>
+  </category>
+</xml>
