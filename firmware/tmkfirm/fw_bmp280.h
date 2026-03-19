@@ -1,3 +1,4 @@
+#ifdef BLOCKS_BMP280
 #ifndef __TSUMICKY_FIRMWARE_BMP280_H__
 #define __TSUMICKY_FIRMWARE_BMP280_H__
 #include <Wire.h>
@@ -10,4 +11,5 @@ void bmp280_dispose(JSONVar &p);
 void bmp280_temperature(JSONVar &p);
 void bmp280_pressure(JSONVar &p);
 
-#endif
+#endif // __TSUMICKY_FIRMWARE_BMP280_H__
+#endif // BLOCKS_BMP280

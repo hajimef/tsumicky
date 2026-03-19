@@ -1,3 +1,5 @@
+#include "option_blocks.h"
+#ifdef BLOCKS_OLED
 #include "fw_common.h"
 #include "fw_oled.h"
 #if defined(ARDUINO_ARCH_RP2040)
@@ -98,6 +100,7 @@ void oled_init(JSONVar &p) {
         SPI.setTX(mosi);
         SPI.setSCK(sck);
         SPI.begin();
+#elif defined(ARDUINO_UNOWIFIR4) || defined(ARDUINO_UNO_Q)
 #else
         SPI.begin(sck, -1, mosi, cs);
 #endif
@@ -112,6 +115,7 @@ void oled_init(JSONVar &p) {
 #if defined(ARDUINO_ARCH_RP2040)
         SPI.setTX(mosi);
         SPI.setSCK(sck);
+#elif defined(ARDUINO_UNOWIFIR4) || defined(ARDUINO_UNO_Q)
 #else
         SPI.begin(sck, -1, mosi, cs);
 #endif
@@ -126,6 +130,7 @@ void oled_init(JSONVar &p) {
 #if defined(ARDUINO_ARCH_RP2040)
         SPI.setTX(mosi);
         SPI.setSCK(sck);
+#elif defined(ARDUINO_UNOWIFIR4) || defined(ARDUINO_UNO_Q)
 #else
         SPI.begin(sck, -1, mosi, cs);
 #endif
@@ -263,3 +268,4 @@ void oled_clear_buffer(JSONVar &p) {
   u8g2->clearBuffer();
   r_stat["s"] = (int) NO_RETURN;
 }
+#endif // BLOCKS_OLED

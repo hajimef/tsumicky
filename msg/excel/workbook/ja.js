@@ -11,7 +11,7 @@ export function addMessages() {
   Blockly.Msg["TSUMICKY_EXCEL_CURRENT_WORKBOOK_TOOLTIP"] = "操作対象のブックを得ます。\n「〇〇を操作対象にしてブロック内の処理を行う」のブロック内でのみ利用できます。";
   Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_SAVE"] = "%1 を上書き保存する";
   Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_SAVE_TOOLTIP"] = "指定したブックを上書き保存します。";
-  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_SAVE_AS"] = "%1 に %2 の名前を付けて保存";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_SAVE_AS"] = "%1 に %2 %3 の名前を付けて保存";
   Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_SAVE_AS_TOOLTIP"] = "指定したブックにファイル名を付けて保存します。";
   Blockly.Msg["TSUMICKY_EXCEL_WORKBOOKS"] = "開いているブックのリスト";
   Blockly.Msg["TSUMICKY_EXCEL_WORKBOOKS_TOOLTIP"] = "開いているブックのリストを得ます。";

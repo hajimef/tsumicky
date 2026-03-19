@@ -28,15 +28,18 @@ export function setup() {
 export async function dispose() {
 }
 
-export async function sleep(ms) {
+export async function sleep(ms, blockId) {
+    Blockly.checkStop(blockId);
     await sleep_sub(ms);
 }
 
-export async function console_log(text) {
+export async function console_log(text, blockId) {
+    Blockly.checkStop(blockId);
     await console.log(text);
 }
 
-export function format_float(num, n_all, n_u0) {
+export function format_float(num, n_all, n_u0, blockId) {
+    Blockly.checkStop(blockId);
     let fmt = "{0:" + format("{0}.{1}f", n_all, n_u0) + "}";
     return format(fmt, num);
 }

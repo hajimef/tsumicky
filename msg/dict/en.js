@@ -26,4 +26,8 @@ export function addMessages() {
   Blockly.Msg["TSUMICKY_DICT_TO_JSON_TOOLTIP"] = "Get a JSON string converted from a dictionary.";
   Blockly.Msg["TSUMICKY_DICT_EACH"] = "for each item in dictionary %1 : key %2 value %3 %4 %5";
   Blockly.Msg["TSUMICKY_DICT_EACH_TOOLTIP"] = "For each item in the dictionary, assign the key and value to variables and iterate over them.";
+  Blockly.Msg["TSUMICKY_DICT_CONVKV"] = "dictionary %1 with key and value swapped. Values ​​for duplicate keys: %2";
+  Blockly.Msg["TSUMICKY_DICT_CONVKV_TOOLTIP"] = "Swap the key and value for each entry in the dictionary.";
+  Blockly.Msg["TSUMICKY_DICT_CONVKV_OVERWRITE"] = "overwrite";
+  Blockly.Msg["TSUMICKY_DICT_CONVKV_LIST"] = "list";
 };

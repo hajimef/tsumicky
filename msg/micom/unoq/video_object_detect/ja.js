@@ -1,0 +1,31 @@
+export function addMessages() {
+  Blockly.Msg.TSUMICKY_CATEGORY_MICOM_UNOQ_VIDEO_OBJECT_DETECT = "物体検出";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_INIT_DETECTOR = "%1 の物体検出器 %2 カメラ %3 信頼度 %4 %5 画像表示 %6";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_INIT_DETECTOR_TOOLTIP = "物体検出器を初期化します。信頼度は0～1の値を指定してください。";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_ON_DETECT_ALL = "%1 の検出器 %2 %3 で物体を検出したとき：引数 %4 %5 実行 %6";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_ON_DETECT_ALL_TOOLTIP = "物体検出器で物体を検出したときに実行する処理を定義します。";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_ON_DETECT = "%1 の検出器 %2 %3 で %4 を検出したとき：引数 %5 %6 実行 %7";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_ON_DETECT_TOOLTIP = "物体検出器で指定の物体を検出したときに実行する処理を定義します。";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_STOP_DETECTOR = "%1 の物体検出器 %2 %3 を停止する %4";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_STOP_DETECTOR_TOOLTIP = "物体検出器の動作を停止します。";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_RESULT_LOOP = "検出結果 %1 の各物体について：名前 %2 データ %3 %4 実行 %5";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_RESULT_LOOP_TOOLTIP = "検出結果の各物体について繰り返し処理を行います。\n物体の名前と、検出した信頼度等の情報が、それぞれ変数に代入されます。";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_IS_EXIST = "検出結果 %1 %2 に %3 が含まれる";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_IS_EXIST_TOOLTIP = "物体検出結果に、指定した物体が含まれているかどうかを取得します。";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_RESULT_DATA = "検出結果 %1 %2 の %3 の情報";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_RESULT_DATA_TOOLTIP = "物体検出結果の中で、指定した物体の情報を取得します。";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_COUNT_TYPES = "検出結果 %1 の物体の種類の個数 %2";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_COUNT_TYPES_TOOLTIP = "検出結果に含まれる物体の種類の個数を取得します。";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_COUNT_OBJECTS = "検出結果 %1 の物体の個数 %2";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_COUNT_OBJECTS_TOOLTIP = "検出結果に含まれる物体の個数を取得します。";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_DATA_CONFIDENCE = "%1 の信頼度 %2";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_DATA_CONFIDENCE_TOOLTIP = "検出された物体の信頼度を取得します。";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_DATA_BOX = "%1 の %2 %3";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_DATA_BOX_TOOLTIP = "検出された物体を囲むボックスの座標を取得します。";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_DATA_BOX_OPT_X1 = "左上のX座標";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_DATA_BOX_OPT_Y1 = "左上のY座標";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_DATA_BOX_OPT_X2 = "右下のX座標";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_DATA_BOX_OPT_Y2 = "右下のY座標";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_FOUND_OBJECTS = "%1 で検出された物のリスト";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_FOUND_OBJECTS_TOOLTIP = "検出結果に含まれる物のリストを取得します。";
+}

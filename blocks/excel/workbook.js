@@ -1,3 +1,5 @@
+import { getSaveFilename } from '../../lib/file_utils.js';
+
 export function addBlocks() {
   Blockly.defineBlocksWithJsonArray([
     {
@@ -88,6 +90,12 @@ export function addBlocks() {
           "type": "input_value",
           "name": "filename",
           "check": "String"
+        },
+        {
+          "type": "field_button",
+          "name": "BTN",
+          "text": "%{BKY_TSUMICKY_BUTTON_BROWSE}",
+          "callbackKey": "excel_workbook_save_as_browse_callback",
         }
       ],
       "inputsInline": true,
@@ -159,4 +167,12 @@ export function addBlocks() {
       "helpUrl": "https://www.hfchannel.site/tsumicky/cmn/ref/excel/workbook/blocks.php#workbook_path"
     }
   ]);
+}
+
+export function addCallbacks(workspace) {
+  workspace.registerButtonCallback('excel_workbook_save_as_browse_callback', (block) => {
+    let caption = Blockly.Msg["TSUMICKY_EXCEL_SAVE_AS_FILE_DLG_CAPTION"]; 
+    let filter = Blockly.Msg["TSUMICKY_EXCEL_SAVE_AS_FILE_FILTER"];
+    getSaveFilename(block, caption, filter)
+  });
 }

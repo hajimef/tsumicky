@@ -1,3 +1,5 @@
+#include "option_blocks.h"
+#ifdef BLOCKS_MPU6050
 #include "fw_common.h"
 #include "fw_mpu6050.h"
 
@@ -44,3 +46,4 @@ void mpu6050_update(JSONVar &p) {
 void mpu6050_read(JSONVar &p) {
   imu_read(p, &accelData, &gyroData, NULL);
 }
+#endif // BLOCKS_MPU6050

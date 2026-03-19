@@ -7,15 +7,23 @@
     "pwm_esp32",
     "pwm_rpi",
     "pwm_pico",
+    "pwm_unoq",
+    "pwm_unor4wifi",
     "servo",
     "motor/pca9685",
     "display/lcd",
     "display/neopixel",
     "display/oled",
+    "display/unor4wifi",
+    "display/unoq",
+    "display/rpi500p",
     "sensor/bmp280",
     "sensor/dht",
     "sensor/mpu6050",
     "sensor/max30100",
+    "micom/unoq/camera",
+    "micom/unoq/code_detect",
+    "micom/unoq/video_object_detect",
     "sep",
     "excel/basic",
     "excel/workbook",
@@ -65,6 +73,14 @@
         {
           "id": "category_pwm_pico",
           "catname": "%{BKY_TSUMICKY_CATEGORY_PWM_SUB_PICO}"
+        },
+        {
+          "id": "category_pwm_unoq",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_PWM_SUB_UNOQ}"
+        },
+        {
+          "id": "category_pwm_unor4wifi",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_PWM_SUB_UNOR4WIFI}"
         }
       ]
     },
@@ -90,6 +106,18 @@
       "before": "category_lcd",
       "id": "category_display",
       "children": [
+        {
+          "id": "category_display_rpi500p",
+          "catname": "Raspberry Pi 500+"
+        },
+        {
+          "id": "category_display_unoq",
+          "catname": "Arduino UNO Q"
+        },
+        {
+          "id": "category_display_unor4wifi",
+          "catname": "Arduino UNO R4 WiFi"
+        },
         {
           "id": "category_lcd",
           "catname": "LCD"
@@ -161,6 +189,38 @@
         {
           "id": "category_motion",
           "catname": "%{BKY_TSUMICKY_CATEGORY_MOTION}"
+        }
+      ]
+    },
+    {
+      "catname": "UNO Q",
+      "colour": "60",
+      "before": "category_micom_unoq_camera",
+      "id": "category_micom_unoq",
+      "children": [
+        {
+          "id": "category_micom_unoq_camera",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_MICOM_UNOQ_CAMERA}"
+        },
+        {
+          "id": "category_micom_unoq_code_detect",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_MICOM_UNOQ_CODE_DETECT}"
+        },
+        {
+          "id": "category_micom_unoq_video_object_detect",
+          "catname": "%{BKY_TSUMICKY_CATEGORY_MICOM_UNOQ_VIDEO_OBJECT_DETECT}"
+        }
+      ]
+    },
+    {
+      "catname": "%{BKY_TSUMICKY_CATEGORY_MICOM}",
+      "colour": "60",
+      "before": "category_micom_unoq",
+      "id": "category_micom",
+      "children": [
+        {
+          "id": "category_micom_unoq",
+          "catname": "Arduino UNO Q"
         }
       ]
     },
@@ -312,6 +372,7 @@
     "excel_run_book_macro"
   ],
   "hiddenCategory": [
+    "category_micom_unoq_camera",
     "category_misc_common"
   ],
   "workspace": "workspace"

@@ -1,0 +1,100 @@
+<xml id="toolbox_micom_unoq_video_object_detect" style="display: none" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <category id="category_micom_unoq_video_object_detect" name="%{BKY_TSUMICKY_CATEGORY_MICOM_UNOQ_VIDEO_OBJECT_DETECT}" colour="165">
+    <xi:include href="./camera_inc.xml" parse="xml" />
+    <block type="variables_set">
+      <field name="VAR">detector</field>
+      <value name="VALUE">
+        <block type="unoq_video_object_detect_init_detector">
+          <value name="camera">
+            <block type="variables_get">
+              <field name="VAR">camera</field>
+            </block>
+          </value>
+          <value name="confidence">
+            <shadow type="math_number">
+              <field name="NUM">0.3</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block type="unoq_video_object_detect_init_detector">
+      <value name="camera">
+        <block type="variables_get">
+          <field name="VAR">camera</field>
+        </block>
+      </value>
+      <value name="confidence">
+        <shadow type="math_number">
+          <field name="NUM">0.3</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="unoq_video_object_detect_on_detect_all">
+      <value name="detector">
+        <block type="variables_get">
+          <field name="VAR">detector</field>
+        </block>
+      </value>
+    </block>
+    <block type="unoq_video_object_detect_on_detect">
+      <value name="detector">
+        <block type="variables_get">
+          <field name="VAR">detector</field>
+        </block>
+      </value>
+      <value name="thing">
+        <shadow type="text">
+          <field name="TEXT">dog</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="unoq_video_object_detect_result_loop">
+      <value name="results">
+        <block type="variables_get">
+          <field name="VAR">results</field>
+        </block>
+      </value>
+      <value name="thing">
+        <shadow type="text">
+          <field name="TEXT">dog</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="controls_forEach">
+      <value name="LIST">
+        <block type="variables_get">
+          <field name="VAR">result</field>
+        </block>
+      </value>
+      <field name="VAR">data</field>
+    </block>
+    <block type="unoq_video_object_detect_is_exist">
+      <value name="thing">
+        <shadow type="text">
+          <field name="TEXT">dog</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="unoq_video_object_detect_result_data">
+      <value name="thing">
+        <shadow type="text">
+          <field name="TEXT">dog</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="unoq_video_object_detect_count_types"></block>
+    <block type="unoq_video_object_detect_count_objects"></block>
+    <block type="unoq_video_object_detect_data_confidence"></block>
+    <block type="unoq_video_object_detect_data_box"></block>
+<!--
+    <block type="unoq_video_object_detect_stop_detector">
+      <value name="detector">
+        <block type="variables_get">
+          <field name="VAR">detector</field>
+        </block>
+      </value>
+    </block>
+-->
+  </category>
+</xml>

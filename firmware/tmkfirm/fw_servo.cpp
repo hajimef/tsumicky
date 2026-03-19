@@ -1,3 +1,5 @@
+//#ifndef ARDUINO_UNO_Q
+
 #include "fw_common.h"
 #if defined(ESP32)
 #include <ESP32Servo.h>
@@ -39,3 +41,5 @@ void servo_write(JSONVar &p) {
   sv[servo_no].write(angle);
   r_stat["s"] = (int) NO_RETURN;
 }
+
+//#endif

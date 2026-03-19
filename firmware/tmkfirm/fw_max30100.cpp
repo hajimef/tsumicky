@@ -1,3 +1,5 @@
+#include "option_blocks.h"
+#ifdef BLOCKS_MAX30100
 #include "fw_common.h"
 #include "fw_max30100.h"
 #include <Wire.h>
@@ -16,6 +18,7 @@ void max30100_init(JSONVar &p) {
   if (pOximeter != NULL) {
     delete pOximeter;
   }
+  Serial.println("before max30100 init");
   pOximeter = new PulseOximeter();
   if (!pOximeter->begin()) {
     delete pOximeter;
@@ -25,21 +28,24 @@ void max30100_init(JSONVar &p) {
     return;
   }
   pOximeter->setOnBeatDetectedCallback(max30100_onbeat_callback);
+  Serial.println("after max30100 init");
   r_stat["s"] = (int) NO_RETURN;
 }
 
 void max30100_init_wire(JSONVar &p) {
   uint8_t sda = (int)p["s"];
   uint8_t scl = (int)p["c"];
+#ifndef ARDUINO_UNOWIFIR4
 #if defined(ARDUINO_ARCH_RP2040)
   Wire.setSDA(sda);
   Wire.setSCL(scl);
-#else
+#elif defined(ESP32)
   //Serial.print("init_wire sda = ");
   //Serial.print(sda);
   //Serial.print(", scl = ");
   //Serial.println(scl);
   Wire.setPins(sda, scl);
+#endif
 #endif
   if (pOximeter != NULL) {
     delete pOximeter;
@@ -109,3 +115,4 @@ void max30100_loop() {
     }
   }
 }
+#endif // BLOCKS_MAX30100

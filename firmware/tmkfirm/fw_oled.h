@@ -1,3 +1,4 @@
+#ifdef BLOCKS_OLED
 #ifndef __TSUMICKY_FIRMWARE_OLED_H__
 #define __TSUMICKY_FIRMWARE_OLED_H__
 #include <U8g2lib.h>
@@ -31,4 +32,5 @@ void oled_send_buffer(JSONVar &p);
 void oled_clear_display(JSONVar &p);
 void oled_clear_buffer(JSONVar &p);
 
-#endif
+#endif // __TSUMICKY_FIRMWARE_OLED_H__
+#endif // BLOCKS_OLED

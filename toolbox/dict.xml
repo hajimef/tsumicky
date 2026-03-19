@@ -19,6 +19,11 @@
           <field name="TEXT"></field>
         </shadow>
       </value>
+      <value name="dict">
+        <block type="variables_get">
+          <field name="VAR">dic</field>
+        </block>
+      </value>
     </block>
     <block type="dict_get_item">
       <value name="key">
@@ -26,22 +31,63 @@
           <field name="TEXT"></field>
         </shadow>
       </value>
+      <value name="dict">
+        <block type="variables_get">
+          <field name="VAR">dic</field>
+        </block>
+      </value>
     </block>
-    <block type="dict_keys"></block>
+    <block type="dict_keys">
+      <value name="dict">
+        <block type="variables_get">
+          <field name="VAR">dic</field>
+        </block>
+      </value>
+    </block>
     <block type="dict_has_key">
       <value name="key">
         <shadow type="text">
           <field name="TEXT"></field>
         </shadow>
       </value>
+      <value name="dict">
+        <block type="variables_get">
+          <field name="VAR">dic</field>
+        </block>
+      </value>
     </block>
-    <block type="dict_values"></block>
+    <block type="dict_values">
+      <value name="dict">
+        <block type="variables_get">
+          <field name="VAR">dic</field>
+        </block>
+      </value>
+    </block>
     <block type="dict_from_json">
       <value name="json">
         <block type="text_ml"></block>
       </value>
     </block>
-    <block type="dict_to_json"></block>
-    <block type="dict_each"></block>
+    <block type="dict_to_json">
+      <value name="dict">
+        <block type="variables_get">
+          <field name="VAR">dic</field>
+        </block>
+      </value>
+    </block>
+    <block type="dict_convkv">
+      <value name="dict">
+        <block type="variables_get">
+          <field name="VAR">dic</field>
+        </block>
+      </value>
+    </block>
+    <block type="dict_each">
+      <value name="dict">
+        <block type="variables_get">
+          <field name="VAR">dic</field>
+        </block>
+      </value>
+    </block>
   </category>
 </xml>

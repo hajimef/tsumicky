@@ -26,6 +26,8 @@ Blockly.Extensions.register('warning_on_change', function() {
 });
 */
 
+import { getOpenFilename, getSaveFilename } from '../../lib/file_utils.js';
+
 let tsumicky_excel_os_join_path_mutator_mixin = {
   saveExtraState: function() {
     return {
@@ -257,6 +259,12 @@ export function addBlocks() {
           "type": "input_value",
           "name": "filename",
           "check": "String"
+        },
+        {
+          "type": "field_button",
+          "name": "BTN",
+          "text": "%{BKY_TSUMICKY_BUTTON_BROWSE}",
+          "callbackKey": "excel_open_file_browse_callback",
         }
       ],
       "inputsInline": true,
@@ -282,6 +290,12 @@ export function addBlocks() {
           "type": "input_value",
           "name": "filename",
           "check": "String"
+        },
+        {
+          "type": "field_button",
+          "name": "BTN",
+          "text": "%{BKY_TSUMICKY_BUTTON_BROWSE}",
+          "callbackKey": "excel_save_file_as_browse_callback",
         }
       ],
       "inputsInline": true,
@@ -508,4 +522,18 @@ export function addBlocks() {
       "helpUrl": ""
     },
   ]);
+}
+
+export function addCallbacks(workspace) {
+  workspace.registerButtonCallback('excel_open_file_browse_callback', (block) => {
+    let caption = Blockly.Msg["TSUMICKY_EXCEL_OPEN_FILE_DLG_CAPTION"]; 
+    let filter = Blockly.Msg["TSUMICKY_EXCEL_OPEN_FILE_FILTER"];
+    getOpenFilename(block, caption, filter)
+  });
+
+  workspace.registerButtonCallback('excel_save_file_as_browse_callback', (block) => {
+    let caption = Blockly.Msg["TSUMICKY_EXCEL_SAVE_AS_FILE_DLG_CAPTION"]; 
+    let filter = Blockly.Msg["TSUMICKY_EXCEL_SAVE_AS_FILE_FILTER"];
+    getSaveFilename(block, caption, filter)
+  });
 }

@@ -1,10 +1,12 @@
+//#ifndef ARDUINO_UNO_Q
+
 #include "fw_common.h"
 #include "pwm.h"
 
 #define MAX_CH 16
 #define MAX_PIN 48
 #define DEF_FREQ 10000
-#if defined(CONFIG_IDF_TARGET_ESP32S3) || defined(CONFIG_IDF_TARGET_ESP32C3) || defined(CONFIG_IDF_TARGET_ESP32C6) || defined(CONFIG_IDF_TARGET_ESP32C5)
+#if defined(CONFIG_IDF_TARGET_ESP32S3) || defined(CONFIG_IDF_TARGET_ESP32C3) || defined(CONFIG_IDF_TARGET_ESP32C6) || defined(CONFIG_IDF_TARGET_ESP32C5) || defined(ARDUINO_UNO_Q)
 #define DEF_BIT 10
 #define DEF_RES 1023
 #else
@@ -22,6 +24,12 @@ long maxRes[MAX_CH];
 #endif
 #elif defined(ARDUINO_ARCH_RP2040)
 String pwm_group = "pwm_rpip";
+long maxRes;
+#elif defined(ARDUINO_UNOWIFIR4)
+String pwm_group = "pwm_uw4";
+long maxRes;
+#elif defined(ARDUINO_UNO_Q)
+String pwm_group = "pwm_uq";
 long maxRes;
 #endif
 
@@ -48,6 +56,10 @@ void pwm_setup(void) {
   analogWriteFreq(DEF_FREQ);
   analogWriteResolution(DEF_BIT);
   maxRes = DEF_RES;
+#elif defined(ARDUINO_UNOWIFIR4) || defined(ARDUINO_UNO_Q)
+  addCallback(pwm_group, "", "w", &pwm_unoWrite);
+  analogWriteResolution(DEF_BIT);
+  maxRes = DEF_RES;
 #endif
 }
 
@@ -72,12 +84,12 @@ void pwm_ledcWrite(JSONVar &p) {
   pin = (int) p["p"];
   duty_d = (double) p["d"];
   duty = (int) (maxRes[pin] * duty_d / 100);
-  Serial.print("pin = ");
-  Serial.print(pin);
-  Serial.print(", duty_d = ");
-  Serial.print(duty_d);
-  Serial.print(", duty = ");
-  Serial.println(duty);
+//  Serial.print("pin = ");
+//  Serial.print(pin);
+//  Serial.print(", duty_d = ");
+//  Serial.print(duty_d);
+//  Serial.print(", duty = ");
+//  Serial.println(duty);
   ledcWrite(pin, duty);
   r_stat["s"] = (int) NO_RETURN;
 }
@@ -135,3 +147,24 @@ void pwm_picoWrite(JSONVar &p) {
   r_stat["s"] = (int) NO_RETURN;
 }
 #endif
+
+#if defined(ARDUINO_UNOWIFIR4) || defined(ARDUINO_UNO_Q)
+void pwm_unoWrite(JSONVar &p) {
+  int pin, duty;
+  double duty_d;
+
+  pin = (int) p["p"];
+  duty_d = (double) p["d"];
+  duty = (int) (maxRes * duty_d / 100);
+//  Serial.print("pin = ");
+//  Serial.print(pin);
+//  Serial.print(", duty_d = ");
+//  Serial.print(duty_d);
+//  Serial.print(", duty = ");
+//  Serial.println(duty);
+  analogWrite(pin, duty);
+  r_stat["s"] = (int) NO_RETURN;
+}
+#endif // ARDUINO_UNOWIFIR4 || ARDUINO_UNO_Q
+
+//#endif 

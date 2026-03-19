@@ -1,3 +1,4 @@
+#ifdef BLOCKS_PCA9685
 #ifndef __TSUMICKY_FIRMWARE_PCA9685_H__
 #define __TSUMICKY_FIRMWARE_PCA9685_H__
 
@@ -10,4 +11,5 @@ void pca9685_init_i2c(JSONVar &p);
 void pca9685_pulse_range(JSONVar &p);
 void pca9685_set_servo(JSONVar &p);
 
-#endif
+#endif // __TSUMICKY_FIRMWARE_PCA9685_H__
+#endif // BLOCKS_PCA9685

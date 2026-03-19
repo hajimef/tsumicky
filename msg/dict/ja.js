@@ -26,4 +26,8 @@ export function addMessages() {
   Blockly.Msg["TSUMICKY_DICT_TO_JSON_TOOLTIP"] = "辞書をJSON文字列に変換した結果を得ます。";
   Blockly.Msg["TSUMICKY_DICT_EACH"] = "辞書 %1 の各項目について : キー %2 値 %3 %4 %5";
   Blockly.Msg["TSUMICKY_DICT_EACH_TOOLTIP"] = "辞書内の各項目について、キーをと値を変数に代入し、繰り返して処理を行います。";
+  Blockly.Msg["TSUMICKY_DICT_CONVKV"] = "辞書 %1 のキーと値を入れ替えた辞書 キー重複時の値 %2";
+  Blockly.Msg["TSUMICKY_DICT_CONVKV_TOOLTIP"] = "辞書内の各項目について、キーをと値を入れ替えます。";
+  Blockly.Msg["TSUMICKY_DICT_CONVKV_OVERWRITE"] = "上書き";
+  Blockly.Msg["TSUMICKY_DICT_CONVKV_LIST"] = "リスト";
 };

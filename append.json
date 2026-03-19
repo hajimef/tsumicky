@@ -8,7 +8,19 @@
     "before": "text_join"
   },
   {
+    "name": "text_to_string",
+    "before": "text_basen"
+  },
+  {
     "name": "math_dec",
+    "after": "math_round"
+  },
+  {
+    "name": "math_angle",
+    "after": "math_constant"
+  },
+  {
+    "name": "math_to_number",
     "after": "math_round"
   },
   {
@@ -24,11 +36,47 @@
     "after": "colour_grey"
   },
   {
+    "name": "colour_hsv",
+    "after": "colour_rgb"
+  },
+  {
     "name": "list_pop_shift",
     "after": "lists_getSublist"
   },
   {
     "name": "list_push_unshift",
-    "before": "list_pop_shift"
+    "after": "list_pop_shift"
+  },
+  {
+    "name": "list_concat",
+    "after": "list_push_unshift"
+  },
+  {
+    "name": "list_get_random",
+    "after": "list_concat"
+  },
+  {
+    "name": "list_reverse",
+    "after": "list_get_random"
+  },
+  {
+    "name": "list_filter",
+    "after": "list_reverse"
+  },
+  {
+    "name": "list_map",
+    "after": "list_filter"
+  },
+  {
+    "name": "list_item",
+    "after": "list_map"
+  },
+  {
+    "name": "list_compute",
+    "after": "list_item"
+  },
+  {
+    "name": "logic_is_type",
+    "after": "logic_null"
   }
 ]

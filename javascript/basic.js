@@ -48,7 +48,7 @@ export function addJS() {
       let statements_loop = generator.statementToCode(block, 'loop');
       let statements_end = generator.statementToCode(block, 'end');
       if (statements_loop.trim() == '') {
-          statements_loop = 'await $_basic.sleep(1000);\n'
+          statements_loop = 'await $_basic.sleep("' + block.id + '", 1000);\n'
       }
       // TODO: Assemble javascript into code variable.
       let code = createVarList(generator);
@@ -120,7 +120,7 @@ export function addJS() {
       setRuntimeName();
       var value_text = generator.valueToCode(block, 'text', javascript.Order.ATOMIC);
       // TODO: Assemble javascript into code variable.
-      var code = '$_' + modName + '.console_log(' + value_text + ');\n';
+      var code = '$_' + modName + '.console_log(' + value_text + ', "' + block.id + '");\n';
       return code;
     };
     
@@ -131,7 +131,7 @@ export function addJS() {
       var n_u0 = block.getFieldValue('u0');
     
       // TODO: Assemble javascript into the code variable.
-      var code = '$_' + modName + '.format_float('+ num + ', ' + n_all + ', ' + n_u0 + ')';
+      var code = '$_' + modName + '.format_float(' + num + ', ' + n_all + ', ' + n_u0 + ', "' + block.id + '")';
       return [ code, Blockly.JavaScript.ORDER_NONE ];
     }
 
@@ -139,7 +139,7 @@ export function addJS() {
       setRuntimeName();
       var value_ms = generator.valueToCode(block, 'ms', javascript.Order.ATOMIC);
       // TODO: Assemble javascript into code variable.
-      var code = 'await $_' + modName + '.sleep(' + value_ms + ');\n';
+      var code = 'await $_' + modName + '.sleep(' + value_ms + ', \"' + block.id + '\");\n';
       return code;
     };
 

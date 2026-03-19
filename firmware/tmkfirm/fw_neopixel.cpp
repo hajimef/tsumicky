@@ -1,3 +1,5 @@
+#include "option_blocks.h"
+#ifdef BLOCKS_NEOPIXEL
 #include "fw_common.h"
 #include "fw_neopixel.h"
 
@@ -95,3 +97,4 @@ void neopixel_show(JSONVar &p) {
   pixels[no]->show();
   r_stat["s"] = (int) NO_RETURN;
 }
+#endif // BLOCKS_NEOPIXEL

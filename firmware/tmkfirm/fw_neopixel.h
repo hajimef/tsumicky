@@ -1,3 +1,4 @@
+#ifdef BLOCKS_NEOPIXEL
 #ifndef __TSUMICKY_FIRMWARE_NEOPIXEL_H__
 #define __TSUMICKY_FIRMWARE_NEOPIXEL_H__
 #include <Arduino_JSON.h>
@@ -8,4 +9,5 @@ void neopixel_init(JSONVar &p);
 void neopixel_dispose(JSONVar &p);
 void neopixel_show(JSONVar &p);
 
-#endif
+#endif // __TSUMICKY_FIRMWARE_NEOPIXEL_H__
+#endif // BLOCKS_NEOPIXEL

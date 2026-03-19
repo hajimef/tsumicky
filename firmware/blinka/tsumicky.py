@@ -25,6 +25,10 @@ except Exception as e:
 import mods.displays.tmkLCD as tmkLCD
 import mods.displays.tmkNeoPixel as tmkNeoPixel
 import mods.displays.tmkOLED as tmkOLED
+try:
+    import mods.displays.tmkRPi500p as tmkRPi500p
+except Exception as e:
+    pass
 import mods.sensors.env.tmkDHT as tmkDHT
 import mods.sensors.env.tmkBMP280 as tmkBMP280
 import mods.sensors.motion.tmkMPU6050 as tmkMPU6050
@@ -84,6 +88,10 @@ tmkLCD.addCallbacks()
 tmkNeoPixel.addCallbacks()
 tmkOLED.addCallbacks()
 tmkDHT.addCallbacks()
+try:
+    tmkRPi500p.addCallbacks()
+except Exception as e:
+    pass
 tmkBMP280.addCallbacks()
 tmkMPU6050.addCallbacks()
 tmkPCA9685.addCallbacks()

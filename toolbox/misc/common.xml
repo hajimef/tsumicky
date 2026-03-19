@@ -1,6 +1,6 @@
 <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_misc_common" style="display: none">
     <category name="%{BKY_TSUMICKY_CATEGORY_MISC_COMMON}" id="category_misc_common" colour="#5ba55b">
-        <block type="rpa_connect">
+        <block type="misc_connect">
             <field name="visible">1</field>
             <value name="host">
                 <shadow type="text">

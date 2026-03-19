@@ -1,3 +1,5 @@
+#include "option_blocks.h"
+#ifdef BLOCKS_IMU
 #include "fw_common.h"
 #include "fw_imu.h"
 
@@ -9,12 +11,16 @@ void imu_i2c_init(JSONVar &p) {
   Wire.setSDA(sda);
   Wire.begin();
 #else
+#if !defined(ARDUINO_UNOWIFIR4) && !defined(ARDUINO_UNO_Q)
   if (sda != -1) {
     Wire.begin(sda, scl);
   }
   else {
+#endif
     Wire.begin();
+#if !defined(ARDUINO_UNOWIFIR4) && !defined(ARDUINO_UNO_Q)
   }
+#endif
 #endif
 /*
   Serial.print("sda = ");
@@ -77,4 +83,4 @@ void imu_read(JSONVar &p, AccelData* accelData,GyroData* gyroData, MagData* magD
     r_stat["v"] = (double) magData->magZ;
   }
 }
-
+#endif // BLOCKS_IMU

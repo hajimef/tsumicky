@@ -1,0 +1,72 @@
+<xml id="toolbox_micom_unoq_code_detect" style="display: none" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <category id="category_micom_unoq_code_detect" name="%{BKY_TSUMICKY_CATEGORY_MICOM_UNOQ_CODE_DETECT}" colour="120">
+    <xi:include href="./camera_inc.xml" parse="xml" />
+    <block type="variables_set">
+      <field name="VAR">detector</field>
+      <value name="VALUE">
+        <block type="unoq_code_detect_init_detector">
+          <value name="camera">
+            <block type="variables_get">
+              <field name="VAR">camera</field>
+            </block>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block type="unoq_code_detect_init_detector">
+      <value name="camera">
+        <block type="variables_get">
+          <field name="VAR">camera</field>
+        </block>
+      </value>
+    </block>
+    <block type="variables_set">
+      <field name="VAR">results</field>
+      <value name="VALUE">
+        <block type="unoq_code_detect_result">
+          <value name="detector">
+            <block type="variables_get">
+              <field name="VAR">detector</field>
+            </block>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block type="unoq_code_detect_result">
+      <value name="detector">
+        <block type="variables_get">
+          <field name="VAR">detector</field>
+        </block>
+      </value>
+    </block>
+    <block type="controls_forEach">
+      <value name="LIST">
+        <block type="variables_get">
+          <field name="VAR">results</field>
+        </block>
+      </value>
+      <field name="VAR">result</field>
+    </block>
+    <block type="unoq_code_detect_result_type"></block>
+    <block type="unoq_code_detect_result_value"></block>
+    <block type="unoq_code_detect_reset_seen_all">
+      <value name="detector">
+        <block type="variables_get">
+          <field name="VAR">detector</field>
+        </block>
+      </value>
+    </block>
+    <block type="unoq_code_detect_reset_seen">
+      <value name="detector">
+        <block type="variables_get">
+          <field name="VAR">detector</field>
+        </block>
+      </value>
+      <value name="value">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+  </category>
+</xml>

@@ -14,6 +14,7 @@ export async function dispose() {
 }
 
 export async function load_dataset(range, dataset) {
+  Blockly.checkStop();
   let params = range.getParams();
   params.d = dataset;
   let r = await ws.send(__ws, "sl", "dt", "ds", params);  
@@ -92,6 +93,7 @@ export async function standardize() {
 }
 
 export async function save(range, data, type) {
+  Blockly.checkStop();
   let params = range.getParams();
   params.d = data;
   params.t = type;
@@ -99,6 +101,7 @@ export async function save(range, data, type) {
 }
 
 export async function save_predict(range, type) {
+  Blockly.checkStop();
   let params = range.getParams();
   params.t = type;
   let r = await ws.send(__ws, "sl", "dt", "sp", params);  

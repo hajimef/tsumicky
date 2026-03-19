@@ -1,0 +1,9 @@
+name: Tsumicky for UNO Q
+description: Tsumicky firmware for Arduino UNO Q
+ports:
+- 5678
+- 7000
+- 8000
+bricks:
+- arduino:web_ui: {}
+icon: 😀

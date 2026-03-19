@@ -1,3 +1,4 @@
+#ifdef BLOCKS_IMU
 #ifndef __TSUMICKY_FIRMWARE_IMU_H__
 #define __TSUMICKY_FIRMWARE_IMU_H__
 
@@ -18,4 +19,5 @@
 void imu_i2c_init(JSONVar &p);
 void imu_update(IMUBase* imu, AccelData* accelData,GyroData* gyroData, MagData* magData);
 void imu_read(JSONVar &p, AccelData* accelData,GyroData* gyroData, MagData* magData);
-#endif
+#endif // __TSUMICKY_FIRMWARE_IMU_H__
+#endif // BLOCKS_IMU

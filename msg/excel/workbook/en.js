@@ -11,7 +11,7 @@ export function addMessages() {
   Blockly.Msg["TSUMICKY_EXCEL_CURRENT_WORKBOOK_TOOLTIP"] = "Get the target workbook. \nCan only be used in the block 'process within the block using as the target workbook'.";
   Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_SAVE"] = "save %1";
   Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_SAVE_TOOLTIP"] = "Save the specified workbook.";
-  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_SAVE_AS"] = "save %1 as %2";
+  Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_SAVE_AS"] = "save %1 as %2 %3";
   Blockly.Msg["TSUMICKY_EXCEL_WORKBOOK_SAVE_AS_TOOLTIP"] = "Save the specified workbook with a file name.";
   Blockly.Msg["TSUMICKY_EXCEL_WORKBOOKS"] = "list of open workbooks";
   Blockly.Msg["TSUMICKY_EXCEL_WORKBOOKS_TOOLTIP"] = "Get a list of open workbooks.";

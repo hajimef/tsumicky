@@ -11,11 +11,15 @@ export function addMessages() {
   Blockly.Msg["TSUMICKY_EXCEL_QUIT_TOOLTIP"] = "Excelを終了します。";
   Blockly.Msg["TSUMICKY_EXCEL_NEW_FILE"] = "ブックを新規作成する";
   Blockly.Msg["TSUMICKY_EXCEL_NEW_FILE_TOOLTIP"] = "ブックを新規作成します。";
-  Blockly.Msg["TSUMICKY_EXCEL_OPEN_FILE"] = "ファイル名が %1 のブックを開く"
+  Blockly.Msg["TSUMICKY_EXCEL_OPEN_FILE"] = "ファイル名が %1 %2 のブックを開く"
   Blockly.Msg["TSUMICKY_EXCEL_OPEN_FILE_TOOLTIP"] = "ブックのファイルを開きます。"
+  Blockly.Msg["TSUMICKY_EXCEL_OPEN_FILE_DLG_CAPTION"] = "ファイルを選択"
+  Blockly.Msg["TSUMICKY_EXCEL_OPEN_FILE_FILTER"] = "Excelファイル (*.xlsx *.xlsb *.xlsm *.xls *.xlam *.xltx *.xltm);; テキストファイル (*.txt *.csv);; すべてのファイル (*.*)"
 //  Blockly.Msg["TSUMICKY_EXCEL_FIND_FILE"] = "ファイル選択ダイアログでブックを開いて、ファイル名を得る";
-  Blockly.Msg["TSUMICKY_EXCEL_SAVE_AS_FILE"] = "ブックに %1 のファイル名を付けて保存する";
+  Blockly.Msg["TSUMICKY_EXCEL_SAVE_AS_FILE"] = "ブックに %1 %2 のファイル名を付けて保存する";
   Blockly.Msg["TSUMICKY_EXCEL_SAVE_AS_FILE_TOOLTIP"] = "ブックにファイル名を付けて保存します。";
+  Blockly.Msg["TSUMICKY_EXCEL_SAVE_AS_FILE_FILTER"] = "Excelブック (*.xlsx);; Excelマクロ有効ブック (*.xlsm);; Excelバイナリブック (*.xlsb);;Excel97-2003ブック (*.xls);; テキスト(タブ区切り) (*.txt);; CSVファイル (*.csv);; すべてのファイル (*.*)"
+  Blockly.Msg["TSUMICKY_EXCEL_SAVE_AS_FILE_DLG_CAPTION"] = "名前を付けて保存"
   Blockly.Msg["TSUMICKY_EXCEL_SAVE_FILE"] = "ブックを上書き保存する";
   Blockly.Msg["TSUMICKY_EXCEL_SAVE_FILE_TOOLTIP"] = "ブックを上書き保存します。";
   Blockly.Msg["TSUMICKY_EXCEL_SCREEN_UPDATING_TOOLTIP"] = "Excelの画面表示を更新するかどうかを選択します。\n画面表示の更新を止めると、プログラムの動作が速くなります。";

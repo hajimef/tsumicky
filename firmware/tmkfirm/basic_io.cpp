@@ -1,10 +1,14 @@
 #include "fw_common.h"
 #include "basic_io.h"
 
-#if defined(ESP32)
+#if defined(ARDUINO_UNOWIFIR4)
+const char* modelname = "unor4wifi";
+#elif defined(ESP32)
 const char* modelname = "esp32";
 #elif defined(ARDUINO_ARCH_RP2040)
 const char* modelname = "picow";
+#elif defined(ARDUINO_UNO_Q)
+const char* modelname = "unoq";
 #endif
 
 String basic_io_group = "bio";

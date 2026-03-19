@@ -1,3 +1,5 @@
+#include "option_blocks.h"
+#ifdef BLOCKS_BMP280
 #include "fw_common.h"
 #include "fw_bmp280.h"
 
@@ -26,14 +28,16 @@ void bmp280_init(JSONVar &p) {
   Serial.print(sda);
   Serial.print(", scl = ");
   Serial.println(scl);
+#ifndef ARDUINO_UNOWIFIR4
   if (sda != -1) {
 #if defined(ARDUINO_ARCH_RP2040)
     Wire.setSDA(sda);
     Wire.setSCL(scl);
-#else
+#elif defined(ESP32)
     Wire.setPins(sda, scl);
 #endif
   }
+#endif
   bmp280 = new Adafruit_BMP280(&Wire);
   status = bmp280->begin(i2c_adrs);
   if (!status) {
@@ -64,3 +68,4 @@ void bmp280_pressure(JSONVar &p) {
   r_stat["t"] = (int) TYPE_FLOAT;
   r_stat["v"] = (double) pr;
 }
+#endif // BLOCKS_BMP280

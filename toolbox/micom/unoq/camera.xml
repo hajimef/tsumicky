@@ -1,0 +1,5 @@
+<xml id="toolbox_micom_unoq_common" style="display: none" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <category id="category_micom_unoq_camera" name="%{BKY_TSUMICKY_CATEGORY_MICOM_UNOQ_CAMERA}" colour="60">
+    <xi:include href="./camera_inc.xml" parse="xml" />
+  </category>
+</xml>

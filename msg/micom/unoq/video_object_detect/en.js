@@ -1,0 +1,31 @@
+export function addMessages() {
+  Blockly.Msg.TSUMICKY_CATEGORY_MICOM_UNOQ_VIDEO_OBJECT_DETECT = "Object detection";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_INIT_DETECTOR = "object detector in %1 %2 camera %3 confidence %4 %5 display image %6";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_INIT_DETECTOR_TOOLTIP = "Initialize the object detector.\nSpecify a confidence value between 0 and 1.";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_ON_DETECT_ALL = "when object is detected by detector %2 %3 in %1: argument %4 %5 do %6";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_ON_DETECT_ALL_TOOLTIP = "Define the action to be taken when the object detector detects an object.";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_ON_DETECT = "when %4 is detected by detector %2 %3 in %1: argument %5 %6 do %7";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_ON_DETECT_TOOLTIP = "Define the action to be taken when the object detector detects specified object.";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_STOP_DETECTOR = "stop object detector %2 %3 of %1 %4";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_STOP_DETECTOR_TOOLTIP = "Stop the object detector.";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_RESULT_LOOP = "for each object in detection results %1: name %2 data %3 %4 do %5";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_RESULT_LOOP_TOOLTIP = "Iterate through each object in the detection results.\nThe object's name and information such as detection confidence are assigned to variables.";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_IS_EXIST = "detection results %1 %2 include %3";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_IS_EXIST_TOOLTIP = "Get whether the specified object is included in the object detection results.";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_RESULT_DATA = "information of %3 in detection results %1 %2";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_RESULT_DATA_TOOLTIP = "Get information about the specified object from the object detection results.";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_COUNT_TYPES = "number of object types in detection results %1 %2";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_COUNT_TYPES_TOOLTIP = "Get the number of types of objects included in the detection results.";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_COUNT_OBJECTS = "number of objects in detection results %1 %2";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_COUNT_OBJECTS_TOOLTIP = "Get the number of objects included in the detection results.";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_DATA_CONFIDENCE = "confidence of %1 %2";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_DATA_CONFIDENCE_TOOLTIP = "Get the confidence of the detected object.";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_DATA_BOX = "%2 of %1 %3";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_DATA_BOX_TOOLTIP = "Get the coordinates of the box surrounding the detected object.";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_DATA_BOX_OPT_X1 = "Top-left X coordinate";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_DATA_BOX_OPT_Y1 = "Top-left Y coordinate";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_DATA_BOX_OPT_X2 = "Bottom-right X coordinate";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_DATA_BOX_OPT_Y2 = "Bottom-right Y coordinate";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_FOUND_OBJECTS = "list of objects detected in %1";
+  Blockly.Msg.TSUMICKY_UNOQ_VIDEO_OBJECT_DETECT_FOUND_OBJECTS_TOOLTIP = "Get a list of objects included in the detection results.";
+}

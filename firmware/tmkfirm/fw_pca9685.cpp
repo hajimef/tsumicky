@@ -1,3 +1,5 @@
+#include "option_blocks.h"
+#ifdef BLOCKS_PCA9685
 #include "fw_pca9685.h"
 #include <Adafruit_PWMServoDriver.h>
 
@@ -99,3 +101,4 @@ void pca9685_setup(void) {
   addCallback(pca9685_group, pca9685_subgroup, "s", &pca9685_set_servo);
   addCallback(pca9685_group, pca9685_subgroup, "d", &pca9685_dispose);
 }
+#endif // BLOCKS_PCA9685

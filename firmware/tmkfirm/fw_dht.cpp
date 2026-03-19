@@ -1,3 +1,5 @@
+#include "option_blocks.h"
+#ifdef BLOCKS_DHT
 #include "fw_common.h"
 #include "fw_dht.h"
 
@@ -51,3 +53,4 @@ void dht_humidity(JSONVar &p) {
   r_stat["t"] = (int) TYPE_FLOAT;
   r_stat["v"] = (double) h;
 }
+#endif

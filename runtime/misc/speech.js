@@ -74,8 +74,8 @@ export function dispose() {
     }
 }
 
-export function speak(text, isAsync) {
-    Blockly.checkStop();
+export function speak(text, isAsync, blockId) {
+    Blockly.checkStop(blockId);
     if (!synth) return Promise.resolve();
 
     if (synth.speaking) {
@@ -112,8 +112,8 @@ export function speak(text, isAsync) {
     });
 }
 
-export function setLang(langName) {
-    Blockly.checkStop();
+export function setLang(langName, blockId) {
+    Blockly.checkStop(blockId);
     if (!utterance) return;
     const voice = Blockly.voices.find(v => v.lang === langName);
     if (voices) {
@@ -122,8 +122,8 @@ export function setLang(langName) {
     }
 }
 
-export function setVoice(voiceName) {
-    Blockly.checkStop();
+export function setVoice(voiceName, blockId) {
+    Blockly.checkStop(blockId);
     if (!utterance) return;
     const voice = Blockly.voices.find(v => v.name === voiceName);
     if (voice) {
@@ -132,68 +132,68 @@ export function setVoice(voiceName) {
     }
 }
 
-export function setSpeed(speed) {
-    Blockly.checkStop();
+export function setSpeed(speed, blockId) {
+    Blockly.checkStop(blockId);
     if (!utterance) return;
     utterance.rate = speed;
 }
 
-export function setPitch(pitch) {
-    Blockly.checkStop();
+export function setPitch(pitch, blockId) {
+    Blockly.checkStop(blockId);
     if (!utterance) return;
     utterance.pitch = pitch;
 }
 
-export function setVolume(volume) {
-    Blockly.checkStop();
+export function setVolume(volume, blockId) {
+    Blockly.checkStop(blockId);
     if (!utterance) return;
     utterance.volume = volume;
 }
 
-export function cancel() {
-    Blockly.checkStop();
+export function cancel(blockId) {
+    Blockly.checkStop(blockId);
     if (synth) {
         synth.cancel();
     }
     return Promise.resolve();
 }
 
-export function pause() {
-    Blockly.checkStop();
+export function pause(blockId) {
+    Blockly.checkStop(blockId);
     if (synth) {
         synth.pause();
     }
     return Promise.resolve();
 }
 
-export function resume() {
-    Blockly.checkStop();
+export function resume(blockId) {
+    Blockly.checkStop(blockId);
     if (synth) {
         synth.resume();
     }
     return Promise.resolve();
 }
 
-export function paused() {
-    Blockly.checkStop();
+export function paused(blockId) {
+    Blockly.checkStop(blockId);
     if (!synth) return false;
     return synth.paused;
 }
 
-export function pending() {
-    Blockly.checkStop();
+export function pending(blockId) {
+    Blockly.checkStop(blockId);
     if (!synth) return false;
     return synth.pending;
 }
 
-export function speaking() {
-    Blockly.checkStop();
+export function speaking(blockId) {
+    Blockly.checkStop(blockId);
     if (!synth) return false;
     return synth.speaking;
 }
 
-export async function startRecognition(interim) {
-    Blockly.checkStop();
+export async function startRecognition(interim, blockId) {
+    Blockly.checkStop(blockId);
     if (!recognition) return;
     transcript = '';
     isInterim = false;
@@ -202,8 +202,8 @@ export async function startRecognition(interim) {
     recognition.start();
 }
 
-export async function stopRecognition() {
-    Blockly.checkStop();
+export async function stopRecognition(blockId) {
+    Blockly.checkStop(blockId);
     if (!recognition) return;
     if (isInRecognition) {
         recognition.stop();
@@ -211,16 +211,18 @@ export async function stopRecognition() {
     }
 }
 
-export function onResult(callback) {
+export function onResult(callback, blockId) {
+    Blockly.checkStop(blockId);
     onResultCallback = callback;
 }
 
-export function onError(callback) {
+export function onError(callback, blockId) {
+    Blockly.checkStop(blockId);
     onErrorCallback = callback;
 }
 
-export function getTranscript() {
-    Blockly.checkStop();
+export function getTranscript(blockId) {
+    Blockly.checkStop(blockId);
     if (isInterim) {
         return interim_transcript;
     }
@@ -229,19 +231,19 @@ export function getTranscript() {
     }
 }
 
-export function recogIsInterim() {
-    Blockly.checkStop();
+export function recogIsInterim(blockId) {
+    Blockly.checkStop(blockId);
     return isInterim;
 }
 
-export function setRecognitionLang(lang) {
-    Blockly.checkStop();
+export function setRecognitionLang(lang, blockId) {
+    Blockly.checkStop(blockId);
     if (!recognition) return;
     recognition.lang = lang;
 }
 
-export async function setGrammars(grammars) {
-    Blockly.checkStop();
+export async function setGrammars(grammars, blockId) {
+    Blockly.checkStop(blockId);
     if (!recognition) return;
     const SpeechGrammarList = window.SpeechGrammarList || window.webkitSpeechGrammarList;
     if (SpeechGrammarList) {
@@ -255,12 +257,12 @@ export async function setGrammars(grammars) {
     }
 }
 
-export function recogError() {
-    Blockly.checkStop();
+export function recogError(blockId) {
+    Blockly.checkStop(blockId);
     return rError;
 }
 
-export function recogErrorMessage() {
-    Blockly.checkStop();
+export function recogErrorMessage(blockId) {
+    Blockly.checkStop(blockId);
     return rErrorMessage;
 }

@@ -7,7 +7,6 @@ const misc_connect_mutator_mixin = {
   },
 
   updateShape_: function (checked) {
-    console.log(checked);
     if (this.getInput('v_dummy')) {
       this.removeInput('v_dummy');
     }

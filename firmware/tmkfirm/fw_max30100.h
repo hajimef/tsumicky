@@ -1,3 +1,4 @@
+#ifdef BLOCKS_MAX30100
 #ifndef __TSUMICKY_FIRMWARE_MAX30100_H__
 #define __TSUMICKY_FIRMWARE_MAX30100_H__
 #include <Arduino_JSON.h>
@@ -12,4 +13,5 @@ void max30100_read_heartrate(JSONVar &p);
 void max30100_read_spo2(JSONVar &p);
 void max30100_onbeat_callback();
 
-#endif
+#endif // __TSUMICKY_FIRMWARE_MAX30100_H__
+#endif // BLOCKS_MAX30100

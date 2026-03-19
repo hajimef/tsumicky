@@ -1,4 +1,7 @@
 #include "fw_common.h"
+#ifdef ARDUINO_UNO_Q
+#include "Arduino_RouterBridge.h"
+#endif
 
 std::map<String, std::map<String, std::map<String, std::function<void(JSONVar&)>>>> cbTable;
 JSONVar r_stat;
@@ -43,5 +46,11 @@ void sendWebSocketSub(String group, String subgrp, String command, JSONVar &para
   j_str = JSON.stringify(cbdata);
   //Serial.print("send callback ");
   //Serial.println(j_str);
+#if defined(ARDUINO_UNO_Q)
+  Bridge.call("b", j_str);
+#elif defined(ARDUINO_UNOWIFIR4)
+  ws->broadcastTXT(j_str);
+#else
   ws.sendTXT(ws_num, j_str);
+#endif
 }

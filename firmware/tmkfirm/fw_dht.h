@@ -1,3 +1,4 @@
+#ifdef BLOCKS_DHT
 #ifndef __TSUMICKY_FIRMWARE_DHT_H__
 #define __TSUMICKY_FIRMWARE_DHT_H__
 #include <DHT.h>
@@ -11,4 +12,5 @@ void dht_dispose(JSONVar &p);
 void dht_temperature(JSONVar &p);
 void dht_humidity(JSONVar &p);
 
+#endif
 #endif

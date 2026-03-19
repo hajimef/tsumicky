@@ -13,6 +13,7 @@ const MODE_SETTING = 3;
 
 (async() => {
     registerFieldColour();
+    registerFieldAngle();
     colourPicker.installBlock();
     colourRgb.installBlock();
     colourRandom.installBlock();
@@ -89,6 +90,7 @@ const MODE_SETTING = 3;
     const data_tb = await res_tb.text();
     const doc_tb = await parser.parseFromString(data_tb, 'application/xml');
     let tbTop = doc_tb.getElementById('toolbar_top_sep');
+    let wsCallbacks = [];
     for (let i = 0; i < data_cats.length; i++) {
         let cat_name = data_cats[i];
         if (cat_name.substring(0, 1) != "#") {
@@ -124,6 +126,9 @@ const MODE_SETTING = 3;
                 modJS.addJS();
                 let modBlk = await import('./blocks/' + cat_name + '.js');
                 modBlk.addBlocks();
+                if (modBlk.addCallbacks) {
+                    wsCallbacks.push(modBlk.addCallbacks);
+                }
                 let modMsg;
                 try {
                     modMsg = await import('./msg/' + cat_name + '/' + _tsmLang + '.js');
@@ -169,6 +174,26 @@ const MODE_SETTING = 3;
             targetNode.after(node);
         }
     }
+    // change blockly original functions
+    const blockly_funcs = [
+        "controls_if", "controls_ifelse", 
+        "controls_repeat", "controls_repeat_ext", "controls_for", "controls_forEach",
+        "controls_whileUntil", "controls_flow_statements",
+        "math_change",
+        "text_append", "text_print",
+        "lists_setIndex",
+        "variables_set", "variables_set_dynamic",
+        "procedures_callnoreturn"
+    ];
+    blockly_funcs.forEach(function(func) {
+        let orgFunc = javascript.javascriptGenerator.forBlock[func];
+        javascript.javascriptGenerator.forBlock[func] = function(block, generator) {
+            let code = 'Blockly.checkStop("' + block.id + '");\n';
+            code += orgFunc(block, generator);
+            return code;
+        }
+    });
+    // modify toolbox tree
     if (settings.hasOwnProperty('tree')) {
         let tree = settings.tree;
         for (let i = 0; i < tree.length; i++) {
@@ -289,12 +314,37 @@ const MODE_SETTING = 3;
         }
         return blocklist;
     });
+    workspace.addChangeListener(function(event) {
+        if (event.type == Blockly.Events.BLOCK_CHANGE) {
+            const blockId = event.blockId;
+            const block = workspace.getBlockById(blockId);
+            block.inputList.forEach(function(input) {
+                input.fieldRow.forEach(function(field) {
+                    if (field.constructor.name == 'FieldButton') {
+                        console.log(field);
+                        if (event.oldValue == true) {
+                            field.buttonRect_.setAttribute('fill', field.backgroundColor_);
+                            field.buttonRect_.setAttribute('stroke', field.borderColor_);
+                        }
+                        else {
+                            field.buttonRect_.setAttribute('fill', 'none');
+                            field.buttonRect_.setAttribute('stroke', '#cccccc');
+                        }
+                    }
+                });
+            });
+        }
+    });
+    for (let i = 0; i < wsCallbacks.length; i++) {
+        wsCallbacks[i](workspace);
+    }
     if (localStorage.hasOwnProperty('curProg')) {
         const wsCode = localStorage.getItem('curProg');
         const ws = JSON.parse(wsCode);
         Blockly.serialization.workspaces.load(ws, workspace);
         localStorage.removeItem('curProg');
     }
+
     const blocklyArea = document.getElementById('blocklyArea');
     const blocklyDiv = document.getElementById('blocklyDiv');
     const onresize = function(e) {
@@ -388,6 +438,7 @@ function runCode() {
     Blockly.__callbacks = {};
     Blockly.__listeners = {};
     Blockly.__listener_no = 0;
+    Blockly.runTimeJS = {};
     btnRun.setAttribute('disabled', 'disabled');
     btnStop.removeAttribute('disabled');
     let code = javascript.javascriptGenerator.workspaceToCode(workspace);
@@ -413,7 +464,11 @@ Blockly.endCode = function() {
     throw new Error('endTsumicky');
 }
 
-Blockly.checkStop = function() {
+Blockly.checkStop = function(blockId) {
+    const blk = Blockly.getMainWorkspace().getBlockById(blockId);
+    if (blk) {
+        //console.log(blk.type, blk.id);
+    }
     if (Blockly.isStop) {
         throw new Error('abortTsumicky');
     }

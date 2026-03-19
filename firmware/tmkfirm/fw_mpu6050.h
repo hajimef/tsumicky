@@ -1,3 +1,4 @@
+#ifdef BLOCKS_MPU6050
 #ifndef __TSUMICKY_FIRMWARE_MPU6050_H__
 #define __TSUMICKY_FIRMWARE_MPU6050_H__
 #include <FastIMU.h>
@@ -9,4 +10,5 @@ void mpu6050_dispose(JSONVar &p);
 void mpu6050_update(JSONVar &p);
 void mpu6050_read(JSONVar &p);
 
-#endif
+#endif // __TSUMICKY_FIRMWARE_MPU6050_H__
+#endif // BLOCKS_MPU6050

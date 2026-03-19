@@ -24,6 +24,12 @@
 #ifdef BLOCKS_PCA9685
 #include "fw_pca9685.h"
 #endif
+#ifdef BLOCKS_UNOR4WIFI_MATRIX
+#include "fw_unor4wifi_matrix.h"
+#endif
+#ifdef BLOCKS_UNOQ_MATRIX
+#include "fw_unoq_matrix.h"
+#endif
 
 void option_blocks_setup(void) {
 #ifdef BLOCKS_NEOPIXEL
@@ -49,6 +55,12 @@ void option_blocks_setup(void) {
 #endif
 #ifdef BLOCKS_PCA9685
   pca9685_setup();
+#endif
+#ifdef BLOCKS_UNOR4WIFI_MATRIX
+  unor4wifi_matrix_setup();
+#endif
+#ifdef BLOCKS_UNOQ_MATRIX
+  unoq_matrix_setup();
 #endif
 }
 

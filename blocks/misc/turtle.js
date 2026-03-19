@@ -503,6 +503,39 @@ export function addBlocks() {
       "colour": 60,
       "tooltip": "%{BKY_TSUMICKY_TURTLE_END_TOOLTIP}",
       "helpUrl": "https://www.hfchannel.site/tsumicky/ja/ref/turtle/blocks.php#end"
-    }
+    },
+    {
+      "type": "turtle_angle",
+      "message0": "%1",
+      "args0": [
+        {
+          "type": "field_angle",
+          "name": "ANGLE",
+          "angle": 90
+        }
+      ],
+      "output": "Number",
+      "colour": 225,
+      "tooltip": "",
+      "helpUrl": ""
+    },
+    {
+      "type": "turtle_slider",
+      "message0": "%1",
+      "args0": [
+        {
+          "type": "field_slider",
+          "name": "SLIDER",
+          "value": 10,
+          "min": 0,
+          "max": 10,
+          "precision": 1
+        }
+      ],
+      "output": "Number",
+      "colour": 225,
+      "tooltip": "",
+      "helpUrl": ""
+    }   
   ]);
 }

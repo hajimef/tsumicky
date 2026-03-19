@@ -1,3 +1,5 @@
+#include "option_blocks.h"
+#ifdef BLOCKS_LCD
 #include "fw_common.h"
 #include "fw_lcd.h"
 #if defined(ARDUINO_ARCH_RP2040)
@@ -40,12 +42,14 @@ void lcd_init(JSONVar &p) {
   Serial.println(scl);
 */
   if (sda != -1) {
+#ifndef ARDUINO_UNOWIFIR4
 #if defined(ARDUINO_ARCH_RP2040)
     Wire.setSDA(sda);
     Wire.setSCL(scl);
-#else
+#elif defined(ESP32)
     Wire.setPins(sda, scl);
-#endif
+#endif // ARDUINO_ARCH_RP2040
+#endif // ndef ARDUINO_UNOWIFIR4
   }
   lcd = new LiquidCrystal_I2C(adrses[adrs], cols[rc], rows[rc]);
   lcd->init();
@@ -91,3 +95,4 @@ void lcd_print(JSONVar &p) {
   lcd->print(str);
   r_stat["s"] = (int) NO_RETURN;
 }
+#endif // BLOCKS_LCD

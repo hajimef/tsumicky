@@ -17,6 +17,8 @@ void pwm_ledcWrite(JSONVar &p);
 #elif defined(ARDUINO_ARCH_RP2040)
 void pwm_picoSetup(JSONVar &p);
 void pwm_picoWrite(JSONVar &p);
+#elif defined(ARDUINO_UNOWIFIR4) || defined(ARDUINO_UNO_Q)
+void pwm_unoWrite(JSONVar &p);
 #endif
 
 #endif

@@ -12,7 +12,7 @@ async def dispose(p):
         if wnd is not None:
             wnd.withdraw()
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def init(p):
     global cv, wnd
@@ -29,7 +29,7 @@ async def init(p):
             wnd.deiconify()
         turtle.reset()
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def color(p):
     try:
@@ -37,54 +37,54 @@ async def color(p):
         fc = p.get('fc', 'black')
         turtle.color(c, fc)
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def penDown(p):
     try:
         turtle.pendown()
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def penUp(p):
     try:
         turtle.penup()
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def penSize(p):
     try:
         width = p.get('w', 1)
         turtle.pensize(width)
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def forward(p):
     try:
         distance = p.get('d', 0)
         turtle.forward(distance)
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def backward(p):
     try:
         distance = p.get('d', 0)
         turtle.backward(distance)
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def right(p):
     try:
         angle = p.get('a', 0)
         turtle.right(angle)
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def left(p):
     try:
         angle = p.get('a', 0)
         turtle.left(angle)
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def goTo(p):
     try:
@@ -92,7 +92,7 @@ async def goTo(p):
         y = p.get('y', 0)
         turtle.goto(x, y)
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def circle(p):
     try:
@@ -103,40 +103,40 @@ async def circle(p):
         else:
             turtle.circle(radius, angle)
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def speed(p):
     try:
         s = p.get('s', 3)
         turtle.speed(s)
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def beginFill(p):
     try:
         turtle.begin_fill()
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def endFill(p):
     try:
         turtle.end_fill()
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def mainLoop(p):
     try:
 #        turtle.done()
         turtle.done() 
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def setHeading(p):
     try:
         angle = p.get('a', 0)
         turtle.setheading(angle)
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def dot(p):
     try:
@@ -149,13 +149,13 @@ async def dot(p):
         else:
             turtle.dot(size, color)
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def reset(p):
     try:
         turtle.reset()
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def showHide(p):
     try:
@@ -165,44 +165,44 @@ async def showHide(p):
         else:
             turtle.hideturtle()
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def getX(p):
     try:
         return turtle.xcor()
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def getY(p):
     try:
         return turtle.ycor()
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def getHeading(p):
     try:
         return turtle.heading()
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def isDown(p):
     try:
         return turtle.isdown()
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def stamp(p):
     try:
         turtle.stamp()
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def shape(p):
     try:
         s = p.get('s', 'classic')
         turtle.shape(s)
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def write(p):
     try:
@@ -214,7 +214,7 @@ async def write(p):
         s = p.get('s', 'normal')
         turtle.write(t, move=m, align=a, font=(f, z, s))
     except Exception as e:
-        return g.errReturn(e)
+        return g.errReturn()
 
 async def update(p):
     global cv, wnd
@@ -226,7 +226,7 @@ async def update(p):
             wnd = None
             cv = None
         else:
-            return g.errReturn(e)
+            return g.errReturn()
 
 
 def addCallbacks():

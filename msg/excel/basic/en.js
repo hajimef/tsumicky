@@ -11,10 +11,10 @@ export function addMessages() {
   Blockly.Msg["TSUMICKY_EXCEL_QUIT_TOOLTIP"] = "Quit Excel.";
   Blockly.Msg["TSUMICKY_EXCEL_NEW_FILE"] = "create new workbook";
   Blockly.Msg["TSUMICKY_EXCEL_NEW_FILE_TOOLTIP"] = "Create new workbook.";
-  Blockly.Msg["TSUMICKY_EXCEL_OPEN_FILE"] = "open workbook with filename %1"
+  Blockly.Msg["TSUMICKY_EXCEL_OPEN_FILE"] = "open workbook with filename %1 %2"
   Blockly.Msg["TSUMICKY_EXCEL_OPEN_FILE_TOOLTIP"] = "Open the workbook with the specified file name."
 //  Blockly.Msg["TSUMICKY_EXCEL_FIND_FILE"] = "open workbook by filedialog, and get filename";
-  Blockly.Msg["TSUMICKY_EXCEL_SAVE_AS_FILE"] = "save workbook as filename %1";
+  Blockly.Msg["TSUMICKY_EXCEL_SAVE_AS_FILE"] = "save workbook as filename %1 %2";
   Blockly.Msg["TSUMICKY_EXCEL_SAVE_AS_FILE_TOOLTIP"] = "Save the workbook with a file name.";
   Blockly.Msg["TSUMICKY_EXCEL_SAVE_FILE"] = "save workbook";
   Blockly.Msg["TSUMICKY_EXCEL_SAVE_FILE_TOOLTIP"] = "Save the workbook.";

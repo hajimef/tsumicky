@@ -4,5 +4,6 @@ mlxtend
 numpy
 pandas
 scikit-learn
+asyncio
 websockets
 xlwings

@@ -1,0 +1,13 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox_pwm_unoq" style="display: none">
+    <category name="%{BKY_TSUMICKY_CATEGORY_PWM_UNOQ}" id="category_pwm_unoq" colour="#5b80a5">
+        <block type="pwm_unoq_analog_write">
+            <field name="ws_var" id="mM0r_zLEftg14tf7COGf">sock</field>
+            <field name="pin_var" id="EF7w@lL*,ML7bJ+g@RN-">pin</field>
+            <value name="duty">
+                <shadow type="math_number">
+                    <field name="NUM">50</field>
+                </shadow>
+            </value>
+        </block>
+    </category>
+</xml>

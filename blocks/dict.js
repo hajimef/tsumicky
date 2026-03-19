@@ -284,7 +284,7 @@ export function addBlocks() {
           "check": "String"
         }
       ],
-      "output": null,
+      "output": "Dictionary",
       "colour": 330,
       "inputsInline": true
     },
@@ -301,6 +301,36 @@ export function addBlocks() {
         }
       ],
       "output": "String",
+      "colour": 330,
+      "inputsInline": true
+    },
+    {
+      "type": "dict_convkv",
+      "tooltip": "%{BKY_TSUMICKY_DICT_CONVKV_TOOLTIP}",
+      "helpUrl": "",
+      "message0": "%{BKY_TSUMICKY_DICT_CONVKV}",
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "dict",
+          "check": "Dictionary"
+        },
+        {
+          "type": "field_dropdown",
+          "name": "same",
+          "options": [
+            [
+              "%{BKY_TSUMICKY_DICT_CONVKV_OVERWRITE}",
+              "0"
+            ],
+            [
+              "%{BKY_TSUMICKY_DICT_CONVKV_LIST}",
+              "1"
+            ]
+          ]
+        },
+      ],
+      "output": "Dictionary",
       "colour": 330,
       "inputsInline": true
     },

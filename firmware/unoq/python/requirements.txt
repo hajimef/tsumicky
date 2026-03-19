@@ -1,0 +1,5 @@
+websockets
+uvicorn
+fastapi
+pyyaml
+debugpy

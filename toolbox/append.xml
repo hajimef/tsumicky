@@ -8,6 +8,7 @@
       </value>
     </block>
     <block type="text_ml"></block>
+    <block type="text_to_string"></block>
     <block type="math_dec">
       <value name="str">
         <shadow type="text">
@@ -15,6 +16,14 @@
         </shadow>
       </value>
     </block>
+    <block type="math_to_number">
+      <value name="str">
+        <shadow type="text">
+          <field name="TEXT">0</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="math_angle"></block>
     <block type="colour_split">
       <value name="colour">
         <block type="colour_picker"></block>
@@ -30,12 +39,93 @@
         <block type="colour_picker"></block>
       </value>
     </block>
+    <block type="colour_hsv">
+      <value name="hue">
+        <shadow type="math_angle">
+          <field name="angle">0</field>
+        </shadow>
+      </value>
+      <value name="saturate">
+        <shadow type="colour_hsv_sv">
+          <field name="value">100</field>
+        </shadow>
+      </value>
+      <value name="value">
+        <shadow type="colour_hsv_sv">
+          <field name="value">100</field>
+        </shadow>
+      </value>
+    </block>
     <block type="list_push_unshift">
       <field name="method">push</field>
+      <value name="var_name">
+        <block type="variables_get">
+          <field name="VAR">list</field>
+        </block>
+      </value>
     </block>
     <block type="list_pop_shift">
       <field name="method">pop</field>
+      <value name="var_name">
+        <block type="variables_get">
+          <field name="VAR">list</field>
+        </block>
+      </value>
     </block>
+    <block type="list_get_random">
+      <value name="LIST">
+        <block type="variables_get">
+          <field name="VAR">list</field>
+        </block>
+      </value>
+      <value name="NUM">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="list_concat">
+      <value name="LIST">
+        <block type="variables_get">
+          <field name="VAR">list</field>
+        </block>
+      </value>
+      <value name="LIST2">
+        <block type="variables_get">
+          <field name="VAR">list2</field>
+        </block>
+      </value>
+    </block>
+    <block type="list_reverse">
+      <value name="LIST">
+        <block type="variables_get">
+          <field name="VAR">list</field>
+        </block>
+      </value>
+    </block>
+    <block type="list_filter">
+      <value name="LIST">
+        <block type="variables_get">
+          <field name="VAR">list</field>
+        </block>
+      </value>
+    </block>
+    <block type="list_map">
+      <value name="LIST">
+        <block type="variables_get">
+          <field name="VAR">list</field>
+        </block>
+      </value>
+    </block>
+    <block type="list_item"></block>
+    <block type="list_compute">
+      <value name="LIST">
+        <block type="variables_get">
+          <field name="VAR">list</field>
+        </block>
+      </value>
+    </block>
+    <block type="logic_is_type"></block>
   </category>
 </xml>
 

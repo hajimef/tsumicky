@@ -1,0 +1,8 @@
+websockets
+adafruit-circuitpython-motor
+adafruit-circuitpython-dht
+adafruit-circuitpython-neopixel
+adafruit-circuitpython-ssd1306
+adafruit-circuitpython-bmp280
+adafruit-circuitpython-mpu6050
+adafruit-circuitpython-servokit
